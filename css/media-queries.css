@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+@media only screen and (min-width: 10in) {
+  .appLinkContainer {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 6in) {
+  .appLinkName {
+    font-size: 8pt;
+  }
+
+  #searchContainer {
+    border-radius: 0 0 12pt 12pt;
+    -webkit-border-radius: 0 0 12pt 12pt;
+    -moz-border-radius: 0 0 12pt 12pt;
+    -ms-border-radius: 0 0 12pt 12pt;
+    -o-border-radius: 0 0 12pt 12pt;
+  }
+
+  .appLinkHyperLink {
+    height: 1.5in;
+  }
+}
+
+@media only screen and (max-width: 4in) {
+   .appLinkName {
+    font-size: 6pt;
+  }
+  
+  .appLinkHyperLink {
+    height: 1.2in;
+  }
+}
+
+@media only screen and (max-width: 3in) {
+  .appLinkContainer {
+    width: 33.3%;
+  }
+
+  .appLinkContainer {
+    margin-bottom: 0;
+  }
+
+  .appLinkPic {
+    border-radius: 10pt;
+    -webkit-border-radius: 10pt;
+    -moz-border-radius: 10pt;
+    -ms-border-radius: 10pt;
+    -o-border-radius: 10pt;
+  }
+}
+
+@media only screen and (max-width: 210px) {
+  #logo {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  #logo > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 2in) {
+  .appLinkContainer {
+    width: 50%;
+  }
+}

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+header, #searchContainer {
+  background-color: #DD0000;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  min-width: 1.6in;
+  top: 0;
+}
+
+header, #logo {
+  height: 48pt;
+}
+
+#logo > img {
+  border: none;
+}
+
+#searchContainer {
+  margin-top: 48pt;
+  padding-bottom: 4pt;
+}
+
+#searchContainer.sticky {
+  position: fixed;
+  padding-top: 4pt;
+  margin-top: 0;
+}
+
+#sticky-anchor {
+  position: absolute;
+  top: 45pt;
+}
+
+#searchBar {
+  background-color: #EEEEEE;
+  border: 2pt solid #000000;
+  font-size: 1.5em;
+  width: 95%;
+  max-width: 5in;
+  min-width: 1.5in;
+  display: inline-block;
+  
+  border-radius: 13pt;
+  -webkit-border-radius: 13pt;
+  -moz-border-radius: 13pt;
+  -ms-border-radius: 13pt;
+  -o-border-radius: 13pt;
+}

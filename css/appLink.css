@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+.appLinkContainer {
+  float: left;
+  margin: 12pt 0 12pt 0;
+  text-align: center;
+  width: 25%;
+}
+
+.appLinkHyperLink {
+  border: 2pt solid #000000;
+  background-color: #DDDDDD;
+  display: inline-block;
+  height: 1.7in;
+  min-width: 40pt;
+  max-width: 1.7in;
+  width: 75%;
+  text-decoration: none;
+
+  border-radius: 2pt;
+  -webkit-border-radius: 2pt;
+  -moz-border-radius: 2pt;
+  -ms-border-radius: 2pt;
+  -o-border-radius: 2pt;
+  
+  box-shadow:
+    1pt 2pt 5pt #222222;
+  -webkit-box-shadow:
+    1pt 2pt 5pt #222222;
+  -moz-box-shadow:
+    1pt 2pt 5pt #222222;
+  -ms-box-shadow:
+    1pt 2pt 5pt #222222;
+  -o-box-shadow:
+    1pt 2pt 5pt #222222;
+}
+
+.appLinkHyperLink.searched {
+  background-color: #DD0000;
+
+  box-shadow:
+    2pt 3pt 5pt #222222;
+  -webkit-box-shadow:
+    2pt 3pt 5pt #222222;
+  -moz-box-shadow:
+    2pt 3pt 5pt #222222;
+  -ms-box-shadow:
+    2pt 3pt 5pt #222222;
+  -o-box-shadow:
+    2pt 3pt 5pt #222222;
+}
+
+.appLinkHyperLink:hover {
+  border-color: #EEEEEE;
+}
+
+.appLinkHyperLink:active {
+  background-color: #EE0000;
+
+  box-shadow:
+    0 0 10pt #EEEEEE;
+  -webkit-box-shadow:
+    0 0 10pt #EEEEEE;
+  -moz-box-shadow:
+    0 0 10pt #EEEEEE;
+  -ms-box-shadow:
+    0 0 10pt #EEEEEE;
+  -o-box-shadow:
+    0 0 10pt #EEEEEE;
+}
+
+.appLinkHyperLink:active > .appLinkPic {
+  box-shadow:
+    0 0 20px #FFFFFF,
+    inset 0 5px 18px #FFFFFF;
+  -webkit-box-shadow:
+    0 0 20px #FFFFFF,
+    inset 0 5px 18px #FFFFFF;
+  -moz-box-shadow:
+    0 0 20px #FFFFFF,
+    inset 0 5px 18px #FFFFFF;
+  -ms-box-shadow:
+    0 0 20px #FFFFFF,
+    inset 0 5px 18px #FFFFFF;
+  -o-box-shadow:
+  0 0 20px #FFFFFF,
+    inset 0 5px 18px #FFFFFF;
+}
+
+.appLinkHyperLink:focus {
+  border-color: #FFFFFF;
+}
+
+.appLinkPic {
+  width: 80%;
+  min-width: 36pt;
+  max-width: 72pt;
+  height: auto;
+  margin-top: 8pt;
+  
+  border-radius: 12pt;
+  -webkit-border-radius: 12pt;
+  -moz-border-radius: 12pt;
+  -ms-border-radius: 12pt;
+  -o-border-radius: 12pt;
+  
+  box-shadow:
+    0 0 3px #EEEEEE,
+    inset 0 5px 10px #EEEEEE;
+  -webkit-box-shadow:
+    0 0 3px #EEEEEE,
+    inset 0 5px 10px #EEEEEE;
+  -moz-box-shadow:
+    0 0 3px #EEEEEE,
+    inset 0 5px 10px #EEEEEE;
+  -ms-box-shadow:
+    0 0 3px #EEEEEE,
+    inset 0 5px 10px #EEEEEE;
+  -o-box-shadow:
+    0 0 3px #EEEEEE,
+    inset 0 5px 10px #EEEEEE;
+}
+
+.appLinkName {
+  margin-top: 4pt;
+  font-size: 12pt;
+  font-weight: bold;
+}
