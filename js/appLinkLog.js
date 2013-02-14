@@ -60,14 +60,14 @@ function AppLinkLog(info, subAppLinkLogs) {
 }
 
 var checkListAppLinkInfo = new AppLinkLog(
-  [ ['Back', '../images/backArrowSymbol.png', '../index.html', '#FFFFFF'],
-    ['Enrollment', '../images/diplomaSymbol.png', '#', '#00FF00',
+  [ ['Back', '../images/backArrowSymbol.gif', '../index.html', '#FFFFFF'],
+    ['Enrollment', '../images/diplomaSymbol.gif', '#', '#00FF00',
       'apply'],
-    ['Supplies', '../images/chestSymbol.png', '#', '#0000FF',
+    ['Supplies', '../images/chestSymbol.gif', '#', '#0000FF',
       'tools'],
-    ['name4', '../images/homeSymbol.png', '#', '#00FF00'],
-    ['name5', '../images/homeSymbol.png', '#', '#FF0000'],
-    ['NAME', '../images/homeSymbol.png', '#', '#FFFF00']],
+    ['name4', '../images/homeSymbol.gif', '#', '#00FF00'],
+    ['name5', '../images/homeSymbol.gif', '#', '#FF0000'],
+    ['NAME', '../images/homeSymbol.gif', '#', '#FFFF00']],
   [ ,
     ,
     ,
@@ -77,18 +77,18 @@ var checkListAppLinkInfo = new AppLinkLog(
 );
     
 var homePageAppLinkInfo = new AppLinkLog(
-  [ ['CheckLists', 'images/requiredSymbol.png', 'htdocs/checklists.html', '#FF0000',
+  [ ['CheckLists', 'images/requiredSymbol.gif', 'htdocs/checklists.html', '#FF0000',
     'checkmark'],
-    ['Forecast', 'images/umbrellaSymbol.png', 'http://weather.yahoo.com/', '#FFFF00',
-      'weather', 'testing'],
-    ['Learning Tools', 'images/toolsSymbol.png', 'http://www.google.com', '#0000FF',
+    ['Forecast', 'images/umbrellaSymbol.gif', 'http://weather.yahoo.com/', '#FFFF00',
+      'weather'],
+    ['Learning Tools', 'images/toolsSymbol.gif', 'http://www.google.com', '#0000FF',
       'educational'],
-    ['name4', 'images/homeSymbol.png', '#', '#00FF00'],
-    ['name5', 'images/homeSymbol.png', '#', '#FF0000'],
-    ['name6', 'images/homeSymbol.png', '#', '#0000FF'],
-    ['name7', 'images/homeSymbol.png', '#', '#00FF00'],
-    ['name8', 'images/homeSymbol.png', '#', '#0000FF'],
-    ['Enrollment', 'images/diplomaSymbol.png', '#', '#FF0000',
+    ['name4', 'images/homeSymbol.gif', '#', '#00FF00'],
+    ['name5', 'images/homeSymbol.gif', '#', '#FF0000'],
+    ['name6', 'images/homeSymbol.gif', '#', '#0000FF'],
+    ['name7', 'images/homeSymbol.gif', '#', '#00FF00'],
+    ['name8', 'images/homeSymbol.gif', '#', '#0000FF'],
+    ['Enrollment', 'images/diplomaSymbol.gif', '#', '#FF0000',
       'application', 'johnson', 'county', 'community', 'college'] ],
   [ checkListAppLinkInfo]
   /*

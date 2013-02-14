@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /*CSS Document*/
 
-@media only screen and (min-width: 10in) {
+@media screen and (min-width: 10in) {
   .appLinkContainer {
     width: 20%;
   }
 }
 
-@media only screen and (max-width: 6in) {
+@media screen and (max-width: 6in) {
   .appLinkName {
     font-size: 8pt;
   }
@@ -20,22 +20,22 @@
     -o-border-radius: 0 0 12pt 12pt;
   }
 
-  .appLinkHyperLink {
-    height: 1.5in;
+  .appLinkContainer {
+    height: 1.3in;
   }
 }
 
-@media only screen and (max-width: 4in) {
+@media screen and (max-width: 4in) {
    .appLinkName {
     font-size: 6pt;
   }
   
-  .appLinkHyperLink {
-    height: 1.2in;
+  .appLinkContainer {
+    height: 1in;
   }
 }
 
-@media only screen and (max-width: 3in) {
+@media screen and (max-width: 3in) {
   .appLinkContainer {
     width: 33.3%;
   }
@@ -53,7 +53,7 @@
   }
 }
 
-@media only screen and (max-width: 210px) {
+@media screen and (max-width: 210px) {
   #logo {
     display: table-cell;
     vertical-align: middle;
@@ -65,7 +65,7 @@
   }
 }
 
-@media only screen and (max-width: 2in) {
+@media screen and (max-width: 1.8in) {
   .appLinkContainer {
     width: 50%;
   }

@@ -6,7 +6,7 @@ header, #searchContainer {
   position: absolute;
   text-align: center;
   width: 100%;
-  min-width: 1.6in;
+  min-width: 1.4in;
   top: 0;
 }
 
@@ -40,7 +40,7 @@ header, #logo {
   font-size: 1.5em;
   width: 95%;
   max-width: 5in;
-  min-width: 1.5in;
+  min-width: 1.3in;
   display: inline-block;
   
   border-radius: 13pt;

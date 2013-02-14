@@ -6,24 +6,29 @@
   margin: 12pt 0 12pt 0;
   text-align: center;
   width: 25%;
+  height: 1.7in;
 }
 
 .appLinkHyperLink {
-  border: 2pt solid #000000;
-  background-color: #DDDDDD;
   display: inline-block;
-  height: 1.7in;
-  min-width: 40pt;
+  min-width: 38pt;
   max-width: 1.7in;
   width: 75%;
+  height: 100%;
   text-decoration: none;
 
-  border-radius: 2pt;
-  -webkit-border-radius: 2pt;
-  -moz-border-radius: 2pt;
-  -ms-border-radius: 2pt;
-  -o-border-radius: 2pt;
-  
+  border: 2pt solid #AAAAAA;
+  border-radius: 5pt;
+  -webkit-border-radius: 5pt;
+  -moz-border-radius: 5pt;
+  -ms-border-radius: 5pt;
+  -o-border-radius: 5pt;
+}
+
+.appLinkHyperLink.searched  {
+  background-color: #DD0000;
+
+  border-color: #000000;
   box-shadow:
     1pt 2pt 5pt #222222;
   -webkit-box-shadow:
@@ -36,56 +41,63 @@
     1pt 2pt 5pt #222222;
 }
 
-.appLinkHyperLink.searched {
-  background-color: #DD0000;
+.appLinkHyperLink.searched > .appLinkPic {
+  box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -1pt 1pt #000000;
+  -webkit-box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -1pt 1pt #000000;
+  -moz-box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -1pt 1pt #000000;
+  -ms-box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -1pt 1pt #000000;
+  -o-box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -1pt 1pt #000000;
+}
+
+.appLinkHyperLink.searched > .appLinkName {
+  text-shadow: none;
+}
+.appLinkHyperLink.notSearched {
+  background-color: #AAAAAA;
 
   box-shadow:
-    2pt 3pt 5pt #222222;
+    0 0 0 #222222;
   -webkit-box-shadow:
-    2pt 3pt 5pt #222222;
+    0 0 0 #222222;
   -moz-box-shadow:
-    2pt 3pt 5pt #222222;
+    0 0 0 #222222;
   -ms-box-shadow:
-    2pt 3pt 5pt #222222;
+    0 0 0 #222222;
   -o-box-shadow:
-    2pt 3pt 5pt #222222;
+    0 0 0 #222222;
 }
 
 .appLinkHyperLink:hover {
   border-color: #EEEEEE;
 }
 
-.appLinkHyperLink:active {
-  background-color: #EE0000;
-
-  box-shadow:
-    0 0 10pt #EEEEEE;
-  -webkit-box-shadow:
-    0 0 10pt #EEEEEE;
-  -moz-box-shadow:
-    0 0 10pt #EEEEEE;
-  -ms-box-shadow:
-    0 0 10pt #EEEEEE;
-  -o-box-shadow:
-    0 0 10pt #EEEEEE;
-}
 
 .appLinkHyperLink:active > .appLinkPic {
   box-shadow:
-    0 0 20px #FFFFFF,
-    inset 0 5px 18px #FFFFFF;
+    0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
   -webkit-box-shadow:
-    0 0 20px #FFFFFF,
-    inset 0 5px 18px #FFFFFF;
+    0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
   -moz-box-shadow:
-    0 0 20px #FFFFFF,
-    inset 0 5px 18px #FFFFFF;
+    0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
   -ms-box-shadow:
-    0 0 20px #FFFFFF,
-    inset 0 5px 18px #FFFFFF;
+    0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
   -o-box-shadow:
-  0 0 20px #FFFFFF,
-    inset 0 5px 18px #FFFFFF;
+  0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
 }
 
 .appLinkHyperLink:focus {
@@ -97,7 +109,7 @@
   min-width: 36pt;
   max-width: 72pt;
   height: auto;
-  margin-top: 8pt;
+  margin: 6pt auto 0 auto;
   
   border-radius: 12pt;
   -webkit-border-radius: 12pt;
@@ -106,24 +118,30 @@
   -o-border-radius: 12pt;
   
   box-shadow:
-    0 0 3px #EEEEEE,
-    inset 0 5px 10px #EEEEEE;
+    2pt 2pt 1pt -1pt #111111,
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 1pt #000000;
   -webkit-box-shadow:
-    0 0 3px #EEEEEE,
-    inset 0 5px 10px #EEEEEE;
+    2pt 2pt 1pt -1pt #111111,
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 1pt #000000;
   -moz-box-shadow:
-    0 0 3px #EEEEEE,
-    inset 0 5px 10px #EEEEEE;
+    2pt 2pt 1pt -1pt #111111,
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 1pt #000000;
   -ms-box-shadow:
-    0 0 3px #EEEEEE,
-    inset 0 5px 10px #EEEEEE;
+    2pt 2pt 1pt -1pt #111111,
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 1pt #000000;
   -o-box-shadow:
-    0 0 3px #EEEEEE,
-    inset 0 5px 10px #EEEEEE;
+    2pt 2pt 1pt -1pt #111111,
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 1pt #000000;
 }
 
 .appLinkName {
-  margin-top: 4pt;
   font-size: 12pt;
   font-weight: bold;
+  margin-top: 2pt;
+  text-shadow: 0.15em 0.2em 3pt #777777;
 }

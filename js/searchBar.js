@@ -15,13 +15,15 @@ function searchBar_relocate() {
 
 // Search through the appLinks.
 function search(pattern, keypress) {
-  pattern = pattern.trim(' ').toLowerCase().replace(/\W|\band\b/g, ' ');
+  pattern = pattern.trim(' ').toLowerCase().replace(/\W/g, '');
   if (keypress !== 32) {
     var appLinks = document.getElementsByClassName('appLinkHyperLink');
 
     if (pattern === '') {
-      for (var i = 0; i < appLinks.length; i++)
+      for (var i = 0; i < appLinks.length; i++) {
         appLinks[i].classList.remove('searched');
+        appLinks[i].classList.remove('notSearched');
+      }
 
       window.scroll(0, 0);
       resetTabIndex(appLinks);
@@ -47,18 +49,20 @@ function highlightMatches(pattern, appLinks) {
     if (rootAppLinkLog.contains(i, pattern)) {
       if (firstMatch == -1) firstMatch = i;
 
+      appLinks[i].classList.remove('notSearched');
       appLinks[i].classList.add('searched');
       appLinks[i].tabIndex = ++matchCount;
     }
     else {
       appLinks[i].classList.remove('searched');
+      appLinks[i].classList.add('notSearched');
       appLinks[i].tabIndex = -1;
     }
   }
 
   // Scroll to first match
   if (firstMatch > -1)
-    window.scroll(0, (appLinks[firstMatch].offsetTop - 80));
+    window.scroll((appLinks[firstMatch].offsetLeft - 10), (appLinks[firstMatch].offsetTop - 80));
   else
     resetTabIndex(appLinks);
 }
