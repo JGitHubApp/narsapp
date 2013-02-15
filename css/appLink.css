@@ -77,10 +77,28 @@
     0 0 0 #222222;
 }
 
-.appLinkHyperLink:hover {
-  border-color: #EEEEEE;
+.appLinkHyperLink.searched:focus {
+  border-color: #FFFFFF;
 }
 
+.appLinkHyperLink:hover > .appLinkPic, .appLinkHyperLink:focus > .appLinkPic {
+  box-shadow:
+    0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
+  -webkit-box-shadow:
+    0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
+  -moz-box-shadow:
+    0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
+  -ms-box-shadow:
+    0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
+  -o-box-shadow:
+  0 0 20pt #FFFFFF,
+    inset 0 5pt 18pt #FFFFFF;
+  
+}
 
 .appLinkHyperLink:active > .appLinkPic {
   box-shadow:
@@ -98,10 +116,6 @@
   -o-box-shadow:
   0 0 20pt #FFFFFF,
     inset 0 5pt 18pt #FFFFFF;
-}
-
-.appLinkHyperLink:focus {
-  border-color: #FFFFFF;
 }
 
 .appLinkPic {

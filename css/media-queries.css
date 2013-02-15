@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 4in) {
    .appLinkName {
-    font-size: 6pt;
+    font-size: 7pt;
   }
   
   .appLinkContainer {
@@ -35,7 +35,7 @@
   }
 }
 
-@media screen and (max-width: 3in) {
+@media screen and (max-width: 3.5in) {
   .appLinkContainer {
     width: 33.3%;
   }
