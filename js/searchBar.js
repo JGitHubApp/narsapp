@@ -15,7 +15,7 @@ function searchBar_relocate() {
 
 // Search through the appLinks.
 function search(pattern, keypress) {
-  pattern = pattern.trim(' ').toLowerCase().replace(/\W/g, '');
+  pattern = pattern.trim(' ').toLowerCase().replace(/[^\w ]/g, '');
   if (keypress !== 32) {
     var appLinks = document.getElementsByClassName('appLinkHyperLink');
 
@@ -46,7 +46,7 @@ function highlightMatches(pattern, appLinks) {
 
   // Iterate through all AppLink objects on current page
   for (var i = 0; i < appLinks.length; i++) {
-    if (rootAppLinkLog.contains(i, pattern)) {
+    if (rootSearchTree.contains(i, pattern)) {
       if (firstMatch == -1) firstMatch = i;
 
       appLinks[i].classList.remove('notSearched');

@@ -1,5 +1,43 @@
+// SearchTree object
+function SearchTree() {
+  this.contains = contains;
+  function contains(place, pattern) {
+    for  (var i = 0; i < pattern.length; i++)
+      if (!binarySearch(this[place], pattern[i], 0, this[place].length-1))
+        return false;
+    return true;
+
+    function binarySearch(a, p, min, max) {
+      if (min <= max) {
+        var mid = Math.floor((max + min) / 2);
+
+        if (a[mid].indexOf(p) === 0)
+          return true;
+        else if (p < a[mid])
+          return binarySearch(a, p, min, mid-1);
+        else
+          return binarySearch(a, p, mid+1, max);
+      }
+
+      return false;
+    }
+  }
+
+  this.flatten = flatten;
+  function flatten() {
+    var tmpArr = [];
+
+    for (var i = 0; i < this.length; i++)
+      tmpArr = tmpArr.concat(this[i]);
+
+    return tmpArr;
+  }
+}
+
+SearchTree.prototype = new Array();
+
 // AppLinkLog object
-function AppLinkLog(info, subAppLinkLogs) {
+function AppLinkLog(info, aliases, subAppLinkLogs) {
   this.names = [];
   for (var i = 0; i < info.length; i++)
     this.names.push(info[i][0])
@@ -16,89 +54,15 @@ function AppLinkLog(info, subAppLinkLogs) {
   for (var i = 0; i < info.length; i++)
     this.backgroundColors.push(info[i][3])
 
-  this.synonyms = [];
-  for (var i = 0; i < info.length; i++) {
-    var tmpArray = [];
-    for (var j = 4; j < info[i].length; j++)
-      tmpArray.push(info[i][j]);
-
-    if (subAppLinkLogs[i] && subAppLinkLogs[i].names) {
-      tmpArray = tmpArray.concat(subAppLinkLogs[i].names);
-
-      for (var j = 0; j < subAppLinkLogs[i].length; j++) {
-        if (subAppLinkLogs[i].synonyms[j])
-          tmpArray = tmpArray.concat(subAppLinkLogs[i].synonyms[j]);
-        }
-    }
-
-    this.synonyms.push(tmpArray);
-  }
-
-  this.contains = contains;
-  function contains(place, pattern) {
-    var returnVal = [];
-    for (var i = 0; i < pattern.length; i++)
-      returnVal.push(false);
-
-    for  (var i = 0; i < pattern.length; i++) {
-      if (this.names[place].toLowerCase().indexOf(pattern[i]) !== -1)
-        returnVal[i] = true;
-      
-      for (var j = 0; j < this.synonyms[place].length && !returnVal[i]; j++) {
-        //alert(this.synonyms[place][j] + ' : ' + this.synonyms[place][j].indexOf(pattern[i]));
-        if (this.synonyms[place][j].toLowerCase().indexOf(pattern[i]) !== -1)
-          returnVal[i] = true;
-      }
-    }
-
-    for (var i = 0; i < returnVal.length; i++)
-      if (!returnVal[i])
-        return false;
-
-    return true;
-  }
+  this.aliases = new SearchTree();
+  for (var i = 0; i < this.names.length; i++)
+    this.aliases.push([this.names[i].toLowerCase()]);
+  for (var i = 0; i < aliases.length; i++)
+    if (aliases[i][0])
+      this.aliases[i] = this.aliases[i].concat(aliases[i]);
+  for (var i = 0; i < subAppLinkLogs.length; i++)
+    if (subAppLinkLogs[i])
+      this.aliases[i] = this.aliases[i].concat(subAppLinkLogs[i].aliases.flatten());
+  for (var i = 0; i < this.aliases.length; i++)
+    this.aliases[i].sort();
 }
-
-var checkListAppLinkInfo = new AppLinkLog(
-  [ ['Back', '../images/backArrowSymbol.gif', '../index.html', '#FFFFFF'],
-    ['Enrollment', '../images/diplomaSymbol.gif', '#', '#00FF00',
-      'apply'],
-    ['Supplies', '../images/chestSymbol.gif', '#', '#0000FF',
-      'tools'],
-    ['name4', '../images/homeSymbol.gif', '#', '#00FF00'],
-    ['name5', '../images/homeSymbol.gif', '#', '#FF0000'],
-    ['NAME', '../images/homeSymbol.gif', '#', '#FFFF00']],
-  [ ,
-    ,
-    ,
-    ,
-    ,
-     ]
-);
-    
-var homePageAppLinkInfo = new AppLinkLog(
-  [ ['CheckLists', 'images/requiredSymbol.gif', 'htdocs/checklists.html', '#FF0000',
-    'checkmark'],
-    ['Forecast', 'images/umbrellaSymbol.gif', 'http://weather.yahoo.com/', '#FFFF00',
-      'weather'],
-    ['Learning Tools', 'images/toolsSymbol.gif', 'http://www.google.com', '#0000FF',
-      'educational'],
-    ['name4', 'images/homeSymbol.gif', '#', '#00FF00'],
-    ['name5', 'images/homeSymbol.gif', '#', '#FF0000'],
-    ['name6', 'images/homeSymbol.gif', '#', '#0000FF'],
-    ['name7', 'images/homeSymbol.gif', '#', '#00FF00'],
-    ['name8', 'images/homeSymbol.gif', '#', '#0000FF'],
-    ['Enrollment', 'images/diplomaSymbol.gif', '#', '#FF0000',
-      'application', 'johnson', 'county', 'community', 'college'] ],
-  [ checkListAppLinkInfo]
-  /*
-    example1,
-    example2,
-    example3,
-    example4,
-    example5,
-    example6,
-    example7,
-    example8 ]
-    */
-);

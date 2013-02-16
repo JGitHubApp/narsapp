@@ -10,6 +10,7 @@
 }
 
 .appLinkHyperLink {
+  background-color: #999999;
   display: inline-block;
   min-width: 38pt;
   max-width: 1.7in;
@@ -23,62 +24,69 @@
   -moz-border-radius: 5pt;
   -ms-border-radius: 5pt;
   -o-border-radius: 5pt;
+
+  transition: all 0.08s ease-in;
+  -webkit-transition: all 0.08s ease-in;
+  -moz-transition: all 0.08s ease-in;
+  -ms-transition: all 0.08s ease-in;
+  -o-transition: all 0.08s ease-in;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.appLinkHyperLink:focus, .appLinkHyperLink:hover {
+  background-color: #A3A3A3;
 }
 
 .appLinkHyperLink.searched  {
   background-color: #DD0000;
 
-  border-color: #000000;
+  border-color: #DD0000;
   box-shadow:
-    1pt 2pt 5pt #222222;
+    3pt 5pt 8pt #444444;
   -webkit-box-shadow:
-    1pt 2pt 5pt #222222;
+    3pt 5pt 8pt #444444;
   -moz-box-shadow:
-    1pt 2pt 5pt #222222;
+    3pt 5pt 8pt #444444;
   -ms-box-shadow:
-    1pt 2pt 5pt #222222;
+    3pt 5pt 8pt #444444;
   -o-box-shadow:
-    1pt 2pt 5pt #222222;
+    3pt 5pt 8pt #444444;
+}
+
+.appLinkHyperLink.searched:focus {
+  border-color: #FFFFFF;
 }
 
 .appLinkHyperLink.searched > .appLinkPic {
   box-shadow:
+    1pt 1pt 3pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -1pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
   -webkit-box-shadow:
+    1pt 1pt 3pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -1pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
   -moz-box-shadow:
+    1pt 1pt 3pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -1pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
   -ms-box-shadow:
+    1pt 1pt 3pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -1pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
   -o-box-shadow:
+    1pt 1pt 3pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -1pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
 }
 
 .appLinkHyperLink.searched > .appLinkName {
   text-shadow: none;
 }
-.appLinkHyperLink.notSearched {
-  background-color: #AAAAAA;
 
-  box-shadow:
-    0 0 0 #222222;
-  -webkit-box-shadow:
-    0 0 0 #222222;
-  -moz-box-shadow:
-    0 0 0 #222222;
-  -ms-box-shadow:
-    0 0 0 #222222;
-  -o-box-shadow:
-    0 0 0 #222222;
-}
-
-.appLinkHyperLink.searched:focus {
-  border-color: #FFFFFF;
+.appLinkHyperLink.notSearched:hover > .appLinkPic {
+  visibility: visible;
 }
 
 .appLinkHyperLink:hover > .appLinkPic, .appLinkHyperLink:focus > .appLinkPic {
@@ -95,9 +103,28 @@
     0 0 20pt #FFFFFF,
     inset 0 5pt 18pt #FFFFFF;
   -o-box-shadow:
-  0 0 20pt #FFFFFF,
+    0 0 20pt #FFFFFF,
     inset 0 5pt 18pt #FFFFFF;
-  
+}
+
+.appLinkHyperLink.notSearched > .appLinkPic {
+  visibility: hidden;
+
+  box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 2pt #222222;
+  -webkit-box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 2pt #222222;
+  -moz-box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 2pt #222222;
+  -ms-box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 2pt #222222;
+  -o-box-shadow:
+    inset 3pt 5pt 10pt #EEEEEE,
+    inset -1pt -2pt 2pt #222222;
 }
 
 .appLinkHyperLink:active > .appLinkPic {
@@ -132,30 +159,37 @@
   -o-border-radius: 12pt;
   
   box-shadow:
-    2pt 2pt 1pt -1pt #111111,
+    3pt 4pt 5pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -2pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
   -webkit-box-shadow:
-    2pt 2pt 1pt -1pt #111111,
+    3pt 4pt 5pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -2pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
   -moz-box-shadow:
-    2pt 2pt 1pt -1pt #111111,
+    3pt 4pt 5pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -2pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
   -ms-box-shadow:
-    2pt 2pt 1pt -1pt #111111,
+    3pt 4pt 5pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -2pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
   -o-box-shadow:
-    2pt 2pt 1pt -1pt #111111,
+    3pt 4pt 5pt -1pt #333333,
     inset 3pt 5pt 10pt #EEEEEE,
-    inset -1pt -2pt 1pt #000000;
+    inset -1pt -2pt 2pt #222222;
+
+  transition: all 0.08s ease-in;
+  -webkit-transition: all 0.08s ease-in;
+  -moz-transition: all 0.08s ease-in;
+  -ms-transition: all 0.08s ease-in;
+  -o-transition: all 0.08s ease-in;
 }
 
 .appLinkName {
   font-size: 12pt;
   font-weight: bold;
   margin-top: 2pt;
-  text-shadow: 0.15em 0.2em 3pt #777777;
+  text-shadow: 
+    2pt 3pt 4pt #666666;
 }

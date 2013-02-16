@@ -3,7 +3,8 @@
 
 body {
   background-color: #AAAAAA;
-  font-family: 'Courier New', sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
+  letter-spacing: 1pt;
   min-width: 1.5in;
   margin: 0;
   padding: 0 0 16pt 0;

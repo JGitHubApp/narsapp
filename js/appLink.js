@@ -72,14 +72,16 @@ function loadAppLinks(appLinkInfo, container) {
   clearFix.setAttribute('class', 'clearfix');
   container.appendChild(clearFix);
 
-  rootAppLinkLog = appLinkInfo;
+  rootSearchTree = appLinkInfo.aliases;
   getSearchQuery();
 }
 
 function loadHomePageAppLinks() {
   loadAppLinks(homePageAppLinkInfo, document.getElementById('container'));
+  delete homePageAppLinkInfo;
 }
 
 function loadCheckListAppLinks() {
   loadAppLinks(checkListAppLinkInfo, document.getElementById('container'));
+  delete checkListAppLinkInfo;
 }
