@@ -1,25 +1,21 @@
 var homePageAppLinkInfo = new AppLinkLog(
-  [ ['CheckLists', 'images/requiredSymbol.gif', 'htdocs/checklists.html', '#FF0000'],
-    ['Forecast', 'images/umbrellaSymbol.gif', 'http://weather.yahoo.com/', '#FFFF00'],
-    ['Learning Tools', 'images/toolsSymbol.gif', '#', '#0000FF'],
-    ['name4', 'images/homeSymbol.gif', '#', '#00FF00'],
-    ['name5', 'images/homeSymbol.gif', '#', '#FF0000'],
-    ['name6', 'images/homeSymbol.gif', '#', '#0000FF'],
-    ['name7', 'images/homeSymbol.gif', '#', '#00FF00'],
-    ['name8', 'images/homeSymbol.gif', '#', '#0000FF'],
-    ['Enrollment', 'images/diplomaSymbol.gif', '#', '#FF0000'] ],
+  [ ['NARS Programs', 'images/simplePilotSymbol.png', 'htdocs/narsPrograms.html', '#DD0000'],
+    ['NARS Students', 'images/studentSymbol.png', '#', '#00EE00'],
+    ['KC Area', 'images/kansasSymbol.png', '#', '#EE0000'],
+    ['Careers', 'images/briefcaseSymbol.png', '#', '#0000FF'],
+    ['Forecast', 'images/slimUmbrellaSymbol.png', 'http://weather.yahoo.com/', '#FFCC00'],
+    ['Twitter', 'images/twitter-bird-dark-bgs.png', '#', '#00ACED'],
+    ['Facebook', 'images/f_logo.png', '#', '#3B5B99'] ],
 
-  [ ['checkmark'],
-    ['weather'],
+  [ ['school'],
     ['educational'],
     [],
+    ['railroad', 'workers', 'jobs'],
+    ['weather', 'report', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'tomorrow', 'weekly', 'day', 'today'],
     [],
-    [],
-    [],
-    [],
-    ['application', 'johnson', 'county', 'community', 'college'] ],
+    [] ],
 
-  [ checkListAppLinkInfo]
+  [narsProgramsAppLinkInfo]
 );
 
-delete checkListAppLinkInfo;
+delete narsProgramsAppLinkInfo;

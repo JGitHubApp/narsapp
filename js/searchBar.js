@@ -15,8 +15,12 @@ function searchBar_relocate() {
 
 // Search through the appLinks.
 function search(pattern, keypress) {
-  pattern = pattern.trim(' ').toLowerCase().replace(/[^\w ]/g, '');
-  if (keypress !== 32) {
+  if (keypress !== 32) { // not space key
+    // Remove special characters
+    pattern = pattern.toLowerCase().replace(/'[smd]|[^\w ]/g, '');
+    // Remove common/pointless words
+    pattern = pattern.replace(/\b(\w{1,3} |(what|next|this|will|about|(need|look|from|find)(ing)?|info(rmation)?) ?)/g, ' ');
+
     var appLinks = document.getElementsByClassName('appLinkHyperLink');
 
     if (pattern === '') {
@@ -28,7 +32,7 @@ function search(pattern, keypress) {
       window.scroll(0, 0);
       resetTabIndex(appLinks);
     }
-    else if (keypress === 13) {
+    else if (keypress === 13) { // Enter key
       if (firstMatch > -1)
         appLinks[firstMatch].click();
     }
@@ -42,6 +46,10 @@ function search(pattern, keypress) {
 function highlightMatches(pattern, appLinks) {
   firstMatch = -1;
   var matchCount = 0;
+  pattern = pattern.trim().replace(/ {2,}/g, ' ');
+
+  if (pattern === '') return;
+
   pattern = pattern.split(' ');
 
   // Iterate through all AppLink objects on current page
@@ -72,8 +80,15 @@ function getSearchQuery() {
   var query = location.search.substr(1).replace(/%20/g, ' ');
 
   if (query) {
-    document.getElementById('searchBar').value = query;
     search(query);
+    if (firstMatch > -1)
+    {
+      document.getElementById('searchBar').value = query;
+      document.getElementById('searchBar').value = query;
+      document.getElementsByClassName('appLinkHyperLink')[firstMatch].focus();
+    }
+    else
+      search('');
   }
 }
 

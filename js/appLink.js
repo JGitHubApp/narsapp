@@ -73,7 +73,6 @@ function loadAppLinks(appLinkInfo, container) {
   container.appendChild(clearFix);
 
   rootSearchTree = appLinkInfo.aliases;
-  getSearchQuery();
 }
 
 function loadHomePageAppLinks() {
@@ -81,7 +80,8 @@ function loadHomePageAppLinks() {
   delete homePageAppLinkInfo;
 }
 
-function loadCheckListAppLinks() {
-  loadAppLinks(checkListAppLinkInfo, document.getElementById('container'));
-  delete checkListAppLinkInfo;
+function loadNarsProgramsAppLinks() {
+  loadAppLinks(narsProgramsAppLinkInfo, document.getElementById('container'));
+  delete narsProgramsAppLinkInfo;
+  getSearchQuery();
 }

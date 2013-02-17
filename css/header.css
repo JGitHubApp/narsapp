@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /*CSS Document*/
 
+header {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DD0000), to(#CC0000));
+  background: -webkit-linear-gradient(top, #DD0000, #CC0000);
+  background: -moz-linear-gradient(top, #DD0000, #CC0000);
+  background: -ms-linear-gradient(top, #DD0000, #CC0000);
+  background: -o-linear-gradient(top, #DD0000, #CC0000);
+}
+
 header, #searchContainer {
   background-color: #DD0000;
   position: absolute;
@@ -19,8 +27,24 @@ header, #logo {
 }
 
 #searchContainer {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CC0000), to(#880000));
+  background: -webkit-linear-gradient(top, #CC0000, #880000);
+  background: -moz-linear-gradient(top, #CC0000, #880000);
+  background: -ms-linear-gradient(top, #CC0000, #880000);
+  background: -o-linear-gradient(top, #CC0000, #880000);
   margin-top: 48pt;
   padding-bottom: 4pt;
+
+  box-shadow:
+    1pt 8pt 8pt 0 #111111;
+  -webkit-box-shadow:
+    1pt 8pt 8pt 0 #111111;
+  -moz-box-shadow:
+    1pt 8pt 8pt 0 #111111;
+  -ms-box-shadow:
+    1pt 8pt 8pt 0 #111111;
+  -o-box-shadow:
+    1pt 8pt 8pt 0 #111111;
 }
 
 #searchContainer.sticky {

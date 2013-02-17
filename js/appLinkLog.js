@@ -56,7 +56,7 @@ function AppLinkLog(info, aliases, subAppLinkLogs) {
 
   this.aliases = new SearchTree();
   for (var i = 0; i < this.names.length; i++)
-    this.aliases.push([this.names[i].toLowerCase()]);
+    this.aliases.push(this.names[i].toLowerCase().split(' '));
   for (var i = 0; i < aliases.length; i++)
     if (aliases[i][0])
       this.aliases[i] = this.aliases[i].concat(aliases[i]);
