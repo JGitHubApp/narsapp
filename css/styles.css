@@ -1,8 +1,18 @@
 @charset "utf-8";
 /*CSS Document*/
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: #AAAAAA;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBBBBB), to(#9F9F9F));
+  background: -webkit-linear-gradient(top, #BBBBBB, #9F9F9F);
+  background: -moz-linear-gradient(top, #BBBBBB, #9F9F9F);
+  background: -ms-linear-gradient(top, #BBBBBB, #9F9F9F);
+  background: -o-linear-gradient(top, #BBBBBB, #9F9F9F);
+  background-attachment: fixed;
 
   font-family: 'Trebuchet MS', sans-serif;
   letter-spacing: 1pt;
