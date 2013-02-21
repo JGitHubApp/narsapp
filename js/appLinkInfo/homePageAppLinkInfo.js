@@ -1,21 +1,49 @@
 var homePageAppLinkInfo = new AppLinkLog(
-  [ ['NARS Programs', 'images/simplePilotSymbol.png', 'htdocs/narsPrograms.html', '#DD0000'],
-    ['NARS Students', 'images/studentSymbol.png', '#', '#00EE00'],
-    ['KC Area', 'images/kansasSymbol.png', '#', '#EE0000'],
-    ['Careers', 'images/briefcaseSymbol.png', '#', '#0000FF'],
-    ['Forecast', 'images/slimUmbrellaSymbol.png', 'http://weather.yahoo.com/', '#FFCC00'],
-    ['Twitter', 'images/twitter-bird-dark-bgs.png', '#', '#00ACED'],
-    ['Facebook', 'images/f_logo.png', '#', '#3B5B99'] ],
+  [
+    ['Fast Track Certificates', 'images/simpleTracksSymbol.png', 'htdocs/fastTrack.html', '#330066'],
+    ['Railroad Industry', 'images/rrSignSymbol.png', 'htdocs/railroadIndustry.html', '#EEEEEE'],
+    ['Is this for Me?', 'images/manSymbol.png', 'htdocs/forMe.html', '#8888CC'],
+    ['Hotels', 'images/bedFrontSymbol.png', 'htdocs/hotels.html', '#1111EE'],
+    ['GI Bill Students', 'images/medalSymbol.png', '#', '#CC0000'],
+    ['Learning Tools', 'images/crossedHammerWrenchSymbol.png', '#', '#882288'],
+    ['About the Area', 'images/kansasSymbol.png', 'htdocs/area.html', '#FFBB00'],
+    ['About Nars', 'images/simplePilotSymbol.png', 'htdocs/aboutNars.html', '#DD0000'],
+    ['FAQ', 'images/questionMarkSymbol.png', '#', '#FF8800']
+  ],
 
-  [ ['school'],
+  [
+    ['school'],
     ['educational'],
     [],
-    ['railroad', 'workers', 'jobs'],
-    ['weather', 'report', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'tomorrow', 'weekly', 'day', 'today'],
     [],
-    [] ],
+    ['veterans', 'services', 'military'],
+    [],
+    [],
+    [],
+    ['frequently', 'asked', 'questions']
+  ],
 
-  [narsProgramsAppLinkInfo]
+  [
+    fastTrackAppLinkInfo,
+    railroadIndustryAppLinkInfo,
+    forMeAppLinkInfo,
+    hotelsAppLinkInfo,
+    ,
+    ,
+    areaAppLinkInfo,
+    aboutNarsAppLinkInfo,
+
+  ]
 );
 
-delete narsProgramsAppLinkInfo;
+delete fastTrackAppLinkInfo;
+delete railroadIndustryAppLinkInfo;
+delete forMeAppLinkInfo;
+delete hotelsAppLinkInfo;
+delete areaAppLinkInfo;
+delete aboutNarsAppLinkInfo;
+
+function loadHomePageAppLinks() {
+  loadAppLinks(homePageAppLinkInfo, document.getElementById('container'));
+  delete homePageAppLinkInfo;
+}

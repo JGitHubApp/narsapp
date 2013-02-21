@@ -8,15 +8,15 @@ function SearchTree() {
     return true;
 
     function binarySearch(a, p, min, max) {
-      if (min <= max) {
+      while (min <= max) {
         var mid = Math.floor((max + min) / 2);
 
         if (a[mid].indexOf(p) === 0)
           return true;
         else if (p < a[mid])
-          return binarySearch(a, p, min, mid-1);
+          max = mid - 1;
         else
-          return binarySearch(a, p, mid+1, max);
+          min = mid + 1;
       }
 
       return false;

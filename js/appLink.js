@@ -74,14 +74,3 @@ function loadAppLinks(appLinkInfo, container) {
 
   rootSearchTree = appLinkInfo.aliases;
 }
-
-function loadHomePageAppLinks() {
-  loadAppLinks(homePageAppLinkInfo, document.getElementById('container'));
-  delete homePageAppLinkInfo;
-}
-
-function loadNarsProgramsAppLinks() {
-  loadAppLinks(narsProgramsAppLinkInfo, document.getElementById('container'));
-  delete narsProgramsAppLinkInfo;
-  getSearchQuery();
-}

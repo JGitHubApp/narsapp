@@ -194,23 +194,23 @@
   -o-border-radius: 12pt;
   
   box-shadow:
-    3pt 4pt 5pt -1pt #333333,
+    3pt 4pt 5pt -1pt #666666,
     inset 2pt 5pt 10pt #EEEEEE,
     inset -1pt -2pt 2pt #222222;
   -webkit-box-shadow:
-    3pt 4pt 5pt -1pt #333333,
+    3pt 4pt 5pt -1pt #666666,
     inset 2pt 5pt 10pt #EEEEEE,
     inset -1pt -2pt 2pt #222222;
   -moz-box-shadow:
-    3pt 4pt 5pt -1pt #333333,
+    3pt 4pt 5pt -1pt #666666,
     inset 2pt 5pt 10pt #EEEEEE,
     inset -1pt -2pt 2pt #222222;
   -ms-box-shadow:
-    3pt 4pt 5pt -1pt #333333,
+    3pt 4pt 5pt -1pt #666666,
     inset 2pt 5pt 10pt #EEEEEE,
     inset -1pt -2pt 2pt #222222;
   -o-box-shadow:
-    3pt 4pt 5pt -1pt #333333,
+    3pt 4pt 5pt -1pt #666666,
     inset 2pt 5pt 10pt #EEEEEE,
     inset -1pt -2pt 2pt #222222;
 
@@ -226,5 +226,5 @@
   font-weight: bold;
   margin-top: 4pt;
   text-shadow: 
-    2pt 3pt 4pt #666666;
+    2pt 3pt 4pt #777777;
 }

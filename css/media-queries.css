@@ -12,16 +12,8 @@
     font-size: 8pt;
   }
 
-  #searchContainer {
-    border-radius: 0 0 12pt 12pt;
-    -webkit-border-radius: 0 0 12pt 12pt;
-    -moz-border-radius: 0 0 12pt 12pt;
-    -ms-border-radius: 0 0 12pt 12pt;
-    -o-border-radius: 0 0 12pt 12pt;
-  }
-
   .appLinkContainer {
-    height: 1.3in;
+    height: 1.5in;
   }
 }
 
@@ -31,7 +23,7 @@
   }
   
   .appLinkContainer {
-    height: 1in;
+    height: 1.1in;
   }
 }
 
