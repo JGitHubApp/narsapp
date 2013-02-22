@@ -1,9 +1,9 @@
 var fastTrackAppLinkInfo = new AppLinkLog(
   [
-    ['Back', '../images/backArrowSymbol.png', '../index.html', '#CCCCCC'],
-    ['Conductor', '../images/simplePilotWithSmokeSymbol.png', '#', '#FFFFFF'],
-    ['Freight Car', '../images/freightCarSymbol.png', '#', '#FFFFFF'],
-    ['Signal Systems', '../images/rrSignSymbol.png', '../htdocs/signalSystems.html', '#FFFFFF']
+    ['Back', '../images/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCCCCC'],
+    ['Conductor', '../images/glossy-black-icon-transport-travel-transportation-train4.png', '#', '#FFFFFF'],
+    ['Freight Car', '../images/glossy-black-icon-transport-travel-transportation-train6-sc36.png', '#', '#FFFFFF'],
+    ['Signal Systems', '../images/filler.png', '../htdocs/signalSystems.html', '#FFFFFF']
   ],
 
   [

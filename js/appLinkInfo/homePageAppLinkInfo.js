@@ -1,14 +1,14 @@
 var homePageAppLinkInfo = new AppLinkLog(
   [
-    ['Fast Track Certificates', 'images/simpleTracksSymbol.png', 'htdocs/fastTrack.html', '#330066'],
-    ['Railroad Industry', 'images/rrSignSymbol.png', 'htdocs/railroadIndustry.html', '#EEEEEE'],
-    ['Is this for Me?', 'images/manSymbol.png', 'htdocs/forMe.html', '#8888CC'],
-    ['Hotels', 'images/bedFrontSymbol.png', 'htdocs/hotels.html', '#1111EE'],
-    ['GI Bill Students', 'images/medalSymbol.png', '#', '#CC0000'],
-    ['Learning Tools', 'images/crossedHammerWrenchSymbol.png', '#', '#882288'],
-    ['About the Area', 'images/kansasSymbol.png', 'htdocs/area.html', '#FFBB00'],
-    ['About Nars', 'images/simplePilotSymbol.png', 'htdocs/aboutNars.html', '#DD0000'],
-    ['FAQ', 'images/questionMarkSymbol.png', '#', '#FF8800']
+    ['Fast Track Certificates', 'images/glossy-black-icon-people-things-diploma-sc2.png', 'htdocs/fastTrack.html', '#330066'],
+    ['Railroad Industry', 'images/glossy-black-icon-signs-z-roadsign47.png', 'htdocs/railroadIndustry.html', '#EEEEEE'],
+    ['Is this for Me?', 'images/glossy-black-icon-people-things-people-man1.png', 'htdocs/forMe.html', '#8888CC'],
+    ['Hotels', 'images/glossy-black-icon-people-things-bed.png', 'htdocs/hotels.html', '#1111EE'],
+    ['GI Bill Students', 'images/glossy-black-icon-sports-hobbies-medal.png', '#', '#CC0000'],
+    ['Learning Tools', 'images/glossy-black-icon-business-tools1.png', '#', '#882288'],
+    ['About the Area', 'images/filler.png', 'htdocs/area.html', '#FFBB00'],
+    ['About Nars', 'images/glossy-black-icon-transport-travel-transportation-train3-sc44.png', 'htdocs/aboutNars.html', '#DD0000'],
+    ['FAQ', 'images/glossy-black-icon-alphanumeric-icon_091.png', '#', '#FF8800']
   ],
 
   [
