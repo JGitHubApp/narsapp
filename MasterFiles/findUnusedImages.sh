@@ -4,7 +4,7 @@
 # will list whether or not the image could be found in any of the html
 # documents or the appLinkInfo javascript files.
 #
-# If the parameter '--DELETE' (do not include quotations) is used, it will
+# If the parameter '--DELETE' (do not include quotation marks) is used, it will
 # also delete all the unused images.
 
 for file in ../images/*;

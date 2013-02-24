@@ -1,25 +1,12 @@
 var firstMatch = -1; // Contains the index of the first occurence of the matching appLink.
 
-// Positions the searchBar.
-function searchBar_relocate() {
-  var windowY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-
-  // If screen scrolls past searchBar
-  if (document.getElementById('sticky-anchor').offsetTop - windowY <= 0)
-    // Stick searchBar to top of screen
-    document.getElementById('searchContainer').className = 'sticky';
-  else
-    // Set searchBar position to default
-    document.getElementById('searchContainer').className = '';
-}
-
 // Search through the appLinks.
 function search(pattern, keypress) {
   if (keypress !== 32) { // not space key
     // Remove special characters
     pattern = pattern.toLowerCase().replace(/'[smd]|[^\w ]/g, '');
     // Remove common/pointless words
-    pattern = pattern.replace(/\b(\w{1,3} |(what|next|this|will|about|(need|look|from|find)(ing)?|info(rmation)?) ?)/g, ' ');
+    pattern = pattern.replace(/\b(\w{1,3} |(what|which|next|this|will|want|about|(need|look|from|find)(ing)?|info(rmation)?) ?)/g, ' ');
 
     var appLinks = document.getElementsByClassName('appLinkHyperLink');
 
@@ -70,9 +57,19 @@ function highlightMatches(pattern, appLinks) {
 
   // Scroll to first match
   if (firstMatch > -1)
+    if (!navigator.platform.match('iPhone|iPod|iPad'))
     window.scroll((appLinks[firstMatch].offsetLeft - 10), (appLinks[firstMatch].offsetTop - 80));
   else
     resetTabIndex(appLinks);
+}
+
+function imitateFocus(imitate) {
+  var firstAppLink = document.getElementsByClassName('appLinkHyperLink')[firstMatch];
+
+  if (imitate)
+    firstAppLink.classList.add('imitateFocus');
+  else
+    firstAppLink.classList.remove('imitateFocus');
 }
 
 // Sets the searchBar value equal to the string query.
@@ -83,7 +80,6 @@ function getSearchQuery() {
     search(query);
     if (firstMatch > -1)
     {
-      document.getElementById('searchBar').value = query;
       document.getElementById('searchBar').value = query;
       document.getElementsByClassName('appLinkHyperLink')[firstMatch].focus();
     }

@@ -5,25 +5,59 @@
   .appLinkContainer {
     width: 20%;
   }
+
+  .appLinkName {
+    font-size: 14pt;
+  }
 }
 
 @media screen and (max-width: 6in) {
   .appLinkName {
-    font-size: 8pt;
+    letter-spacing: 0;
+    margin-top: 0;
+    font-size: 11pt;
   }
 
   .appLinkContainer {
-    height: 1.5in;
+    height: 1.6in;
+  }
+
+  #container {
+    padding-top: 10pt;
+  }
+
+  header {
+    position: static;
+    text-align: center;
+  }
+
+  #logo {
+    width: 100%;
+    padding: 2.5em 0 0 0;
+  }
+
+  #searchBar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
+    width: 100%;
+  }
+
+  #searchBar:focus {
+    position: fixed;
   }
 }
 
 @media screen and (max-width: 4in) {
    .appLinkName {
-    font-size: 6pt;
+    font-size: 10pt;
   }
   
   .appLinkContainer {
-    height: 1.1in;
+    height: 1.35in;
   }
 }
 
@@ -45,19 +79,25 @@
   }
 }
 
-@media screen and (max-width: 210px) {
-  #logo {
-    display: table-cell;
-    vertical-align: middle;
+@media screen and (max-width: 2.5in) {
+   .appLinkName {
+    font-size: 8pt;
+  }
+}
+
+@media screen and (max-width: 210px), (max-width: 2in) {
+   .appLinkName {
+    font-size: 8pt;
+  }
+
+  .appLinkContainer {
+    height: 90pt;
   }
 
   #logo > img {
     width: 100%;
-    height: auto;
   }
-}
 
-@media screen and (max-width: 2in) {
   .appLinkContainer {
     width: 50%;
   }

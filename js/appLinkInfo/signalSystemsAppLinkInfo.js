@@ -1,9 +1,9 @@
 var signalSystemsAppLinkInfo = new AppLinkLog(
   [
     ['Back', '../images/glossy-black-icon-arrows-arrow-styled-left.png', '../htdocs/fastTrack.html', '#CCCCCC'],
-    ['Date and Fees', '../images/glossy-black-icon-alphanumeric-dollar-sign.png', '#', '#00FF00'],
+    ['Dates and Fees', '../images/glossy-black-icon-business-currency-dollar-sc35.png', '#', '#00FF00'],
     ['How to Apply', '../images/filler.png', '#', 'white'],
-    ['Preparation', '../images/filler.png', '#', 'white'],
+    ['How to Prepare', '../images/../images/glossy-black-icon-business-notepad.png', '#', '#FF5500'],
     ['Class Schedule', '../images/glossy-black-icon-business-calendar.png', '#', '#EEEEEE']
   ],
 
@@ -11,7 +11,7 @@ var signalSystemsAppLinkInfo = new AppLinkLog(
     [],
     ['money', 'tuition', 'times'],
     [''],
-    ['prepare', 'ready'],
+    ['preparations', 'ready'],
     ['time', 'when']
   ],
 

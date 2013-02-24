@@ -17,14 +17,15 @@
     <script src='../js/searchBar.js'></script>
   </head>
 
-  <body onload='loadAboutNarsAppLinks()' onscroll='searchBar_relocate()'>
+  <body onload='loadAboutNarsAppLinks()'>
     <header>
-      <a id='logo' href='#' tabindex='-1'><img src='../images/NARS_logo3.png' alt='NARS' /></a>
+      <div id='headerContainer'>
+        <input id='searchBar' type='search' placeholder='⚲' maxlength='40' onkeyup='search(this.value, event.which)' tabindex='1' />
 
-      <div id='sticky-anchor'></div>
-      <div id='searchContainer'>
-        <input id='searchBar' type='search' placeholder=' &#9906;' maxlength='40' onkeyup='search(this.value, event.which)' tabindex='1' />
+        <div id='logo' href='#' tabindex='-1'><img src='../images/NARS_logo4.png' alt='National Academy of Railroad Science' /></div>
       </div>
+
+      <div class='clearfix'></div>
     </header>
     <div id='container'></div>
   </body>

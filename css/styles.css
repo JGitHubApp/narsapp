@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 /*CSS Document*/
 
 html {
@@ -6,34 +6,19 @@ html {
 }
 
 body {
-  background-color: #AAAAAA;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BBBBBB), to(#9F9F9F));
-  background: -webkit-linear-gradient(top, #BBBBBB, #9F9F9F);
-  background: -moz-linear-gradient(top, #BBBBBB, #9F9F9F);
-  background: -ms-linear-gradient(top, #BBBBBB, #9F9F9F);
-  background: -o-linear-gradient(top, #BBBBBB, #9F9F9F);
-  background-attachment: fixed;
-
+  background-color: #888888;
   font-family: 'Trebuchet MS', sans-serif;
-  letter-spacing: 1pt;
-  min-width: 1.5in;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  min-width: 1.4in;
   margin: 0;
-  padding: 0 0 16pt 0;
 }
 
 #container {
-  max-width: 12in;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 90pt;
-}
-
-a {
-  color: #000000;
-}
-
-a:active {
-  color: #FFFFFF;
+  max-width: 13in;
+  margin: 0 auto 0 auto;
+  padding-top: 58pt;
+  padding-bottom: 10pt;
 }
 
 .clearfix {

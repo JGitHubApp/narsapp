@@ -1,75 +1,70 @@
 @charset "UTF-8";
 /*CSS Document*/
 
+#headerContainer {
+  margin: 0 auto 0 auto;
+  max-width: 12in;
+  line-height: 48pt;
+}
+
 header {
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DD0000), to(#CC0000));
-  background: -webkit-linear-gradient(top, #DD0000, #CC0000);
-  background: -moz-linear-gradient(top, #DD0000, #CC0000);
-  background: -ms-linear-gradient(top, #DD0000, #CC0000);
-  background: -o-linear-gradient(top, #DD0000, #CC0000);
-}
+  background-color: #CC0000;
 
-header, #searchContainer {
-  background-color: #DD0000;
-  position: absolute;
-  text-align: center;
-  width: 100%;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DD0000), to(#880000));
+  background: -webkit-linear-gradient(top, #DD0000, #880000);
+  background: -moz-linear-gradient(top, #DD0000, #880000);
+  background: -ms-linear-gradient(top, #DD0000, #880000);
+  background: -o-linear-gradient(top, #DD0000, #880000);
+
+  position: fixed;
   min-width: 1.4in;
-  top: 0;
+  text-align: right;
+  width: 100%;
+
+  box-shadow:
+    0 3pt 3pt #333333;
+  -webkit-box-shadow:
+    0 3pt 3pt #333333;
+  -moz-box-shadow:
+    0 3pt 3pt #333333;
+  -ms-box-shadow:
+    0 3pt 3pt #333333;
+  -o-box-shadow:
+    0 3pt 3pt #333333;
 }
 
-header, #logo {
+#logo, #SearchBar {
   height: 48pt;
+}
+
+#logo {
+  float: left;
+  padding-left: 10pt;
 }
 
 #logo > img {
   border: none;
-}
-
-#searchContainer {
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CC0000), to(#880000));
-  background: -webkit-linear-gradient(top, #CC0000, #880000);
-  background: -moz-linear-gradient(top, #CC0000, #880000);
-  background: -ms-linear-gradient(top, #CC0000, #880000);
-  background: -o-linear-gradient(top, #CC0000, #880000);
-  margin-top: 48pt;
-  padding-bottom: 4pt;
-
-  box-shadow:
-    1pt 8pt 8pt 0 #111111;
-  -webkit-box-shadow:
-    1pt 8pt 8pt 0 #111111;
-  -moz-box-shadow:
-    1pt 8pt 8pt 0 #111111;
-  -ms-box-shadow:
-    1pt 8pt 8pt 0 #111111;
-  -o-box-shadow:
-    1pt 8pt 8pt 0 #111111;
-}
-
-#searchContainer.sticky {
-  position: fixed;
-  padding-top: 4pt;
-  margin-top: 0;
-}
-
-#sticky-anchor {
-  position: absolute;
-  top: 45pt;
+  vertical-align: middle;
 }
 
 #searchBar {
   background-color: #EEEEEE;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 2pt solid #000000;
-  font-size: 1.5em;
-  width: 95%;
+  height: 1.5em;
+  font-size: 1.4em;
+  min-width: 1.4in;
   max-width: 5in;
-  min-width: 1.3in;
-  display: inline-block;
+  margin-right: 10pt;
+  width: 50%;
   
-  border-radius: 13pt;
-  -webkit-border-radius: 13pt;
-  -moz-border-radius: 13pt;
-  -ms-border-radius: 13pt;
-  -o-border-radius: 13pt;
+  border-radius: 12pt;
+  -webkit-border-radius: 12pt;
+  -moz-border-radius: 12pt;
+  -ms-border-radius: 12pt;
+  -o-border-radius: 12pt;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
