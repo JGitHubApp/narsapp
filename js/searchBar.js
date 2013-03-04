@@ -6,7 +6,7 @@ function search(pattern, keypress) {
     // Remove special characters
     pattern = pattern.toLowerCase().replace(/'[smd]|[^\w ]/g, '');
     // Remove common/pointless words
-    pattern = pattern.replace(/\b(\w{1,3} |(what|which|next|this|will|want|about|(need|look|from|find)(ing)?|info(rmation)?) ?)/g, ' ');
+    pattern = pattern.replace(/\b(\w{1,3} |(what|which|next|this|will|want|about|from|(need|look|find)(ing)?|info(rmation)?) )/g, ' ');
 
     var appLinks = document.getElementsByClassName('appLinkHyperLink');
 
@@ -21,7 +21,7 @@ function search(pattern, keypress) {
     }
     else if (keypress === 13) { // Enter key
       if (firstMatch > -1)
-        appLinks[firstMatch].click();
+        appLinks[firstMatch].focus();
     }
     else {
       highlightMatches(pattern, appLinks);

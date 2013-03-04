@@ -20,13 +20,16 @@
   <body onload='loadAboutNarsAppLinks()'>
     <header>
       <div id='headerContainer'>
-        <input id='searchBar' type='search' placeholder='⚲' maxlength='40' onkeyup='search(this.value, event.which)' tabindex='1' />
+        <input id='searchBar' type='search' placeholder='⚲' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' tabindex='1' />
 
         <div id='logo' href='#' tabindex='-1'><img src='../images/NARS_logo4.png' alt='National Academy of Railroad Science' /></div>
       </div>
 
       <div class='clearfix'></div>
     </header>
-    <div id='container'></div>
+    <div id='container'>
+      <h1>About NARS</h1>
+      <hr />
+    </div>
   </body>
 </html>
