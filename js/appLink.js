@@ -41,7 +41,7 @@ function loadAppLinks(appLinkInfo, container) {
     // Create Name
     this.name = document.createElement('p');
     this.name.setAttribute('class', 'appLinkName');
-    this.name.textContent = name;
+    this.name.appendChild(document.createTextNode(name));
 
     // Create HyperLink
     this.hyperLink = document.createElement('a');
