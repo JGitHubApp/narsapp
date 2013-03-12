@@ -4,7 +4,7 @@ var homePageAppLinkInfo = new AppLinkLog(
     ['Railroad Industry', 'images/glossy-black-icon-signs-z-roadsign47.png', 'htdocs/railroadIndustry.html', '#EEEEEE'],
     ['Is this for Me?', 'images/glossy-black-icon-people-things-people-man1.png', 'htdocs/forMe.html', '#8888CC'],
     ['Hotels', 'images/glossy-black-icon-people-things-bed.png', 'htdocs/hotels.html', '#1111EE'],
-    ['GI Bill Students', 'images/glossy-black-icon-sports-hobbies-medal.png', '#', '#CC0000'],
+    ['GI Bill Students', 'images/glossy-black-icon-sports-hobbies-medal.png', 'http://www.jccc.edu/veterans/index.html', '#CC0000'],
     ['Learning Tools', 'images/glossy-black-icon-business-tools1.png', '#', '#118811'],
     ['About the Area', 'images/glossy-black-icon-business-globe.png', 'htdocs/area.html', '#FFBB00'],
     ['About Nars', 'images/glossy-black-icon-transport-travel-transportation-train3-sc44.png', 'htdocs/aboutNars.html', '#DD0000'],
