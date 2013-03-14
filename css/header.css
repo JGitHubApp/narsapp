@@ -7,7 +7,7 @@
   line-height: 48pt;
 }
 
-header {
+#header {
   background-color: #CC0000;
 
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DD0000), to(#880000));
@@ -16,6 +16,10 @@ header {
   background: -ms-linear-gradient(top, #DD0000, #880000);
   background: -o-linear-gradient(top, #DD0000, #880000);
 
+  text-align: right;
+}
+
+header {
   position: fixed;
   min-width: 1.4in;
   text-align: right;
