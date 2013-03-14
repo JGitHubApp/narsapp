@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+#hotelInfo {
+  text-indent: 2em;
+  font-size: 11pt;
+  height: 1.5in
+}
+
+table, td, th {
+  font-size: 10pt;
+
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+#tableContainer {
+  float: right;
+  width: 75%;
+}
+
+#hotelTable {
+  width: 100%;
+  border-spacing: 0;
+  background-color: #EEEEEE;
+  font-family: sans;
+  border: 1pt solid #000000;
+}
+
+td {
+  height: 1.97in;
+  border: 1pt solid #000000;
+  text-align: center;
+}
+
+
+.true {
+  background-color: #00CC00;
+}
+
+.false {
+  background-color: #CC0000;
+}
+
+th {
+  height: 0.3in;
+  border: 1pt solid #000000;
+}
+
+.appLinkContainer {
+  width: 25%;
+  float: none;
+}
+
+.legend {
+  width: 10pt;
+  height: 10pt;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1pt solid black;
+}
+
+.col4 {
+  display: none;
+}
+
+@media screen and (min-width: 10in) {
+  .col4 {
+    display: table-cell;
+  }
+}
+
+@media screen and (max-width: 6in) {
+  #hotelInfo {
+    height: 1.2in;
+  }
+
+  td {
+    height: 1.67in;
+  }
+
+  td, th, #hotelInfo {
+    font-size: 8pt;
+  }
+}
+
+@media screen and (max-width: 4in) {
+  #hotelInfo {
+    height: 0.95in;
+  }
+  
+  td {
+    height: 1.42in;
+  }
+
+  .col3 {
+    display: none;
+  }
+}
+</style>
