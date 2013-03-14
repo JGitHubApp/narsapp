@@ -29,7 +29,216 @@
     </header>
     <div id='container'>
       <h1>Hotels</h1>
-      <hr />
+      <hr id='titleLine' />
+
+
+    <section id='tableContainer'>
+      <section id='hotelInfo'>
+        <p>We have partnerships with local hotels to provide you with the best option for your needs. If you have any questions, please feel free to call our office at <strong>913-469-3857</strong>.</p>
+      </section>
+
+      <table>
+        <tr>
+         <th class="c">Cost</th>
+         <th class="h">Hotel</th>
+         <th class="as">Apartment Suite</th>
+         <th class="k">Kitchen</th>
+         <th class="fc">Fitness Ct.</th>
+         <th class="acp">Athletic Club Pass</th>
+         <th class="fw">Free WiFi</th>
+         <th class="fhb">Free Hot Breakfast</th>
+         <th class="s">Shuttle</th>
+         <th class="wd">Washer Dryer</th>
+         <th class="ip">Indoor Pool</th>
+        </tr>
+        <tr>
+          <td class="c">$34.99</td>
+         <td class="h">
+         </td>
+         <td class="as true"></td>
+         <td class="k true"></td>
+         <td class="fc true"></td>
+         <td class="acp true"></td>
+         <td class="fw true"></td>
+         <td class="fhb true"></td>
+         <td class="s false"></td>
+         <td class="wd true"> - Free</td>
+         <td class="ip false"></td>
+        </tr>
+        <tr>
+         <td class="c">$50.00</td>
+         <td class="h false">
+         </td>
+         <td class="as true"></td>
+         <td class="k true"></td>
+         <td class="fc true"></td>
+         <td class="acp true"></td>
+         <td class="fw true"></td>
+         <td class="fhb true"></td>
+         <td class="s true"></td>
+         <td class="wd true"></td>
+         <td class="ip false"></td>
+        </tr>
+        <tr>
+          <td class="c">$44.00</td>
+         <td class="h false">
+         </td>
+         <td class="as false"></td>
+         <td class="k false"></td>
+         <td class="fc true"></td>
+         <td class="acp true"></td>
+         <td class="fw true"></td>
+         <td class="fhb false"></td>
+         <td class="s true"></td>
+         <td class="wd true"></td>
+         <td class="ip true"></td>
+        </tr>
+        <tr>
+          <td class="c">$59.00</td>
+         <td class="h false">
+         </td>
+         <td class="as true"></td>
+         <td class="k false"></td>
+         <td class="fc true"></td>
+         <td class="acp true"></td>
+         <td class="fw true"></td>
+         <td class="fhb true"></td>
+         <td class="s false"></td>
+         <td class="wd true"></td>
+         <td class="ip true"></td>
+        </tr>
+        <tr>
+          <td class="c">$45.00<br />*$50.00 Suite</td>
+         <td class="h false">
+         </td>
+         <td class="as false">*X</td>
+         <td class="k false">*X</td>
+         <td class="fc true"></td>
+         <td class="acp false"></td>
+         <td class="fw true"></td>
+         <td class="fhb true"></td>
+         <td class="s true"></td>
+         <td class="wd true"></td>
+         <td class="ip false"></td>
+        </tr>
+                <tr><td class="c">$45.00</td
+         <td class="h false">
+         </td>
+         <td class="as false"></td>
+         <td class="k false"></td>
+         <td class="fc true"></td>
+         <td class="acp true"></td>
+         <td class="fw true"></td>
+         <td class="fhb true"></td>
+         <td class="s false"></td>
+         <td class="wd true"></td>
+         <td class="ip false"></td>
+        </tr>
+        <tr>
+          <td class="c">$30.00</td>
+         <td class="h false">
+         </td>
+         <td class="as false"></td>
+         <td class="k false"></td>
+         <td class="fc false"></td>
+         <td class="acp false"></td>
+         <td class="fw true"></td>
+         <td class="fhb false"></td>
+         <td class="s false"></td>
+         <td class="wd true"></td>
+         <td class="ip false"></td>
+        </tr>
+        </table>
+      </section>
     </div>
+
+    <style>
+      #hotelInfo {
+        text-indent: 2em;
+        font-size: 11pt;
+        height: 1.5in
+      }
+
+      table, td, th {
+        font-size: 10pt;
+
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+      }
+
+      #tableContainer {
+        float: right;
+        width: 75%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #EEEEEE;
+      }
+
+      td {
+        height: 1.97in;
+        border: 2pt solid #000000;
+        text-align: center;
+      }
+
+
+      td.true {
+        background-color: #00CC00;
+      }
+
+      td.false {
+        background-color: #CC0000;
+      }
+
+      th {
+        height: 0.4in;
+        border: 2pt solid #000000;
+      }
+
+      .appLinkContainer {
+        width: 25%;
+        float: none;
+      }
+
+      .h, .as, .acp, .ip {
+        display: none;
+      }
+
+      @media screen and (max-width: 6in) {
+        #hotelInfo {
+          height: 1.2in;
+        }
+
+        td {
+          height: 1.67in;
+        }
+
+        td, th, #hotelInfo {
+          font-size: 8pt;
+        }
+
+        .fc {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 4in) {
+        #hotelInfo {
+          height: 0.95in;
+        }
+        
+        td {
+          height: 1.42in;
+        }
+
+
+        .wd {
+          display: none;
+        }
+      }
+    </style>
   </body>
 </html>

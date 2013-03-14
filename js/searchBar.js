@@ -58,7 +58,7 @@ function highlightMatches(pattern, appLinks) {
   // Scroll to first match
   if (firstMatch > -1)
     if (!navigator.platform.match('iPhone|iPod|iPad'))
-    window.scroll((appLinks[firstMatch].offsetLeft - 10), (appLinks[firstMatch].offsetTop - 80));
+      window.scroll((appLinks[firstMatch].offsetLeft - 10), (appLinks[firstMatch].offsetTop - 80));
   else
     resetTabIndex(appLinks);
 }

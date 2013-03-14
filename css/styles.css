@@ -21,14 +21,21 @@ body {
   padding-bottom: 10pt;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Courier New', 'Georgia';
-  font-size: 2em;
   text-align: center;
   margin: 0;
 }
 
-hr {
+h2 {
+  font-size: 1.1em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+#titleLine {
   margin: 0 0 10px 0;
   border-style: dashed;
 }

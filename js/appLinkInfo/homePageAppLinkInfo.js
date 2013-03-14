@@ -8,7 +8,7 @@ var homePageAppLinkInfo = new AppLinkLog(
     ['Learning Tools', 'images/glossy-black-icon-business-tools1.png', '#', '#118811'],
     ['About the Area', 'images/glossy-black-icon-business-globe.png', 'htdocs/area.html', '#FFBB00'],
     ['About Nars', 'images/glossy-black-icon-transport-travel-transportation-train3-sc44.png', 'htdocs/aboutNars.html', '#DD0000'],
-    ['FAQ', 'images/glossy-black-icon-alphanumeric-icon_091.png', '#', '#FF8800']
+    ['FAQ', 'images/glossy-black-icon-alphanumeric-icon_091.png', 'htdocs/faq.html', '#FF8800']
   ],
 
   [

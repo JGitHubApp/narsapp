@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+dt {
+  font-weight: bold;
+  text-align: center;
+}
+
+dd {
+  display: none;
+  margin: 10pt;
+  text-indent: 2em;
+}
+
+dl > div {
+  height: auto;
+}
+
+dl > div:hover {
+  cursor: pointer;
+}
+
+dl > div:hover > dt {
+  color: #116688;
+}
+
+hr {
+  border-style: solid;
+}
