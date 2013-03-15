@@ -20,8 +20,7 @@ function search(pattern, keypress) {
       resetTabIndex(appLinks);
     }
     else if (keypress === 13) { // Enter key
-      if (firstMatch > -1)
-        appLinks[firstMatch].focus();
+      focusFirstOccurence();
     }
     else {
       highlightMatches(pattern, appLinks);
@@ -55,21 +54,13 @@ function highlightMatches(pattern, appLinks) {
     }
   }
 
-  // Scroll to first match
-  if (firstMatch > -1)
-    if (!navigator.platform.match('iPhone|iPod|iPad'))
-      window.scroll((appLinks[firstMatch].offsetLeft - 10), (appLinks[firstMatch].offsetTop - 80));
-  else
+  if (firstMatch <= -1)
     resetTabIndex(appLinks);
 }
 
-function imitateFocus(imitate) {
-  var firstAppLink = document.getElementsByClassName('appLinkHyperLink')[firstMatch];
-
-  if (imitate)
-    firstAppLink.classList.add('imitateFocus');
-  else
-    firstAppLink.classList.remove('imitateFocus');
+function focusFirstOccurence() {
+  if (firstMatch > -1)
+    document.getElementsByClassName('appLinkHyperLink')[firstMatch].focus();
 }
 
 // Sets the searchBar value equal to the string query.

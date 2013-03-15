@@ -24,7 +24,7 @@
     <header>
       <div id='header'>
         <div id='headerContainer'>
-          <input id='searchBar' type='search' placeholder='⚲' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' tabindex='1' />
+          <input id='searchBar' type='search' placeholder='⚲' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' onblur='focusFirstOccurence()' tabindex='1' />
 
           <div id='logo' tabindex='-1'><img src='../images/NARS_logo4.png' alt='National Academy of Railroad Science' /></div>
         </div>
