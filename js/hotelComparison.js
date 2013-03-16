@@ -17,9 +17,9 @@ function updateColumn(obj, col) {
 
 var hotelAmenities =
   [
-    [['$34.99', ''], ['$50.00', ''], ['$44.00', ''], ['$59.00', ''], ['$45.00<br />*$50.00 Suite', ''], ['$45.00', ''], ['$30.00 OR $480/month', '']],
+    [['$34.99', ''], ['$50.00', ''], ['$44.00', ''], ['$59.00', ''], ['$45.00<br />*$50.00 Suite', ''], ['$45.00', ''], ['$30.00 OR $480 / month', '']],
     [['0.8 miles', ''], ['4.3 miles', ''], ['3 miles', ''], ['4.3 miles', ''], ['1 mile', ''], ['4.3 miles', ''], ['10 miles', '']],
-    [['free', 'true'], ['free', 'true'], ['free', 'true'], ['free', 'true'], ['free', 'true'], ['free', 'true'], ['free', 'true']],
+    [['Free', 'true'], ['Free', 'true'], ['Free', 'true'], ['Free', 'true'], ['Free', 'true'], ['Free', 'true'], ['Free', 'true']],
     [['', 'true'], ['', 'true'], ['', 'false'], ['', 'true'], ['*', 'true'], ['', 'false'], ['', 'false']],
     [['', 'true'], ['', 'true'], ['', 'false'], ['', 'false'], ['*', 'true'], ['', 'false'], ['', 'false']],
     [['', 'true'], ['', 'true'], ['', 'true'], ['', 'true'], ['', 'true'], ['', 'true'], ['', 'false']],

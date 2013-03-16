@@ -10,8 +10,13 @@
   text-indent: 2em;
 }
 
+#hotelTable {
+  margin-right: 20pt;
+  width: 99%;
+}
+
 table, td, th {
-  font-size: 10pt;
+  padding: 0;
 
   box-sizing:border-box;
   -moz-box-sizing:border-box;
@@ -23,19 +28,18 @@ table, td, th {
   width: 75%;
 }
 
-#hotelTable {
-  width: 100%;
-  border-spacing: 0;
-  background-color: #EEEEEE;
+#hotelTable, th > select {
   font-family: sans;
-  border: 1pt solid #000000;
-  clear: right;
+  font-size: 1em;
+  border-spacing: 0;
+  border: 0 1pt 1pt 1pt solid #000000;
 }
 
 td {
   height: 1.9in;
   border: 1pt solid #000000;
   text-align: center;
+  background-color: #EEEEEE;
 }
 
 
@@ -54,8 +58,9 @@ th {
 
 th > select {
   border: none;
-  background: none;
+  background-color: #DDDDDD;
   width: 100%;
+  height: 100%;
   text-align: center;
 }
 
@@ -73,6 +78,14 @@ th > select {
 
 .col4 {
   display: none;
+}
+
+#hotelTable th, th > select {
+  border-radius: 5pt 5pt 0 0;
+  -webkit-border-radius: 5pt 5pt 0 0;
+  -moz-border-radius: 5pt 5pt 0 0;
+  -ms-border-radius: 5pt 5pt 0 0;
+  -o-border-radius: 5pt 5pt 0 0;
 }
 
 @media screen and (min-width: 10in) {
@@ -93,6 +106,10 @@ th > select {
   td {
     height: 1.7in;
   }
+
+  .col3 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 4in) {
@@ -102,10 +119,6 @@ th > select {
   
   td {
     height: 1.4in;
-  }
-
-  .col3 {
-    display: none;
   }
 }
 
