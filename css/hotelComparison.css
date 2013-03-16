@@ -2,9 +2,12 @@
 /*CSS Document*/
 
 #hotelInfo {
-  text-indent: 2em;
   font-size: 11pt;
   height: 1.45in;
+}
+
+#hotelInfo > p:first-child {
+  text-indent: 2em;
 }
 
 table, td, th {
