@@ -6,7 +6,6 @@
   text-align: center;
   width: 25%;
   height: 1.9in;
-  margin-bottom: 5pt;
 }
 
 .appLinkHyperLink {
@@ -14,6 +13,7 @@
   min-width: 38pt;
   max-width: 1.9in;
   width: 95%;
+  height: 100%;
   text-decoration: none;
 
   border: 2pt solid #888888;
