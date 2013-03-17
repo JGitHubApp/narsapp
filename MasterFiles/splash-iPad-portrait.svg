@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="vectorFavicon.svg">
+   sodipodi:docname="splash-iPad-portrait.svg"
+   inkscape:export-filename="/home/ryan/documents/narsapp/apple-splash-iPad-portrait.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,11 +27,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.526254"
-     inkscape:cx="364.60178"
-     inkscape:cy="787.18522"
+     inkscape:zoom="0.62424868"
+     inkscape:cx="374.69783"
+     inkscape:cy="560.39588"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="877"
@@ -49,15 +52,18 @@
   </metadata>
   <g
      inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Layer">
+     id="layer1"
+     inkscape:label="Layer#2">
     <rect
-       style="fill:#d40000"
-       id="rect3000"
-       width="64"
-       height="64"
-       x="321.85983"
-       y="234.39116" />
+       style="fill:#d40000;fill-rule:evenodd;stroke:#000000;stroke-width:1.01583827px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3971"
+       width="766.98419"
+       height="1002.9842"
+       x="8.3278351"
+       y="-4.1538167"
+       inkscape:export-filename="/home/ryan/documents/narsapp/apple-splash-iPad-portrait.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -88,25 +94,25 @@
            ry="0" /></flowRegion><flowPara
          id="flowPara3017">R</flowPara></flowRoot>    <text
        xml:space="preserve"
-       style="font-size:49.60677719px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Sans Bold"
-       x="322.18463"
-       y="297.77823"
+       style="font-size:556.57495117px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Sans Bold"
+       x="39.526104"
+       y="847.63489"
        id="text3019"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3021"
-         x="322.18463"
-         y="297.77823"
-         style="font-size:89.29219818px">R</tspan></text>
+         x="39.526104"
+         y="847.63489"
+         style="font-size:1001.8348999px">R</tspan></text>
     <path
        style="fill:#d40000;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 328.04704,289.08733 c 0,0 34.15325,-23.59229 43.33259,-28.79615 10.29283,-5.83511 10.54654,-0.48308 10.54654,-0.48308 0,0 14.16739,-16.5574 -29.15949,17.90821 -48.0815,38.2478 -24.71964,11.37102 -24.71964,11.37102 z"
+       d="m 105.30075,750.12529 c 0,0 383.19047,-264.69929 486.18024,-323.08522 115.48285,-65.4684 118.32942,-5.42003 118.32942,-5.42003 0,0 158.95441,-185.76967 -327.1618,200.92541 -539.46178,429.13025 -277.34786,127.57984 -277.34786,127.57984 z"
        id="path3872"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cscsc" />
     <path
        style="fill:#d40000;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 326.29301,268.08489 c 0,0 53.29657,-32.4115 55.29687,-25.58186 0.9803,3.34706 -7.11403,0.59361 -7.11403,0.59361 0,0 -25.24781,11.00393 -38.8203,23.08152 -21.9678,19.54822 -9.3625,1.90673 -9.3625,1.90673 z"
+       d="m 85.620993,514.48344 c 0,0 597.973497,-363.64851 620.416317,-287.02172 10.99872,37.55312 -79.81755,6.66013 -79.81755,6.66013 0,0 -283.27376,123.46121 -435.55352,258.96858 C -55.806693,712.41631 85.621453,514.48344 85.621453,514.48344 z"
        id="path3872-6"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cscscc" />
