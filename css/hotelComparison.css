@@ -32,34 +32,34 @@ table, td, th {
   font-family: sans;
   font-size: 1em;
   border-spacing: 0;
-  border: 0 1pt 1pt 1pt solid #000000;
+  border: 0 1pt 1pt 1pt solid #000;
 }
 
 td {
   height: 1.9in;
-  border: 1pt solid #000000;
+  border: 1pt solid #000;
   text-align: center;
-  background-color: #EEEEEE;
+  background-color: #EEE;
 }
 
 
 .true {
-  background-color: #00CC00;
+  background-color: #0C0;
 }
 
 .false {
-  background-color: #CC0000;
+  background-color: #C00;
 }
 
 th {
   height: 0.3in;
-  border: 1pt solid #000000;
+  border: 1pt solid #000;
   width: 33.3%;
 }
 
 th > select {
   border: none;
-  background-color: #DDDDDD;
+  background-color: #DDD;
   width: 100%;
   height: 100%;
   text-align: center;

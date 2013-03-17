@@ -1,6 +1,6 @@
 var classOneRailroadsAppLinkInfo = new AppLinkLog(
   [
-    ['Back', '../images/glossy-black-icon-arrows-arrow-styled-left.png', 'railroadIndustry.html', '#CCCCCC'],
+    ['Back', '../images/glossy-black-icon-arrows-arrow-styled-left.png', 'railroadIndustry.html', '#CCC'],
     ['BNSF', '../images/filler.png', 'http://www.bnsf.com', 'white'],
     ['CSX Transportation', '../images/filler.png', 'http://www.csx.com', 'white'],
     ['Norfolk Southern', '../images/filler.png', 'http://www.nscorp.com', 'white'],

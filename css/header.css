@@ -8,13 +8,13 @@
 }
 
 #header {
-  background-color: #CC0000;
+  background-color: #C00;
 
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DD0000), to(#880000));
-  background: -webkit-linear-gradient(top, #DD0000, #880000);
-  background: -moz-linear-gradient(top, #DD0000, #880000);
-  background: -ms-linear-gradient(top, #DD0000, #880000);
-  background: -o-linear-gradient(top, #DD0000, #880000);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D00), to(#800));
+  background: -webkit-linear-gradient(top, #D00, #800);
+  background: -moz-linear-gradient(top, #D00, #800);
+  background: -ms-linear-gradient(top, #D00, #800);
+  background: -o-linear-gradient(top, #D00, #800);
 }
 
 header {
@@ -23,15 +23,15 @@ header {
   width: 100%;
 
   box-shadow:
-    0 3pt 3pt #444444;
+    0 3pt 3pt #444;
   -webkit-box-shadow:
-    0 3pt 3pt #444444;
+    0 3pt 3pt #444;
   -moz-box-shadow:
-    0 3pt 3pt #444444;
+    0 3pt 3pt #444;
   -ms-box-shadow:
-    0 3pt 3pt #444444;
+    0 3pt 3pt #444;
   -o-box-shadow:
-    0 3pt 3pt #444444;
+    0 3pt 3pt #444;
 }
 
 #logo, #SearchBar {
@@ -49,8 +49,8 @@ header {
 }
 
 #searchBar {
-  background-color: #EEEEEE;
-  border: 2pt solid #000000;
+  background-color: #EEE;
+  border: 2pt solid #000;
   height: 1.5em;
   font-size: 1.4em;
   min-width: 1.4in;
