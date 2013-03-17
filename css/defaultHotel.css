@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+body {
+ text-align: center;
+}
+
+
+iframe {
+
+ width: 100%;
+ max-width: 4in;
+
+ height: 3in;
+ border: none;
+
+}
