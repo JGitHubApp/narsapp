@@ -54,6 +54,7 @@ td {
 th {
   height: 0.3in;
   border: 1pt solid #000000;
+  width: 33.3%;
 }
 
 th > select {
@@ -92,6 +93,10 @@ th > select {
   .col4 {
     display: table-cell;
   }
+
+  th {
+    width: 25%;
+  }
 }
 
 @media screen and (max-width: 6in) {
@@ -103,12 +108,16 @@ th > select {
     display: none;
   }
 
-  td {
-    height: 1.7in;
-  }
-
   .col3 {
     display: none;
+  }
+
+  th {
+    width: 50%
+  }
+
+  td {
+    height: 1.7in;
   }
 }
 
@@ -125,6 +134,10 @@ th > select {
 @media screen and (max-width: 3.5in) {
   .col2 {
     display: none;
+  }
+
+  th {
+    width: 100%;
   }
 
   .appLinkContainer {
