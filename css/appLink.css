@@ -16,7 +16,7 @@
   height: 100%;
   text-decoration: none;
 
-  border: 2pt solid #888888;
+  border: 2pt solid #999999;
   border-color: rgba(136, 136, 136, 0);
   border-radius: 5pt;
   -webkit-border-radius: 5pt;
@@ -32,15 +32,15 @@
 }
 
 .appLinkHyperLink.searched > .appLinkPic {
-  border-color: black;
+  border-color: #000000;
 }
 
 .appLinkHyperLink:focus {
-  border-color: #FFFFFF;
+  border-color: #EEEEEE;
 }
 
 .appLinkHyperLink:hover > .appLinkPic, .appLinkHyperLink:focus > .appLinkPic, .appLinkHyperLink:active > .appLinkPic {
-  border: 1pt solid #EEEEEE;
+  border-color: #EEEEEE;
 
   box-shadow:
     0 0 20pt #FFFFFF;
@@ -55,7 +55,7 @@
 }
 
 .appLinkHyperLink.notSearched > .appLinkPic {
-  background-color: #888888 ! important;
+  background-color: #999999 ! important;
   border-color: #777777;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -82,11 +82,11 @@
   -ms-border-radius: 12pt;
   -o-border-radius: 12pt;
 
-  transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
+  transition: background-color, box-shadow, border-color 0.1s ease-in;
+  -webkit-transition: background-color, box-shadow, border-color 0.1s ease-in;
+  -moz-transition: background-color, box-shadow, border-color 0.1s ease-in;
+  -ms-transition: background-color, box-shadow, border-color 0.1s ease-in;
+  -o-transition: background-color, box-shadow, border-color 0.1s ease-in;
 
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

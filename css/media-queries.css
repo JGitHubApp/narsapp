@@ -22,17 +22,21 @@
     height: 1.7in;
   }
 
-  #container {
-    padding-top: 10pt;
-  }
-
   header {
     position: static;
     margin: 0 auto 0 auto;
   }
 
-  #header {
+  #header, header {
     text-align: center;
+
+    border-radius: 0 0 12pt 12pt;
+    -webkit-border-radius: 0 0 12pt 12pt;
+    -moz-border-radius: 0 0 12pt 12pt;
+    -ms-border-radius: 0 0 12pt 12pt;
+    -o-border-radius: 0 0 12pt 12pt;
+
+    overflow-x: hidden;
   }
 
   #headerContainer {
@@ -45,8 +49,8 @@
   }
 
   #searchBar {
-    margin: 1pt auto 0 auto;
-    width: auto;
+    margin: 0 auto 2pt auto;
+    width: 99%;
   }
 }
 

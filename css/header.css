@@ -18,21 +18,20 @@
 }
 
 header {
-  position: fixed;
   min-width: 1.4in;
   text-align: right;
   width: 100%;
 
   box-shadow:
-    0 3pt 3pt #333333;
+    0 3pt 3pt #444444;
   -webkit-box-shadow:
-    0 3pt 3pt #333333;
+    0 3pt 3pt #444444;
   -moz-box-shadow:
-    0 3pt 3pt #333333;
+    0 3pt 3pt #444444;
   -ms-box-shadow:
-    0 3pt 3pt #333333;
+    0 3pt 3pt #444444;
   -o-box-shadow:
-    0 3pt 3pt #333333;
+    0 3pt 3pt #444444;
 }
 
 #logo, #SearchBar {
