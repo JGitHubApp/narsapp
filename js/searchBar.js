@@ -16,7 +16,6 @@ function search(pattern, keypress) {
         appLinks[i].classList.remove('notSearched');
       }
 
-      window.scroll(0, 0);
       resetTabIndex(appLinks);
     }
     else if (keypress === 13) { // Enter key
