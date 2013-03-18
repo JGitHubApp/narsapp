@@ -8,6 +8,10 @@
 }
 
 #header {
+  overflow-x: auto;
+}
+
+#header {
   background-color: #C00;
 
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D00), to(#800));
@@ -56,6 +60,7 @@ header {
   min-width: 1.4in;
   max-width: 5in;
   margin-right: 10pt;
+  vertical-align: middle;
   width: 50%;
   
   border-radius: 12pt;
