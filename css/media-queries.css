@@ -44,6 +44,7 @@
   #logo {
     width: 100%;
     padding: 0;
+    height: auto;
   }
 
   #searchBar {
@@ -84,7 +85,7 @@
 
 @media screen and (max-width: 210px), (max-width: 2in) {
    .appLinkName {
-    font-size: 8pt;
+    font-size: 7pt;
   }
 
   .appLinkContainer {

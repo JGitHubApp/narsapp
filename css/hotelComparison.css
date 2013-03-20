@@ -29,7 +29,6 @@ table, td, th {
 }
 
 #hotelTable, th > select {
-  font-family: sans;
   font-size: 1em;
   border-spacing: 0;
   border: 0 1pt 1pt 1pt solid #000;
