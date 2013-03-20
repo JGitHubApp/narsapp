@@ -8,7 +8,7 @@
 }
 
 #header {
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 #header {

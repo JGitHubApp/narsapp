@@ -7,8 +7,7 @@ html {
 
 body {
   background-color: #999;
-  font-family: 'Trebuchet MS', sans-serif;
-  font-size: 12pt;
+  font-family: sans-serif;
   letter-spacing: 1px;
   min-width: 1.4in;
   margin: 0;
@@ -22,7 +21,7 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Courier New', 'Georgia';
+  font-family: Oxygen;
   text-align: center;
   margin: 0;
 }
@@ -32,7 +31,7 @@ h2 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 #titleLine {
