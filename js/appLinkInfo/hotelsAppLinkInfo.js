@@ -1,7 +1,7 @@
 var hotelsAppLinkInfo = new AppLinkLog(
   [
     ['Back', '../images/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
-    ['CandelWood Suites', '../images/filler.png', '#', 'white'],
+    ['CandelWood Suites', '../images/filler.png', '../htdocs/CandlewoodSuites.html', 'white'],
     ['Chase Suites', '../images/filler.png', '#', 'white'],
     ['Crowne Plaza', '../images/filler.png', '#', 'white'],
     ['Drury Inn', '../images/filler.png', '#', 'white'],
