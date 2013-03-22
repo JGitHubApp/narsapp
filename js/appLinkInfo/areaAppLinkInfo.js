@@ -1,9 +1,9 @@
 var areaAppLinkInfo = new AppLinkLog(
   [
-    ['Back', '../images/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
-    ['Airport', '../images/glossy-black-icon-transport-travel-transportation-airplane4.png', 'http://www.flykci.com', '#69E'],
-    ['JCCC Campus Map', '../images/filler.png', '#', 'white'],
-    ['Forecast', '../images/glossy-black-icon-people-things-umbrella2.png', 'http://weather.yahoo.com', '#FC0']
+    ['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
+    ['Airport', '../images/icons/glossy-black-icon-transport-travel-transportation-airplane4.png', 'http://www.flykci.com', '#69E'],
+    ['JCCC Campus Map', '../images/icons/filler.png', '#', 'white'],
+    ['Forecast', '../images/icons/glossy-black-icon-people-things-umbrella2.png', 'http://weather.yahoo.com', '#FC0']
   ],
 
   [
