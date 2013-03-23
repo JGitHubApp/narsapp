@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+ th, td {
+  border:1px solid black; vertical-align:top; min-width:1in; max-width:1in;
+ }
+
+ table {
+  width:100%; max-width:8in;
+ }
