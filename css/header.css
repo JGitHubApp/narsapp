@@ -27,15 +27,15 @@ header {
   width: 100%;
 
   box-shadow:
-    0 3pt 3pt #444;
+    0 3pt 3pt #555;
   -webkit-box-shadow:
-    0 3pt 3pt #444;
+    0 3pt 3pt #555;
   -moz-box-shadow:
-    0 3pt 3pt #444;
+    0 3pt 3pt #555;
   -ms-box-shadow:
-    0 3pt 3pt #444;
+    0 3pt 3pt #555;
   -o-box-shadow:
-    0 3pt 3pt #444;
+    0 3pt 3pt #555;
 }
 
 #logo, #SearchBar {

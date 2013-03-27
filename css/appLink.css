@@ -16,7 +16,7 @@
   height: 100%;
   text-decoration: none;
 
-  border: 2pt solid #999;
+  border: 2pt solid #AAA;
   border-color: rgba(136, 136, 136, 0);
   border-radius: 5pt;
   -webkit-border-radius: 5pt;
@@ -29,6 +29,12 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
+  transition: border-color 0.1s ease-in;
+  -webkit-transition: border-color 0.1s ease-in;
+  -moz-transition: border-color 0.1s ease-in;
+  -ms-transition: border-color 0.1s ease-in;
+  -o-transition: border-color 0.1s ease-in;
 }
 
 .appLinkHyperLink.searched > .appLinkPic {
@@ -36,7 +42,7 @@
 }
 
 .appLinkHyperLink:focus {
-  border-color: #EEE;
+  border-color: #FFF;
 }
 
 .appLinkHyperLink:hover > .appLinkPic, .appLinkHyperLink:focus > .appLinkPic, .appLinkHyperLink:active > .appLinkPic {
@@ -55,7 +61,7 @@
 }
 
 .appLinkHyperLink.notSearched > .appLinkPic {
-  background-color: #999 ! important;
+  background-color: #AAA ! important;
   border-color: #777;
   box-shadow: none;
   -webkit-box-shadow: none;
