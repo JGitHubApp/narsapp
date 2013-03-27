@@ -39,7 +39,8 @@ header {
 }
 
 #logo, #SearchBar {
-  height: 48pt;
+  height: 70px;
+  min-height: 48pt;
 }
 
 #logo {
