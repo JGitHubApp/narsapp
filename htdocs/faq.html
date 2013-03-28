@@ -15,7 +15,6 @@
     <link href='../css/header.css' rel='stylesheet' type='text/css' />
     <link href='../css/media-queries.css' rel='stylesheet' type='text/css' />
 
-    <script src='../js/searchBar.js'></script>
     <script src='../js/faq.js'></script>
   </head>
 
@@ -25,7 +24,7 @@
         <div id='headerContainer'>
           <div id='logo' tabindex='-1'><img src='../images/logo.png' alt='National Academy of Railroad Science' /></div>
 
-          <input id='searchBar' type='search' placeholder='⚲' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' onblur='focusFirstOccurence()' tabindex='1' />
+          <input id='searchBar' type='search' placeholder='⚲' maxlength='40' onkeyup='search(this.value)' onchange='search(this.value)' onblur='search(this.value)' tabindex='1' />
         </div>
 
         <div class='clearfix'></div>
@@ -37,29 +36,29 @@
       <hr id='titleLine' />
 
       <dl>
-        <div onclick='toggleDisplay(this.getElementsByTagName("dd")[0])'>
-          <dt><h2>Question 1 Sed ut perspiciatis unde omnis iste natus error sit</h2></dt>
+        <div class='qContainer' onclick='toggleAnswer(this)' tabindex='2'>
+          <dt><div class='indicateExpand'>+</div><h2>Question 1 Sed ut perspiciatis unde omnis iste natus error sit</h2></dt>
+          <div class='keywords'>one list of lowercase keywords</div>
           <dd>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</dd>
         </div>
-        <hr />
 
-        <div onclick='toggleDisplay(this.getElementsByTagName("dd")[0])'>
-          <dt><h2>Question 2</h2></dt>
+        <div class='qContainer' onclick='toggleAnswer(this)' tabindex='3'>
+          <dt><div class='indicateExpand'>+</div><h2>Question 2</h2></dt>
+          <div class='keywords'>two</div>
           <dd>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</dd>
         </div>
-        <hr />
 
-        <div onclick='toggleDisplay(this.getElementsByTagName("dd")[0])'>
-          <dt><h2>Question 3 us erro aliquam quaerat volu</h2></dt>
+        <div class='qContainer' onclick='toggleAnswer(this)' tabindex='4'>
+          <dt><div class='indicateExpand'>+</div><h2>Question 3 us erro aliquam quaerat volu</h2></dt>
+          <div class='keywords'>three</div>
           <dd>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</dd>
         </div>
-        <hr />
 
-        <div onclick='toggleDisplay(this.getElementsByTagName("dd")[0])'>
-          <dt><h2>Question 4 iciatis unde omnis iste natus error sit </h2></dt>
+        <div class='qContainer' onclick='toggleAnswer(this)' tabindex='5'>
+          <dt><div class='indicateExpand'>+</div><h2>Question 4 iciatis unde omnis iste natus error sit </h2></dt>
+          <div class='keywords'>four</div>
           <dd>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</dd>
         </div>
-        <hr />
         
       </dl>
     </div>
