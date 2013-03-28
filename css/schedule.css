@@ -1,18 +1,125 @@
 @charset "UTF-8";
 /*CSS Document*/
 
+#titleLine {
+  margin: 0;
+}
+
 p {
  text-align:center;
 }
 
+th {
+  background-color: #EEE;
+}
+
+th span {
+  display: none;
+}
+
+td {
+  background-color: #FFF;
+}
+
 th, td {
- border:1px solid black; vertical-align:top; min-width:1in; max-width:1in;
+ border:2px solid black;
+ vertical-align: top;
+ max-width: 1in;
+ text-align: center;
+}
+
+.divider {
+  background-color: #C00;
+  color: #FFF;
+  font-weight: bold;
 }
 
 table {
- max-width:7in; width:100%; margin: 0 auto 0 auto; min-width:7in;
+ max-width: 10in;
+ width:100%;
+ margin: 0 auto 0 auto;
+font-size: 0.9em;
 }
 
-body {
- min-width:8in; /*Force Fix Header */
+#goToWeek {
+  width: 100%;
+  height: 2em;
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-align: center;
+  display: none;
+}
+
+@media screen and (min-width: 8in) {
+  th span {
+    display: inline;
+  }
+
+  table {
+    font-size: 1em;
+  }
+}
+
+
+@media screen and (max-width: 6in) {
+  table {
+    border-collapse: collapse;
+  }
+ 
+	thead { 
+    display: none;
+	}
+ 
+	td { 
+		position: relative;
+    max-width: 100%;
+		white-space: normal;
+		display: block; 
+    border: none;
+	}
+
+  .divider {
+    padding: 0.5em;
+    margin-top: 5px;
+    border-top: solid 1px #000;
+  }
+
+  .day {
+    width: 85%;
+		padding-left: 15%; 
+		text-align:left;
+    border-bottom: solid 1px #000;
+  }
+ 
+	.day:before { 
+		position: absolute;
+		left: 3px;
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+    font-size: 0.7em;
+	}
+ 
+	.day:before {
+    content: attr(data-title);
+  }
+
+  #goToWeek {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 3.5in) {
+  table {
+    font-size: 0.8em;
+  }
+
+  .day {
+    width: 80%;
+		padding-left: 20%; 
+  }
+
+	.day:before { 
+    font-size: 0.7em;
+	}
 }

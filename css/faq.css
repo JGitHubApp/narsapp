@@ -3,33 +3,17 @@
 
 dt {
   background-color: #C00;
-  border: solid 2px #000;
   color: #FFF;
   font-weight: bold;
-
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
 }
 
 dd {
   background-color: #EEE;
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
   display: none;
   text-indent: 2em;
   padding: 0.5em;
   width: 100%;
   margin: 0;
-
-  border-radius: 0 0 20px 20px;
-  -webkit-border-radius: 0 0 20px 20px;
-  -moz-border-radius: 0 0 20px 20px;
-  -ms-border-radius: 0 0 20px 20px;
-  -o-border-radius: 0 0 20px 20px;
 }
 
 dd, dt {
@@ -45,6 +29,7 @@ dl {
 
 dl > div {
   margin-bottom: 3px;
+  border: solid 2px #000;
 }
 
 dl > div:hover {
@@ -60,7 +45,7 @@ dl > div:hover .indicateExpand {
   color: #FFF;
 }
 
-h2 {
+h3 {
   display: table-cell;
   text-align: left;
   padding: 1em;
@@ -75,4 +60,14 @@ h2 {
 
 .keywords {
   display: none;
+}
+
+@media screen and (max-width: 3.5in) {
+  .indicateExpand {
+    padding-left: 0.5em;
+  }
+
+  h3 {
+    padding: 0.5em;
+  }
 }

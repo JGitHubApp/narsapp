@@ -24,13 +24,9 @@ h1, h2 {
   margin: 0;
 }
 
-h2 {
-  font-size: 1.1em;
-}
-
-h1 {
-  font-size: 1.8em;
-}
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.1em; }
 
 #titleLine {
   margin: 0 0 10px 0;

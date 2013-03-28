@@ -33,104 +33,118 @@
     </header>
 
     <div id='container'>
-      <h1>Conductor Fast Track Schedule</h1>
+      <h1>Fast Track</h1>
       <hr id='titleLine' />
+      <h2>Conductor Schedule</h2>
       <p>Please notify the NARS office if you have an issue or are late for class 913-469-3857.<br />*If bus doesn't show, call KCTG at 816-471-1234</p><br />
+
+      <select id='goToWeek' onchange='scrollTo(0, document.getElementById(this.value).offsetTop); this.value="week1"'>
+        <option value='week1' selected>Week 1</option>
+        <option value='week2'>Week 2</option>
+        <option value='week3'>Week 3</option>
+        <option value='week4'>Week 4</option>
+        <option value='week5'>Week 5</option>
+        <option value='week6'>Week 6</option>
+      </select>
       
-     <table>
-      <tr>
-       <th>Sun</th>
-       <th>Mon</th>
-       <th>Tue</th>
-       <th>Wed</th>
-       <th>Thu</th>
-       <th>Fri</th>
-       <th>Sat</th>
-     </tr>
+    <table>
+      <thead>
+        <tr>
+          <th>Mon<span>day</span></th>
+          <th>Tue<span>sday</span></th>
+          <th>Wed<span>nesday</span></th>
+          <th>Thu<span>rsday</span></th>
+          <th>Fri<span>day</span></th>
+          <th>Sat<span>urday</span></th>
+          <th>Sun<span>day</span></th>
+        </tr>
+      </thead>
 
-     <tr>
-      <td colspan='7'><div>Week 1 - RRTC 123 - Introduction to Conductor Service (12999)</div></td>
-     </tr>
+      <tbody>
+        <tr>
+          <td id='week1' class='divider' colspan='7'><div>Week 1 - RRTC 123 - Introduction to Conductor Service (12999)</div></td>
+        </tr>
 
-     <tr>
-      <td>Room 104<br />Instructor<br />Tim Brown</td>
-      <td>NARS lobby 7:45am<br />Orientation 8:00am<br />Veteran's rep 9:30<br />PPE Check out</td>
-      <td>&nbsp;</td>
-      <td>8:00am Tour Lenexa & Argentine Yards MUST HAVE ALL PPE</td>
-      <td>&nbsp;</td>
-      <td>Resume skills Tracy Bedell 3:00</td>
-      <td>&nbsp;</td>
-     </tr>
+        <tr>
+          <td class='day' data-title='Mon'>Room 104<br />Instructor<br />Tim Brown</td>
+          <td class='day' data-title='Tue'>NARS lobby 7:45am<br />Orientation 8:00am<br />Veteran's rep 9:30<br />PPE Check out</td>
+          <td class='day' data-title='Wed'>&nbsp;</td>
+          <td class='day' data-title='Thu'>8:00am Tour Lenexa & Argentine Yards MUST HAVE ALL PPE</td>
+          <td class='day' data-title='Fri'>&nbsp;</td>
+          <td class='day' data-title='Sat'>Resume skills Tracy Bedell 3:00</td>
+          <td class='day' data-title='Sun'>&nbsp;</td>
+        </tr>
 
-     <tr>
-      <td colspan='7'><div>Week 2 - RRTC 175 - Conductor Mechanical Operation (12996)</div></td>
-     </tr>
+        <tr>
+          <td id='week2' class='divider' colspan='7'><div>Week 2 - RRTC 175 - Conductor Mechanical Operation (12996)</div></td>
+        </tr>
 
-     <tr>
-      <td>Room 104<br />Instructor<br />Tim Brown</td>
-      <td>&nbsp;</td>
-      <td>Freight Car Lab 3:30 Must Have PPE</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>Tom Leopold - Short Line Discussion 1:30<br />Resume skills - Tracy Bedell 3:00</td>
-      <td>&nbsp;</td>
-     </tr>
+        <tr>
+          <td class='day' data-title='Mon'>Room 104<br />Instructor<br />Tim Brown</td>
+          <td class='day' data-title='Tue'>&nbsp;</td>
+          <td class='day' data-title='Wed'>Freight Car Lab 3:30 Must Have PPE</td>
+          <td class='day' data-title='Thu'>&nbsp;</td>
+          <td class='day' data-title='Fri'>&nbsp;</td>
+          <td class='day' data-title='Sat'>Tom Leopold - Short Line Discussion 1:30<br />Resume skills - Tracy Bedell 3:00</td>
+          <td class='day' data-title='Sun'>&nbsp;</td>
+        </tr>
 
-     <tr>
-      <td colspan='7'><div>Week 3 - RRTC 261 - Conductor Service (13005)</div></td>
-     </tr>
+        <tr>
+          <td id='week3' class='divider' colspan='7'><div>Week 3 - RRTC 261 - Conductor Service (13005)</div></td>
+        </tr>
 
-     <tr>
-      <td>Room 104<br />Instructor<br />Tim Brown</td>
-      <td>&nbsp;</td>
-      <td>Air Brake Lab 4:00<br />Must Have PPE</td>
-      <td>&nbsp;</td>
-      <td>TRAX - Hearing Conservation, Chemicals in the Workplace, Rail Security<br />Practice Interviews Room 104</td>
-      <td>TRAX - Power Brake Law, HAZMAT, Signals, GCOR, RCO<br />Practice Interviews Room 104</td>
-      <td>Need to have resumes completed by the end of Week 3</td>
-     </tr>
+        <tr>
+          <td class='day' data-title='Mon'>Room 104<br />Instructor<br />Tim Brown</td>
+          <td class='day' data-title='Tue'>&nbsp;</td>
+          <td class='day' data-title='Wed'>Air Brake Lab 4:00<br />Must Have PPE</td>
+          <td class='day' data-title='Thu'>&nbsp;</td>
+          <td class='day' data-title='Fri'>TRAX - Hearing Conservation, Chemicals in the Workplace, Rail Security<br />Practice Interviews Room 104</td>
+          <td class='day' data-title='Sat'>TRAX - Power Brake Law, HAZMAT, Signals, GCOR, RCO<br />Practice Interviews Room 104</td>
+          <td class='day' data-title='Sun'>Need to have resumes completed by the end of Week 3</td>
+        </tr>
 
-     <tr>
-      <td colspan='7'><div>Week 4 - RRTC 267 - Conductor Field Application (13015)</div></td>
-     </tr>
+        <tr>
+          <td id='week4' class='divider' colspan='7'><div>Week 4 - RRTC 267 - Conductor Field Application (13015)</div></td>
+        </tr>
 
-     <tr>
-      <td>Lenexa Yard<br />Instructor<br />Tim Brown</td>
-      <td>Lenexa Yard 0700-1530 (Bring Lunch) (*bus pick up at ITC)</td>
-      <td>Lenexa Yard 0700-1530 (Bring Lunch) (*bus pick up at ITC)</td>
-      <td>Lenexa Yard 1800-2359 (Work through lunch) Students will drive</td>
-      <td>Lenexa Yard 1000-1800 (Bring Lunch) (*bus pick up at ITC)</td>
-      <td>Lenexa Yard 0700-1530 (Bring Lunch) (*bus pick up at ITC)</td>
-      <td>&nbsp;</td>
-     </tr>
+        <tr>
+          <td class='day' data-title='Mon'>Lenexa Yard<br />Instructor<br />Tim Brown</td>
+          <td class='day' data-title='Tue'>Lenexa Yard 0700-1530 (Bring Lunch) (*bus pick up at ITC)</td>
+          <td class='day' data-title='Wed'>Lenexa Yard 0700-1530 (Bring Lunch) (*bus pick up at ITC)</td>
+          <td class='day' data-title='Thu'>Lenexa Yard 1800-2359 (Work through lunch) Students will drive</td>
+          <td class='day' data-title='Fri'>Lenexa Yard 1000-1800 (Bring Lunch) (*bus pick up at ITC)</td>
+          <td class='day' data-title='Sat'>Lenexa Yard 0700-1530 (Bring Lunch) (*bus pick up at ITC)</td>
+          <td class='day' data-title='Sun'>&nbsp;</td>
+        </tr>
 
-     <tr>
-      <td colspan='7'><div>Week 5 - RRTC 263 - General Code of Operation Rules (13010)</div></td>
-     </tr>
+        <tr>
+          <td id='week5' class='divider' colspan='7'><div>Week 5 - RRTC 263 - General Code of Operation Rules (13010)</div></td>
+        </tr>
 
-     <tr>
-      <td>Room 106<br />Instructor<br />Doc See</td>
-      <td>Please ask Tracy if you have questions about how to fill out an application</td>
-      <td>Signal Lab 10-11<br />Must Have PPE</td>
-      <td>&nbsp;</td>
-      <td>PPE Check-in by Friday</td>
-      <td>BNSF NARS postings open. Students take BNSF screening guidelines</td>
-      <td>&nbsp;</td>
-     </tr>
+        <tr>
+          <td class='day' data-title='Mon'>Room 106<br />Instructor<br />Doc See</td>
+          <td class='day' data-title='Tue'>Please ask Tracy if you have questions about how to fill out an application</td>
+          <td class='day' data-title='Wed'>Signal Lab 10-11<br />Must Have PPE</td>
+          <td class='day' data-title='Thu'>&nbsp;</td>
+          <td class='day' data-title='Fri'>PPE Check-in by Friday</td>
+          <td class='day' data-title='Sat'>BNSF NARS postings open. Students take BNSF screening guidelines</td>
+          <td class='day' data-title='Sun'>&nbsp;</td>
+        </tr>
 
-     <tr>
-      <td colspan='7'><div>Week 6 - RRTC 263 - General Code of Operation Rules (13010)</div></td>
-     </tr>
+        <tr>
+          <td id='week6' class='divider' colspan='7'><div>Week 6 - RRTC 263 - General Code of Operation Rules (13010)</div></td>
+        </tr>
 
-     <tr>
-      <td>Room 106<br />Instructor<br />Doc See</td>
-      <td>BNSF Job posting closes at midnight!</td>
-      <td>BNSF sends code for qualified candidates (passed screening and applied to job posting) to take online testing</td>
-      <td>BNSF online testing closes!</td>
-      <td>GCOR Final 8:00am Summary of Qualifications distributed 1:00pm</td>
-      <td>Railroad Interviews (If applicable) 7:30am BNSF Room 106 Short Line Interviews TBA</td>
-      <td>&nbsp;</td>
-     </tr>
+        <tr>
+          <td class='day' data-title='Mon'>Room 106<br />Instructor<br />Doc See</td>
+          <td class='day' data-title='Tue'>BNSF Job posting closes at midnight!</td>
+          <td class='day' data-title='Wed'>BNSF sends code for qualified candidates (passed screening and applied to job posting) to take online testing</td>
+          <td class='day' data-title='Thu'>BNSF online testing closes!</td>
+          <td class='day' data-title='Fri'>GCOR Final 8:00am Summary of Qualifications distributed 1:00pm</td>
+          <td class='day' data-title='Sat'>Railroad Interviews (If applicable) 7:30am BNSF Room 106 Short Line Interviews TBA</td>
+          <td class='day' data-title='Sun'>&nbsp;</td>
+        </tr>
+      </tbody>
     </table>
     </div>
   </body>

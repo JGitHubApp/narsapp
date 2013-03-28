@@ -13,14 +13,12 @@ function toggleAnswer(obj) {
 
 function openAnswer(obj) {
     obj.getElementsByTagName('dd')[0].style.display = 'block';
-    obj.getElementsByTagName('dt')[0].style.borderRadius = '20px 20px 0 0';
     obj.getElementsByTagName('dt')[0].style.borderBottom = 'none';
     obj.getElementsByClassName('indicateExpand')[0].innerHTML = '-';
 }
 
 function closeAnswer(obj) {
     obj.getElementsByTagName('dd')[0].style.display = '';
-    obj.getElementsByTagName('dt')[0].style.borderRadius = '';
     obj.getElementsByTagName('dt')[0].style.borderBottom = '';
     obj.getElementsByClassName('indicateExpand')[0].innerHTML = '+';
 }
