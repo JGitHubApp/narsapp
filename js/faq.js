@@ -32,15 +32,16 @@ function search(pattern) {
   for (var i = 0; i < faqs.length; i++) {
     var found = true;
 
-    for (var j = 0; j < pattern.length; j++) {
-      if (faqs[i].getElementsByTagName('h2')[0].innerHTML.toLowerCase().indexOf(pattern[j]) === -1 &&
+    for (var j = 0; j < pattern.length && found; j++) {
+      if (faqs[i].getElementsByTagName('h3')[0].innerHTML.toLowerCase().indexOf(pattern[j]) === -1 &&
           faqs[i].getElementsByClassName('keywords')[0].innerHTML.indexOf(pattern[j]) === -1) {
-        faqs[i].style.display = 'none';
         found = false;
       }
     }
 
     if (found)
       faqs[i].style.display = 'block';
+    else
+        faqs[i].style.display = 'none';
   }
 }
