@@ -41,7 +41,6 @@ td {
   background-color: #EEE;
 }
 
-
 .true {
   background-color: #0C0;
 }
@@ -51,7 +50,6 @@ td {
 }
 
 th {
-  height: 0.3in;
   border: 1pt solid #000;
   width: 33.3%;
 }
@@ -59,7 +57,10 @@ th {
 th > select {
   border: none;
   width: 100%;
-  height: 100%;
+  height: 0.3in;
+}
+
+th, th > select {
   text-align: center;
 }
 

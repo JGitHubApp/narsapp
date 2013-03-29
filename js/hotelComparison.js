@@ -1,4 +1,3 @@
-
 function updateColumn(obj, col) {
   var tbl = document.getElementById('hotelTable');
 
@@ -31,5 +30,7 @@ var hotelAmenities =
     [['', 'false'], ['', 'false'], ['', 'true'], ['', 'true'], ['', 'false'], ['', 'false'], ['', 'false']],
   ];
 
-for (var i = 1; i <= 4; i++)
-  updateColumn(document.getElementById('col' + i), i-1)
+function loadDefaultTable() {
+  for (var i = 1; i <= 4; i++)
+    updateColumn(document.getElementById('col' + i), i-1)
+}
