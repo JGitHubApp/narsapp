@@ -58,8 +58,13 @@ function highlightMatches(pattern, appLinks) {
 }
 
 function focusFirstOccurence() {
-  if (firstMatch > -1)
+  if (firstMatch > -1) {
     document.getElementsByClassName('appLinkHyperLink')[firstMatch].focus();
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Sets the searchBar value equal to the string query.
@@ -68,13 +73,9 @@ function getSearchQuery() {
 
   if (query) {
     search(query);
-    if (firstMatch > -1)
-    {
+
+    if (focusFirstOccurence())
       document.getElementById('searchBar').value = query;
-      document.getElementsByClassName('appLinkHyperLink')[firstMatch].focus();
-    }
-    else
-      search('');
   }
 }
 
