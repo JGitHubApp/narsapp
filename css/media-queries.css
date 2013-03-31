@@ -22,23 +22,21 @@
     height: 1.7in;
   }
 
-  header {
-    position: static;
-    margin: 0 auto 0 auto;
-  }
-
-  #header, header {
+  #header {
+    height: auto;
+    padding-bottom: 1pt;
     text-align: center;
 
-    border-radius: 0 0 12pt 12pt;
-    -webkit-border-radius: 0 0 12pt 12pt;
-    -moz-border-radius: 0 0 12pt 12pt;
-    -ms-border-radius: 0 0 12pt 12pt;
-    -o-border-radius: 0 0 12pt 12pt;
+    border-radius: 0 0 15pt 15pt;
+    -webkit-border-radius: 0 0 15pt 15pt;
+    -moz-border-radius: 0 0 15pt 15pt;
+    -ms-border-radius: 0 0 15pt 15pt;
+    -o-border-radius: 0 0 15pt 15pt;
   }
 
   #headerContainer {
-    line-height: 0;
+    position: static;
+    height: auto;
   }
 
   #logo {
@@ -46,11 +44,13 @@
     padding: 0;
     height: auto;
     min-height: 1px;
+    float: none;
   }
 
-  #searchBar {
-    margin: 0 auto 2pt auto;
+  #searchBarContainer {
     width: 99%;
+    margin: 0 auto 0 auto;
+    position: static;
   }
 }
 

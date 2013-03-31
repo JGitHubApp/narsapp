@@ -76,6 +76,8 @@ function getSearchQuery() {
 
     if (focusFirstOccurence())
       document.getElementById('searchBar').value = query;
+    else
+      search(''); // Reset searchBar
   }
 }
 

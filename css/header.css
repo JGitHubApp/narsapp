@@ -2,13 +2,10 @@
 /*CSS Document*/
 
 #headerContainer {
-  margin: 0 auto 0 auto;
   max-width: 12in;
-  line-height: 48pt;
-}
-
-#header {
-  overflow: hidden;
+  margin: 0 auto 0 auto;
+  position: relative;
+  height: 70px;
 }
 
 #header {
@@ -19,12 +16,11 @@
   background: -moz-linear-gradient(top, #D00, #800);
   background: -ms-linear-gradient(top, #D00, #800);
   background: -o-linear-gradient(top, #D00, #800);
-}
 
-header {
   min-width: 1.4in;
-  text-align: right;
   width: 100%;
+  text-align: right;
+  overflow-x: hidden;
 
   box-shadow:
     0 3pt 3pt #555;
@@ -38,11 +34,6 @@ header {
     0 3pt 3pt #555;
 }
 
-#logo, #SearchBar {
-  height: 70px;
-  min-height: 48pt;
-}
-
 #logo {
   float: left;
   padding-left: 10pt;
@@ -53,24 +44,36 @@ header {
   vertical-align: middle;
 }
 
-#searchBar {
+#searchBarContainer {
+  top: 50%;
+  right: 10pt;
+  margin-top: -1em;
+  height: 2em;
+  position: absolute;
   background-color: #EEE;
   border: 2pt solid #000;
-  height: 1.5em;
-  font-size: 1.4em;
-  min-width: 1.4in;
-  max-width: 5in;
-  margin-right: 10pt;
-  vertical-align: middle;
   width: 50%;
-  
-  border-radius: 12pt;
-  -webkit-border-radius: 12pt;
-  -moz-border-radius: 12pt;
-  -ms-border-radius: 12pt;
-  -o-border-radius: 12pt;
+  max-width: 5in;
 
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+#searchBar {
+  background-color: rgba(238, 238, 238, 0);
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0;
+  font-size: 1.4em;
+}
+
+#searchBarContainer, #SearchBar {
+  border-radius: 15pt;
+  -webkit-border-radius: 15pt;
+  -moz-border-radius: 15pt;
+  -ms-border-radius: 15pt;
+  -o-border-radius: 15pt;
 }
