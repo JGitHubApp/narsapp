@@ -21,11 +21,19 @@ td {
 }
 
 tr {
- background-color:#999;
+ background-color:#DDD;
 }
 
 tr:hover {
- background-color:#B00;
+ background-color:#C00;
+}
+
+@media screen and (max-width: 8in) {
+ table {
+  width:96%;
+  margin:0 auto 0 auto;
+  border-spacing:0px 3px;
+ }
 }
 
 /* Deals with picture displaying */
