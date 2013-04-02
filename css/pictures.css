@@ -57,13 +57,28 @@ tr:hover {
  position:fixed;
  background-color:#000000;
  opacity:0.50;
- filter: Alpha(Opacity=50);
  /*Opacity fix for IE8*/
+ filter: Alpha(Opacity=50);
+ display:none;
+}
+
+#pclose {
+ z-index:999;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ position:absolute;
+ background-color:transparent;
+ background-clip:content-box;
+ background-position: top right;
+ background-repeat:no-repeat;
+ background-image:url("../images/close.png");
  display:none;
 }
 
 #pic {
- z-index:999;
+ z-index:995;
  top:0;
  left:0;
  width:100%;
