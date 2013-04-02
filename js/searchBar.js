@@ -6,7 +6,7 @@ function search(pattern, keypress) {
     // Remove special characters
     pattern = pattern.toLowerCase().replace(/'[smd]|[^\w ]/g, '');
     // Remove common/pointless words
-    pattern = pattern.replace(/\b(\w{1,3} |(what|which|next|this|will|want|about|from|(need|look|find)(ing)?|info(rmation)?) )/g, ' ');
+    pattern = pattern.replace(/\b(\w{1,3} |(what|which|have|this|will|want|about|from|(need|look|find)(ing)?|info(rmation)?) )/g, ' ');
 
     var appLinks = document.getElementsByClassName('appLinkHyperLink');
 
@@ -90,4 +90,6 @@ function putSearchQuery(link) {
 function resetTabIndex(appLinks) {
   for (var i = 0; i < appLinks.length; i++)
     appLinks[i].tabIndex = '';
+
+  firstMatch = -1;
 }
