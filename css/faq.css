@@ -2,13 +2,12 @@
 /*CSS Document*/
 
 dt {
-  background-color: #C00;
-  color: #FFF;
+  background-color: #DDD;
   font-weight: bold;
 }
 
 dd {
-  background-color: #EEE;
+  background-color: #FFF;
   display: none;
   text-indent: 2em;
   padding: 0.5em;
@@ -38,7 +37,6 @@ dl > div:hover {
 
 dl > div:hover > dt {
   background-color: #D00;
-  color: #000;
 }
 
 dl > div:hover .indicateExpand {
