@@ -14,6 +14,7 @@ function showPic(pic) {
   document.getElementById("pic").style.backgroundImage=("url(" + pic.src + ")");
   var pixelsScrolled=window.pageYOffset || document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop; /* Get distance scrolled by user */
   document.getElementById("pic").style.top=(pixelsScrolled + "px"); /* Set the top equal to distance scrolled by user */
+  document.getElementById("pclose").style.top=(pixelsScrolled + "px"); /* Set the top equal to distance scrolled by user */
 
   /* Display Close Icon */
   document.getElementById("pclose").style.display="block";
