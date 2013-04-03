@@ -14,11 +14,15 @@ function showPic(picId) {
      document.getElementById("picbg").style.height=(h + "px");
     }
 
-    // Display Image
+    /* Display Image */
     document.getElementById("pic").style.display="block";
     document.getElementById("pic").style.backgroundImage=("url(" + document.getElementById(picId).getAttribute("src") + ")");
     var pixelsScrolled=window.pageYOffset || document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop; /* Get distance scrolled by user */
     document.getElementById("pic").style.top=(pixelsScrolled + "px"); /* Set the top equal to distance scrolled by user */
+
+    /* Display Close Icon */
+    document.getElementById("pclose").style.display="block";
+    document.getElementById("pclose").style.top=(pixelsScrolled + "px"); /* Set the top equal to distance scrolled by user */
 
  }
  else
@@ -26,5 +30,6 @@ function showPic(picId) {
     /* Hide background and image */
     document.getElementById("picbg").style.display="none";
     document.getElementById("pic").style.display="none";
+    document.getElementById("pclose").style.display="none";
  }
 }
