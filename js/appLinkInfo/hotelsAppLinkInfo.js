@@ -1,7 +1,7 @@
 var hotelsAppLinkInfo = new AppLinkLog(
   [
     ['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
-    ['CandelWood Suites', '../images/icons/filler.png', '../htdocs/CandlewoodSuites.html', 'white'],
+    ['CandleWood Suites', '../images/icons/filler.png', '../htdocs/CandlewoodSuites.html', 'white'],
     ['Chase Suites', '../images/icons/filler.png', '#', 'white'],
     ['Crowne Plaza', '../images/icons/filler.png', '#', 'white'],
     ['Drury Inn', '../images/icons/filler.png', '#', 'white'],
@@ -23,7 +23,7 @@ var hotelsAppLinkInfo = new AppLinkLog(
 
   [
     ,
-    ,
+    CandlewoodSuitesAppLinkInfo,
     ,
     ,
     ,
@@ -32,6 +32,8 @@ var hotelsAppLinkInfo = new AppLinkLog(
     
   ]
 );
+
+delete CandlewoodSuitesAppLinkInfo;
 
 function loadHotelsAppLinks() {
   loadAppLinks(hotelsAppLinkInfo, document.getElementById('container'));
