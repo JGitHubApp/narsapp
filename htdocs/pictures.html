@@ -20,7 +20,7 @@
 
   </head>
 
-  <body>
+  <body onscroll='hidePic()'>
    <div id='h'>
     <div id='header'>
       <div id='headerContainer'>
@@ -38,33 +38,32 @@
       <h1>Pictures</h1>
       <hr id='titleLine' />
 
-      <div id='picbg' onclick="showPic('');"></div>
-      <div id='pclose' onclick="showPic('');"></div>
-      <div id='pic' onclick="showPic('');"></div>
+      <div id='picbg' onclick="hidePic();"></div>
+      <div id='pic' onclick="hidePic();"></div>
+      <img id='pclose' src='../images/close.png' alt='close' onclick="hidePic();" />
 
-      <table>
-      <div class="imagelink"><tr onclick="showPic('filler');"><td class='image'><img id='filler' class='thumbnail' src='../images/icons/filler.png' /></td><td class='comment'>A lamp.</td></tr></div>
-      <tr onclick="showPic('flogo');"><td class='image'><img id='flogo' class='thumbnail' src='../images/icons/f_logo.png' /></td><td class='comment'>Facebook</td></tr>
-      <tr onclick="showPic('spacesatelite');"><td class='image'><img id='spacesatelite' class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></td><td class='comment'>Satelite</td></td></tr>
-      <tr onclick="showPic('manOnRailroadTracks');"><td class='image'><img id='manOnRailroadTracks' class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></td><td class='comment'>Man on railroad tracks</td></tr>
-<tr onclick="showPic('filler');"><td class='image'><img id='filler' class='thumbnail' src='../images/icons/filler.png' /></td><td class='comment'>A lamp.</td></tr>
-      <tr onclick="showPic('flogo');"><td class='image'><img id='flogo' class='thumbnail' src='../images/icons/f_logo.png' /></td><td class='comment'>Facebook</td></tr>
-      <tr onclick="showPic('spacesatelite');"><td class='image'><img id='spacesatelite' class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></td><td class='comment'>Satelite</td></td></tr>
-      <tr onclick="showPic('manOnRailroadTracks');"><td class='image'><img id='manOnRailroadTracks' class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></td><td class='comment'>Man on railroad tracks</td></tr>
-<tr onclick="showPic('filler');"><td class='image'><img id='filler' class='thumbnail' src='../images/icons/filler.png' /></td><td class='comment'>A lamp.</td></tr>
-      <tr onclick="showPic('flogo');"><td class='image'><img id='flogo' class='thumbnail' src='../images/icons/f_logo.png' /></td><td class='comment'>Facebook</td></tr>
-      <tr onclick="showPic('spacesatelite');"><td class='image'><img id='spacesatelite' class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></td><td class='comment'>Satelite</td></td></tr>
-      <tr onclick="showPic('manOnRailroadTracks');"><td class='image'><img id='manOnRailroadTracks' class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></td><td class='comment'>Man on railroad tracks</td></tr>
-<tr onclick="showPic('filler');"><td class='image'><img id='filler' class='thumbnail' src='../images/icons/filler.png' /></td><td class='comment'>A lamp.</td></tr>
-      <tr onclick="showPic('flogo');"><td class='image'><img id='flogo' class='thumbnail' src='../images/icons/f_logo.png' /></td><td class='comment'>Facebook</td></tr>
-      <tr onclick="showPic('spacesatelite');"><td class='image'><img id='spacesatelite' class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></td><td class='comment'>Satelite</td></td></tr>
-      <tr onclick="showPic('manOnRailroadTracks');"><td class='image'><img id='manOnRailroadTracks' class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></td><td class='comment'>Man on railroad tracks</td></tr>
-<tr onclick="showPic('filler');"><td class='image'><img id='filler' class='thumbnail' src='../images/icons/filler.png' /></td><td class='comment'>A lamp.</td></tr>
-      <tr onclick="showPic('flogo');"><td class='image'><img id='flogo' class='thumbnail' src='../images/icons/f_logo.png' /></td><td class='comment'>Facebook</td></tr>
-      <tr onclick="showPic('spacesatelite');"><td class='image'><img id='spacesatelite' class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></td><td class='comment'>Satelite</td></td></tr>
-      <tr onclick="showPic('manOnRailroadTracks');"><td class='image'><img id='manOnRailroadTracks' class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></td><td class='comment'>Man on railroad tracks</td></tr>
-      </table>
-
+      <div id='gallary'>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/pictures/Myron and Son.jpg' /></div><div class='comment'>Myron and Son</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
+        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+      </div>
     </div>
    </div>
   </body>
