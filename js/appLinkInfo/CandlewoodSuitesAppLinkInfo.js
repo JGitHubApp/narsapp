@@ -8,7 +8,7 @@ var CandlewoodSuitesAppLinkInfo = new AppLinkLog(
   [
     [],
     [],
-    [],
+    []
   ],
 
   [
