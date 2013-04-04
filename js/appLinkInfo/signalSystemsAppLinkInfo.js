@@ -9,10 +9,10 @@ var signalSystemsAppLinkInfo = new AppLinkLog(
 
 	[
 		[],
-		['signals', 'systems', 'money', 'tuition', 'times'],
-		['signals', 'systems'],
-		['signals', 'systems', 'preparations', 'ready'],
-		['signals', 'systems', 'time', 'when']
+		['fast', 'track', 'signals', 'systems', 'money', 'tuition', 'times'],
+		['fast', 'track', 'signals', 'systems'],
+		['fast', 'track', 'signals', 'systems', 'preparations', 'ready'],
+		['fast', 'track', 'signals', 'systems', 'time', 'when']
 	],
 
 	[

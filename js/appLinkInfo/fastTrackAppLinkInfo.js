@@ -8,9 +8,9 @@ var fastTrackAppLinkInfo = new AppLinkLog(
 
 	[
 		[],
-		[],
-		[],
-		[]
+		['fast', 'track'],
+		['fast', 'track'],
+		['fast', 'track']
 	],
 
 	[

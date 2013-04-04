@@ -9,10 +9,10 @@ var conductorAppLinkInfo = new AppLinkLog(
 
 	[
 		[],
-		['conductors', 'money', 'tuition', 'times'],
-		['conductors', ''],
-		['conductors', 'preparations', 'ready'],
-		['conductors', 'time', 'when']
+		['fast', 'track', 'conductors', 'money', 'tuition', 'times'],
+		['fast', 'track', 'conductors', ''],
+		['fast', 'track', 'conductors', 'preparations', 'ready'],
+		['fast', 'track', 'conductors', 'time', 'when']
 	],
 
 	[

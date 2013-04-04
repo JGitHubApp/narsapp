@@ -9,10 +9,10 @@ var freightCarAppLinkInfo = new AppLinkLog(
 
 	[
 		[],
-		['freightcars', 'money', 'tuition', 'times'],
-		['freightcars'],
-		['freightcars', 'preparations', 'ready'],
-		['freightcars', 'time', 'when']
+		['fast', 'track', 'freightcars', 'money', 'tuition', 'times'],
+		['fast', 'track', 'freightcars'],
+		['fast', 'track', 'freightcars', 'preparations', 'ready'],
+		['fast', 'track', 'freightcars', 'time', 'when']
 	],
 
 	[
