@@ -11,10 +11,8 @@ function search(pattern, keypress) {
 		var appLinks = document.getElementsByClassName('appLinkHyperLink');
 
 		if (pattern === '') {
-			for (var i = 0; i < appLinks.length; i++) {
-				appLinks[i].classList.remove('searched');
-				appLinks[i].classList.remove('notSearched');
-			}
+			for (var i = 0; i < appLinks.length; i++)
+				appLinks[i].className = 'appLinkHyperLink';
 
 			resetTabIndex(appLinks);
 		}
@@ -42,13 +40,11 @@ function highlightMatches(pattern, appLinks) {
 		if (rootSearchTree.contains(i, pattern)) {
 			if (firstMatch == -1) firstMatch = i;
 
-			appLinks[i].classList.remove('notSearched');
-			appLinks[i].classList.add('searched');
+			appLinks[i].className = 'appLinkHyperLink searched';
 			appLinks[i].tabIndex = ++matchCount;
 		}
 		else {
-			appLinks[i].classList.remove('searched');
-			appLinks[i].classList.add('notSearched');
+			appLinks[i].className = 'appLinkHyperLink notSearched';
 			appLinks[i].tabIndex = -1;
 		}
 	}
