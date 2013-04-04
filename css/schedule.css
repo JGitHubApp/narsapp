@@ -32,6 +32,12 @@ th, td {
 	background-color: #C00;
 	color: #FFF;
 	font-weight: bold;
+
+	transition: background-color 0.5s ease-in-out;
+	-webkit-transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+	-ms-transition: background-color 0.5s ease-in-out;
+	-o-transition: background-color 0.5s ease-in-out;
 }
 
 table {
@@ -47,7 +53,6 @@ font-size: 0.9em;
 	font-size: 1em;
 	margin-bottom: 10px;
 	text-align: center;
-	display: none;
 }
 
 @media screen and (min-width: 8in) {
@@ -99,10 +104,6 @@ font-size: 0.9em;
 		font-weight: bold;
 		font-size: 0.7em;
 		content: attr(data-title);
-	}
-
-	#goToWeek {
-		display: block;
 	}
 }
 

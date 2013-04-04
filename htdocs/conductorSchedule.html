@@ -24,8 +24,36 @@
 			<div id='headerContainer'>
 				<a href='../index.html' id='logo' tabindex='-1'><img src='../images/logo.png' alt='National Academy of Railroad Science' /></a>
 
-				<div id='searchBarContainer'>
-					<input id='searchBar' type='search' results='0' placeholder='search' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' onblur='focusFirstOccurence()' tabindex='1' />
+				<div class='headerTool'>
+					<script>
+						function goToWeek(selection) {
+							if (selection.value !== 'default') {
+								// set week to selected value
+								var week = document.getElementById(selection.value);
+
+								// Reset to default
+								selection.value='default';
+
+								// Scroll to week
+								scrollTo(0, week.offsetTop);
+
+								// Highlight the week temporarily
+								week.style.backgroundColor = '#00F'
+								setTimeout(function(){week.style.backgroundColor = ""}, 550);
+							}
+						}
+					</script>
+					<div id='headerToolContainer'>
+						<select class='headerTool' onchange='goToWeek(this)'>
+							<option value='default' selected>Go to Week...</option>
+							<option value='week1'>Week 1</option>
+							<option value='week2'>Week 2</option>
+							<option value='week3'>Week 3</option>
+							<option value='week4'>Week 4</option>
+							<option value='week5'>Week 5</option>
+							<option value='week6'>Week 6</option>
+						</select>
+					</div>
 				</div>
 			</div>
 
@@ -38,15 +66,6 @@
 			<h2>Fast Track Schedule</h2>
 
 			<p>Please notify the NARS office if you have an issue or are late for class 913-469-3857.<br />*If bus doesn't show, call KCTG at 816-471-1234</p><br />
-
-			<select id='goToWeek' onchange='scrollTo(0, document.getElementById(this.value).offsetTop); this.value="week1"'>
-				<option value='week1' selected>Week 1</option>
-				<option value='week2'>Week 2</option>
-				<option value='week3'>Week 3</option>
-				<option value='week4'>Week 4</option>
-				<option value='week5'>Week 5</option>
-				<option value='week6'>Week 6</option>
-			</select>
 			
 			<table>
 				<thead>

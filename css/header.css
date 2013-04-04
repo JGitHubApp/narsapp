@@ -44,33 +44,39 @@
 	vertical-align: middle;
 }
 
-#searchBarContainer {
+#headerToolContainer {
 	top: 50%;
 	right: 10pt;
 	margin-top: -1em;
 	height: 2em;
 	position: absolute;
-	background-color: #EEE;
-	border: 2pt solid #000;
 	width: 50%;
 	max-width: 5in;
+	background-color: #EEE;
+	border: 2pt solid #000;
 
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-#searchBar {
+.headerTool {
 	background-color: rgba(238, 238, 238, 0);
-	border: none;
 	outline: none;
-	-webkit-appearance: none;
+	border: none;
 	width: 100%;
 	margin: 0;
-	font-size: 1.4em;
+	font-size: 1em;
+	line-height: 1.8em;
 }
 
-#searchBarContainer, #SearchBar {
+#searchBar {
+	-webkit-appearance: none;
+	font-size: 1.4em;
+	line-height: 1em;
+}
+
+#headerToolContainer, #SearchBar {
 	border-radius: 15pt;
 	-webkit-border-radius: 15pt;
 	-moz-border-radius: 15pt;

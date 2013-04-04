@@ -24,7 +24,7 @@
 
 	#header {
 		height: auto;
-		padding-bottom: 1pt;
+		padding-bottom: 3pt;
 		text-align: center;
 
 		border-radius: 0 0 15pt 15pt;
@@ -47,8 +47,8 @@
 		float: none;
 	}
 
-	#searchBarContainer {
-		width: 99%;
+	#headerToolContainer {
+		width: 96%;
 		margin: 0 auto 0 auto;
 		position: static;
 	}
