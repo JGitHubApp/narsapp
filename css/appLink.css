@@ -2,109 +2,109 @@
 /*CSS Document*/
 
 .appLinkContainer {
-  float: left;
-  text-align: center;
-  width: 25%;
-  height: 1.9in;
+	float: left;
+	text-align: center;
+	width: 25%;
+	height: 1.9in;
 }
 
 .appLinkHyperLink {
-  display: inline-block;
-  min-width: 38pt;
-  max-width: 1.9in;
-  width: 95%;
-  height: 100%;
-  text-decoration: none;
+	display: inline-block;
+	min-width: 38pt;
+	max-width: 1.9in;
+	width: 95%;
+	height: 100%;
+	text-decoration: none;
 
-  border: 2pt solid #AAA;
-  border-color: rgba(136, 136, 136, 0);
-  border-radius: 5pt;
-  -webkit-border-radius: 5pt;
-  -moz-border-radius: 5pt;
-  -ms-border-radius: 5pt;
-  -o-border-radius: 5pt;
+	border: 2pt solid #AAA;
+	border-color: rgba(136, 136, 136, 0);
+	border-radius: 5pt;
+	-webkit-border-radius: 5pt;
+	-moz-border-radius: 5pt;
+	-ms-border-radius: 5pt;
+	-o-border-radius: 5pt;
 
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 
-  transition: border-color 0.1s ease-in;
-  -webkit-transition: border-color 0.1s ease-in;
-  -moz-transition: border-color 0.1s ease-in;
-  -ms-transition: border-color 0.1s ease-in;
-  -o-transition: border-color 0.1s ease-in;
+	transition: border-color 0.1s ease-in;
+	-webkit-transition: border-color 0.1s ease-in;
+	-moz-transition: border-color 0.1s ease-in;
+	-ms-transition: border-color 0.1s ease-in;
+	-o-transition: border-color 0.1s ease-in;
 }
 
 .appLinkHyperLink.searched > .appLinkPic {
-  border-color: #000;
+	border-color: #000;
 }
 
 .appLinkHyperLink:focus {
-  border-color: #FFF;
+	border-color: #FFF;
 }
 
 .appLinkHyperLink:hover > .appLinkPic, .appLinkHyperLink:focus > .appLinkPic, .appLinkHyperLink:active > .appLinkPic {
-  border-color: #EEE;
+	border-color: #EEE;
 
-  box-shadow:
-    0 0 20pt #FFF;
-  -webkit-box-shadow:
-    0 0 20pt #FFF;
-  -moz-box-shadow:
-    0 0 20pt #FFF;
-  -ms-box-shadow:
-    0 0 20pt #FFF;
-  -o-box-shadow:
-    0 0 20pt #FFF;
+	box-shadow:
+		0 0 20pt #FFF;
+	-webkit-box-shadow:
+		0 0 20pt #FFF;
+	-moz-box-shadow:
+		0 0 20pt #FFF;
+	-ms-box-shadow:
+		0 0 20pt #FFF;
+	-o-box-shadow:
+		0 0 20pt #FFF;
 }
 
 .appLinkHyperLink.notSearched > .appLinkPic {
-  background-color: #AAA ! important;
-  border-color: #777;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
+	background-color: #AAA ! important;
+	border-color: #777;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
 }
 
 .appLinkHyperLink.notSearched:hover > .appLinkPic {
-  border: 2pt solid #444;
+	border: 2pt solid #444;
 }
 
 .appLinkPic {
-  width: 80%;
-  min-width: 36pt;
-  max-width: 80pt;
-  height: auto;
-  margin-top: 6pt;
-  
-  border: 2pt solid #333;
-  border-radius: 12pt;
-  -webkit-border-radius: 12pt;
-  -moz-border-radius: 12pt;
-  -ms-border-radius: 12pt;
-  -o-border-radius: 12pt;
+	width: 80%;
+	min-width: 36pt;
+	max-width: 80pt;
+	height: auto;
+	margin-top: 6pt;
+	
+	border: 2pt solid #333;
+	border-radius: 12pt;
+	-webkit-border-radius: 12pt;
+	-moz-border-radius: 12pt;
+	-ms-border-radius: 12pt;
+	-o-border-radius: 12pt;
 
-  transition: background-color, box-shadow, border-color 0.1s ease-in;
-  -webkit-transition: background-color, box-shadow, border-color 0.1s ease-in;
-  -moz-transition: background-color, box-shadow, border-color 0.1s ease-in;
-  -ms-transition: background-color, box-shadow, border-color 0.1s ease-in;
-  -o-transition: background-color, box-shadow, border-color 0.1s ease-in;
+	transition: background-color, box-shadow, border-color 0.1s ease-in;
+	-webkit-transition: background-color, box-shadow, border-color 0.1s ease-in;
+	-moz-transition: background-color, box-shadow, border-color 0.1s ease-in;
+	-ms-transition: background-color, box-shadow, border-color 0.1s ease-in;
+	-o-transition: background-color, box-shadow, border-color 0.1s ease-in;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .appLinkName {
-  font-weight: bold;
-  margin-top: 4pt;
-  color: #000;
+	font-weight: bold;
+	margin-top: 4pt;
+	color: #000;
 }
 
 .appLinkName:active, .appLinkHyperLink:active > .appLinkName, .appLinkPic:active + .appLinkName {
-  color: #FFF;
+	color: #FFF;
 }

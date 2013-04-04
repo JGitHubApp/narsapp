@@ -2,122 +2,70 @@
 /*CSS Document*/
 
 body {
- text-align: center;
+	text-align: center;
 }
 
 #titleLine {
-  margin: 0;
+	margin: 0;
 }
 
 
 #appLinkAnchor {
-  max-width: 8in;
-  margin: 0 auto 0 auto;
+	max-width: 8in;
+	margin: 0 auto 0 auto;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
-  max-width: 7in;
-  margin: 0 auto 0 auto;
+	list-style-type: none;
+	padding: 0;
+	max-width: 7in;
+	margin: 0 auto 0 auto;
 }
 
 li {
-  width: 33%;
-  float: left;
+	width: 33%;
+	float: left;
 }
 
 #address {
-  margin-top: 2em;
-  font-weight: bold;
-  clear: both;
+	margin-top: 2em;
+	font-weight: bold;
+	clear: both;
 }
 
 iframe {
-  width: 99%;
-  max-width: 7in;
-  min-width: 1.4in;
-  height: 3in;
-  border: 2pt solid #000;
-  draggable: false;
+	width: 99%;
+	max-width: 7in;
+	min-width: 1.4in;
+	height: 3in;
+	border: 2pt solid #000;
+	draggable: false;
 
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 @media screen and (max-width: 6in) {
-  li {
-    width: 50%;
-  }
+	li {
+		width: 50%;
+	}
 }
 
 @media screen and (max-width: 3.5in) {
-  li {
-    width: 100%;
-  }
+	li {
+		width: 100%;
+	}
 }
 
 @media screen and (min-width: 3.5in) {
-  .appLinkContainer {
-    width: 33.3%;
-  }
+	.appLinkContainer {
+		width: 33.3%;
+	}
 }
-
-/*
-body {
- text-align: center;
-}
-
-#titleLine {
-  margin: 0;
-}
-
-#appLinkAnchor {
-  max-width: 10in;
-  margin: 0 auto 0 auto;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  max-width: 7in;
-  margin: 0 auto 0 auto;
-}
-
-li {
-  width: 33%;
-  float: left;
-}
-
-#address {
-  margin-top: 1em;
-  font-weight: bold;
-  clear: both;
-}
-
-@media screen and (max-width: 6in) {
-  li {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 3.5in) {
-  li {
-    width: 100%;
-  }
-}
-
-  @media screen and (min-width: 10in) {
-    .appLinkContainer {
-      width: 25%;
-    }
-  }
-}
-*/

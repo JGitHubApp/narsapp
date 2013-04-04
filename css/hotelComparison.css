@@ -2,166 +2,166 @@
 /*CSS Document*/
 
 #hotelInfo {
-  font-size: 11pt;
-  height: 1.45in;
+	font-size: 11pt;
+	height: 1.45in;
 }
 
 #hotelInfo > p:first-child {
-  text-indent: 2em;
+	text-indent: 2em;
 }
 
 #hotelTable {
-  margin-right: 20pt;
-  width: 99%;
+	margin-right: 20pt;
+	width: 99%;
 }
 
 table, td, th {
-  padding: 0;
+	padding: 0;
 
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 }
 
 #tableContainer {
-  float: right;
-  width: 75%;
+	float: right;
+	width: 75%;
 }
 
 #hotelTable, th > select {
-  font-size: 1em;
-  border-spacing: 0;
-  border: 0 1pt 1pt 1pt solid #000;
+	font-size: 1em;
+	border-spacing: 0;
+	border: 0 1pt 1pt 1pt solid #000;
 }
 
 td {
-  height: 1.9in;
-  border: 1pt solid #000;
-  text-align: center;
-  background-color: #EEE;
+	height: 1.9in;
+	border: 1pt solid #000;
+	text-align: center;
+	background-color: #EEE;
 }
 
 .true {
-  background-color: #0C0;
+	background-color: #0C0;
 }
 
 .false {
-  background-color: #C00;
+	background-color: #C00;
 }
 
 th {
-  border: 1pt solid #000;
-  width: 33.3%;
+	border: 1pt solid #000;
+	width: 33.3%;
 }
 
 th > select {
-  border: none;
-  width: 100%;
-  height: 0.3in;
+	border: none;
+	width: 100%;
+	height: 0.3in;
 }
 
 th, th > select {
-  text-align: center;
+	text-align: center;
 }
 
 .appLinkContainer {
-  width: 25%;
+	width: 25%;
 }
 
 .legendKey {
-  width: 10pt;
-  height: 10pt;
-  display: inline-block;
-  vertical-align: middle;
-  border: 1pt solid black;
+	width: 10pt;
+	height: 10pt;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1pt solid black;
 }
 
 .col4 {
-  display: none;
+	display: none;
 }
 
 #hotelTable th, th > select {
-  border-radius: 5pt 5pt 0 0;
-  -webkit-border-radius: 5pt 5pt 0 0;
-  -moz-border-radius: 5pt 5pt 0 0;
-  -ms-border-radius: 5pt 5pt 0 0;
-  -o-border-radius: 5pt 5pt 0 0;
+	border-radius: 5pt 5pt 0 0;
+	-webkit-border-radius: 5pt 5pt 0 0;
+	-moz-border-radius: 5pt 5pt 0 0;
+	-ms-border-radius: 5pt 5pt 0 0;
+	-o-border-radius: 5pt 5pt 0 0;
 }
 
 @media screen and (min-width: 10in) {
-  .col4 {
-    display: table-cell;
-  }
+	.col4 {
+		display: table-cell;
+	}
 
-  th {
-    width: 25%;
-  }
+	th {
+		width: 25%;
+	}
 }
 
 @media screen and (max-width: 6in) {
-  #hotelInfo {
-    height: 1.25in;
-  }
+	#hotelInfo {
+		height: 1.25in;
+	}
 
-  #hotelInfo > p:first-child {
-    display: none;
-  }
+	#hotelInfo > p:first-child {
+		display: none;
+	}
 
-  .col3 {
-    display: none;
-  }
+	.col3 {
+		display: none;
+	}
 
-  th {
-    width: 50%
-  }
+	th {
+		width: 50%
+	}
 
-  td {
-    height: 1.7in;
-  }
+	td {
+		height: 1.7in;
+	}
 }
 
 @media screen and (max-width: 4in) {
-  #hotelInfo {
-    height: 0.95in;
-  }
-  
-  td {
-    height: 1.4in;
-  }
+	#hotelInfo {
+		height: 0.95in;
+	}
+	
+	td {
+		height: 1.4in;
+	}
 }
 
 @media screen and (max-width: 3.5in) {
-  .col2 {
-    display: none;
-  }
+	.col2 {
+		display: none;
+	}
 
-  th {
-    width: 100%;
-  }
+	th {
+		width: 100%;
+	}
 
-  .appLinkContainer {
-    width: 33.3%
-  }
+	.appLinkContainer {
+		width: 33.3%
+	}
 
-  #tableContainer {
-    width: 66.6%;
-  }
+	#tableContainer {
+		width: 66.6%;
+	}
 }
 
 @media screen and (max-width: 210px), (max-width: 2in) {
-  .appLinkContainer {
-    width: 50%
-  }
+	.appLinkContainer {
+		width: 50%
+	}
 
-  #tableContainer {
-    width: 50%;
-  }
+	#tableContainer {
+		width: 50%;
+	}
 
-  #hotelInfo {
-    height: 0.85in;
-  }
+	#hotelInfo {
+		height: 0.85in;
+	}
 
-  td {
-    height: 1.3in;
-  }
+	td {
+		height: 1.3in;
+	}
 }

@@ -1,172 +1,172 @@
 <!doctype html>
 <html lang='en'>
-  <head>
-    <script src='../js/fullscreen.js' type='text/javascript'></script>
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="../favicon.ico" type='image/x-icon' />
+	<head>
+		<script src='../js/fullscreen.js' type='text/javascript'></script>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<meta name='viewport' content='initial-scale=1.0, width=device-width' />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="../favicon.ico" type='image/x-icon' />
 
-    <title>NARS Resource Hotels</title>
+		<title>NARS Resource Hotels</title>
 
-    <link href='../css/styles.css' rel='stylesheet' type='text/css' />
-    <link href='../css/header.css' rel='stylesheet' type='text/css' />
-    <link href='../css/appLink.css' rel='stylesheet' type='text/css' />
-    <link href='../css/media-queries.css' rel='stylesheet' type='text/css' />
-    <link href='../css/hotelComparison.css' rel='stylesheet' type='text/css' />
+		<link href='../css/styles.css' rel='stylesheet' type='text/css' />
+		<link href='../css/header.css' rel='stylesheet' type='text/css' />
+		<link href='../css/appLink.css' rel='stylesheet' type='text/css' />
+		<link href='../css/media-queries.css' rel='stylesheet' type='text/css' />
+		<link href='../css/hotelComparison.css' rel='stylesheet' type='text/css' />
 
-    <script src='../js/appLinkLog.js' type='text/javascript'></script>
-    <script src='../js/appLinkInfo/CandlewoodSuitesAppLinkInfo.js' type='text/javascript'></script>
-    <script src='../js/appLinkInfo/hotelsAppLinkInfo.js' type='text/javascript'></script>
-    <script src='../js/appLink.js'></script>
-    <script src='../js/searchBar.js'></script>
-    <script src='../js/classList.js'></script>
-    <script src='../js/hotelComparison.js' defer></script>
-  </head>
+		<script src='../js/appLinkLog.js' type='text/javascript'></script>
+		<script src='../js/appLinkInfo/CandlewoodSuitesAppLinkInfo.js' type='text/javascript'></script>
+		<script src='../js/appLinkInfo/hotelsAppLinkInfo.js' type='text/javascript'></script>
+		<script src='../js/appLink.js'></script>
+		<script src='../js/searchBar.js'></script>
+		<script src='../js/classList.js'></script>
+		<script src='../js/hotelComparison.js' defer></script>
+	</head>
 
-  <body onload='loadHotelsAppLinks(); loadDefaultTable()'>
-    <div id='header'>
-      <div id='headerContainer'>
-        <a href='../index.html' id='logo' tabindex='-1'><img src='../images/logo.png' alt='National Academy of Railroad Science' /></a>
+	<body onload='loadHotelsAppLinks(); loadDefaultTable()'>
+		<div id='header'>
+			<div id='headerContainer'>
+				<a href='../index.html' id='logo' tabindex='-1'><img src='../images/logo.png' alt='National Academy of Railroad Science' /></a>
 
-        <div id='searchBarContainer'>
-          <input id='searchBar' type='search' results='0' placeholder='search' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' onblur='focusFirstOccurence()' tabindex='1' />
-        </div>
-      </div>
+				<div id='searchBarContainer'>
+					<input id='searchBar' type='search' results='0' placeholder='search' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' onblur='focusFirstOccurence()' tabindex='1' />
+				</div>
+			</div>
 
-      <div class='clearfix'></div>
-    </div>
+			<div class='clearfix'></div>
+		</div>
 
-    <div id='container'>
-      <h1>Hotels</h1>
-      <hr id='titleLine' />
+		<div id='container'>
+			<h1>Hotels</h1>
+			<hr id='titleLine' />
 
 
-    <section id='tableContainer'>
-      <section id='hotelInfo'>
-        <p>We have partnerships with local hotels to provide you with the best option for your needs. If you have any questions, please feel free to call our office at <strong>913-469-3857</strong>.</p>
+		<section id='tableContainer'>
+			<section id='hotelInfo'>
+				<p>We have partnerships with local hotels to provide you with the best option for your needs. If you have any questions, please feel free to call our office at <strong>913-469-3857</strong>.</p>
 
-        <p>
-          <div class='false legendKey'></div> - NO<br />
-          <div class='true legendKey'></div> - YES
-        </p>
-      </section>
+				<p>
+					<div class='false legendKey'></div> - NO<br />
+					<div class='true legendKey'></div> - YES
+				</p>
+			</section>
 
-      <table id='hotelTable'>
-        <tr>
-          <th class='col1'>
-            <select id='col1' onchange='updateColumn(this, 0)'>
-              <option selected>Cost/night</option>
-              <option>Distance from NARS</option>
-              <option>Wifi</option>
-              <option>Apartment Suite</option>
-              <option>Kitchen</option>
-              <option>Fitness Ct.</option>
-              <option>Athletic Club Pass</option>
-              <option>Hot Breakfast</option>
-              <option>Dinner</option>
-              <option>Shuttle</option>
-              <option>Washer Dryer</option>
-              <option>indoor Pool</option>
-            </select>
-          </th>
+			<table id='hotelTable'>
+				<tr>
+					<th class='col1'>
+						<select id='col1' onchange='updateColumn(this, 0)'>
+							<option selected>Cost/night</option>
+							<option>Distance from NARS</option>
+							<option>Wifi</option>
+							<option>Apartment Suite</option>
+							<option>Kitchen</option>
+							<option>Fitness Ct.</option>
+							<option>Athletic Club Pass</option>
+							<option>Hot Breakfast</option>
+							<option>Dinner</option>
+							<option>Shuttle</option>
+							<option>Washer Dryer</option>
+							<option>indoor Pool</option>
+						</select>
+					</th>
 
-          <th class='col2'>
-            <select id='col2' selectedindex='2' onchange='updateColumn(this, 1)'>
-              <option>Cost/night</option>
-              <option selected>Distance from NARS</option>
-              <option>Wifi</option>
-              <option>Apartment Suite</option>
-              <option>Kitchen</option>
-              <option>Fitness Ct.</option>
-              <option>Athletic Club Pass</option>
-              <option>Hot Breakfast</option>
-              <option>Dinner</option>
-              <option>Shuttle</option>
-              <option>Washer Dryer</option>
-              <option>indoor Pool</option>
-            </select>
-          </th>
+					<th class='col2'>
+						<select id='col2' selectedindex='2' onchange='updateColumn(this, 1)'>
+							<option>Cost/night</option>
+							<option selected>Distance from NARS</option>
+							<option>Wifi</option>
+							<option>Apartment Suite</option>
+							<option>Kitchen</option>
+							<option>Fitness Ct.</option>
+							<option>Athletic Club Pass</option>
+							<option>Hot Breakfast</option>
+							<option>Dinner</option>
+							<option>Shuttle</option>
+							<option>Washer Dryer</option>
+							<option>indoor Pool</option>
+						</select>
+					</th>
 
-          <th class='col3'>
-            <select id='col3' onchange='updateColumn(this, 2)'>
-              <option>Cost/night</option>
-              <option>Distance from NARS</option>
-              <option selected>Wifi</option>
-              <option>Apartment Suite</option>
-              <option>Kitchen</option>
-              <option>Fitness Ct.</option>
-              <option>Athletic Club Pass</option>
-              <option>Hot Breakfast</option>
-              <option>Dinner</option>
-              <option>Shuttle</option>
-              <option>Washer Dryer</option>
-              <option>indoor Pool</option>
-            </select>
-          </th>
+					<th class='col3'>
+						<select id='col3' onchange='updateColumn(this, 2)'>
+							<option>Cost/night</option>
+							<option>Distance from NARS</option>
+							<option selected>Wifi</option>
+							<option>Apartment Suite</option>
+							<option>Kitchen</option>
+							<option>Fitness Ct.</option>
+							<option>Athletic Club Pass</option>
+							<option>Hot Breakfast</option>
+							<option>Dinner</option>
+							<option>Shuttle</option>
+							<option>Washer Dryer</option>
+							<option>indoor Pool</option>
+						</select>
+					</th>
 
-          <th class='col4'>
-            <select id='col4' onchange='updateColumn(this, 3)'>
-              <option>Cost/night</option>
-              <option>Distance from NARS</option>
-              <option>Wifi</option>
-              <option>Apartment Suite</option>
-              <option>Kitchen</option>
-              <option>Fitness Ct.</option>
-              <option>Athletic Club Pass</option>
-              <option selected>Hot Breakfast</option>
-              <option>Dinner</option>
-              <option>Shuttle</option>
-              <option>Washer Dryer</option>
-              <option>indoor Pool</option>
-            </select>
-          </th>
-        </tr>
-        <tr>
-          <td class='col1'></td>
-          <td class='col2'></td>
-          <td class='col3'></td>
-          <td class='col4'></td>
-        </tr>
-        <tr>
-          <td class='col1'></td>
-          <td class='col2'></td>
-          <td class='col3'></td>
-          <td class='col4'></td>
-        </tr>
-        <tr>
-          <td class='col1'></td>
-          <td class='col2'></td>
-          <td class='col3'></td>
-          <td class='col4'></td>
-        </tr>
-        <tr>
-          <td class='col1'></td>
-          <td class='col2'></td>
-          <td class='col3'></td>
-          <td class='col4'></td>
-        </tr>
-        <tr>
-          <td class='col1'></td>
-          <td class='col2'></td>
-          <td class='col3'></td>
-          <td class='col4'></td>
-        </tr>
-        <tr>
-          <td class='col1'></td>
-          <td class='col2'></td>
-          <td class='col3'></td>
-          <td class='col4'></td>
-        </tr>
-        <tr>
-          <td class='col1'></td>
-          <td class='col2'></td>
-          <td class='col3'></td>
-          <td class='col4'></td>
-        </tr>
-        </table>
-      </section>
-    </div>
-  </body>
+					<th class='col4'>
+						<select id='col4' onchange='updateColumn(this, 3)'>
+							<option>Cost/night</option>
+							<option>Distance from NARS</option>
+							<option>Wifi</option>
+							<option>Apartment Suite</option>
+							<option>Kitchen</option>
+							<option>Fitness Ct.</option>
+							<option>Athletic Club Pass</option>
+							<option selected>Hot Breakfast</option>
+							<option>Dinner</option>
+							<option>Shuttle</option>
+							<option>Washer Dryer</option>
+							<option>indoor Pool</option>
+						</select>
+					</th>
+				</tr>
+				<tr>
+					<td class='col1'></td>
+					<td class='col2'></td>
+					<td class='col3'></td>
+					<td class='col4'></td>
+				</tr>
+				<tr>
+					<td class='col1'></td>
+					<td class='col2'></td>
+					<td class='col3'></td>
+					<td class='col4'></td>
+				</tr>
+				<tr>
+					<td class='col1'></td>
+					<td class='col2'></td>
+					<td class='col3'></td>
+					<td class='col4'></td>
+				</tr>
+				<tr>
+					<td class='col1'></td>
+					<td class='col2'></td>
+					<td class='col3'></td>
+					<td class='col4'></td>
+				</tr>
+				<tr>
+					<td class='col1'></td>
+					<td class='col2'></td>
+					<td class='col3'></td>
+					<td class='col4'></td>
+				</tr>
+				<tr>
+					<td class='col1'></td>
+					<td class='col2'></td>
+					<td class='col3'></td>
+					<td class='col4'></td>
+				</tr>
+				<tr>
+					<td class='col1'></td>
+					<td class='col2'></td>
+					<td class='col3'></td>
+					<td class='col4'></td>
+				</tr>
+				</table>
+			</section>
+		</div>
+	</body>
 </html>

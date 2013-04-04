@@ -11,7 +11,7 @@
 # Unzip all zip files
 for zFile in *.zip
 do
-  unzip $zFile
+	unzip $zFile
 done
 
 # Move all files to the working directory
@@ -21,20 +21,20 @@ echo "`ls -1 *.png | wc -l` pictures will be converted"
 # Format the images
 for pic in *.png
 do
-    mogrify -format gif -crop 400x400+50+50 -scale 100x100 $pic && echo "${pic:7} CONVERTED to .gif"
-    mogrify -crop 400x400+50+50 -scale 100x100 $pic && echo "${pic:7} FORMATTED"
-    mv $pic ${pic:7}
+		mogrify -format gif -crop 400x400+50+50 -scale 100x100 $pic && echo "${pic:7} CONVERTED to .gif"
+		mogrify -crop 400x400+50+50 -scale 100x100 $pic && echo "${pic:7} FORMATTED"
+		mv $pic ${pic:7}
 done
 
 # Move the .gif files into the gifs folder
 mkdir gifs
 for gif in *.gif
 do
-  mv $gif "gifs/${gif:7}"
+	mv $gif "gifs/${gif:7}"
 done
 
 # Delete the zip files and their unzipped counterparts
 for zFile in *.zip
 do
-  rm -r ${zFile} ${zFile%.zip} && echo "${zFile} DELETED"
+	rm -r ${zFile} ${zFile%.zip} && echo "${zFile} DELETED"
 done

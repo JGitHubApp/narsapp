@@ -8,28 +8,28 @@
 # also delete all the unused images.
 
 function insertSeparator {
-  for i in {1..80}; do
-    printf '='
-  done
+	for i in {1..80}; do
+		printf '='
+	done
 
-  printf '\n'
+	printf '\n'
 }
 
 for icon in ../images/icons/*; do
-  filename="${icon##*/}"
+	filename="${icon##*/}"
 
-  printf '%-65s | ' $filename
-  if grep -q "images/icons/${filename}" ../js/appLinkInfo/*
-    then
-      echo 'found'
-    else
-      if [[ -n $1 ]] && [[ $1 = "--DELETE" ]]
-        then
-          rm $icon && echo 'DELETED!!!'
-        else
-          echo 'NOT FOUND!!!'
-      fi
-  fi
+	printf '%-65s | ' $filename
+	if grep -q "images/icons/${filename}" ../js/appLinkInfo/*
+		then
+			echo 'found'
+		else
+			if [[ -n $1 ]] && [[ $1 = "--DELETE" ]]
+				then
+					rm $icon && echo 'DELETED!!!'
+				else
+					echo 'NOT FOUND!!!'
+			fi
+	fi
 
-  insertSeparator
+	insertSeparator
 done;

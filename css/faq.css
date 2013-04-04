@@ -2,70 +2,70 @@
 /*CSS Document*/
 
 dt {
-  background-color: #DDD;
-  font-weight: bold;
+	background-color: #DDD;
+	font-weight: bold;
 }
 
 dd {
-  background-color: #FFF;
-  display: none;
-  text-indent: 2em;
-  padding: 0.5em;
-  width: 100%;
-  margin: 0;
+	background-color: #FFF;
+	display: none;
+	text-indent: 2em;
+	padding: 0.5em;
+	width: 100%;
+	margin: 0;
 }
 
 dd, dt {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 dl {
-  width: 99%;
-  margin: 0 auto 0 auto;
+	width: 99%;
+	margin: 0 auto 0 auto;
 }
 
 dl > div {
-  margin-bottom: 3px;
-  border: solid 2px #000;
+	margin-bottom: 3px;
+	border: solid 2px #000;
 }
 
 dl > div:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 dl > div:hover > dt {
-  background-color: #D00;
+	background-color: #D00;
 }
 
 dl > div:hover .indicateExpand {
-  color: #FFF;
+	color: #FFF;
 }
 
 h3 {
-  display: table-cell;
-  text-align: left;
-  padding: 1em;
+	display: table-cell;
+	text-align: left;
+	padding: 1em;
 }
 
 .indicateExpand {
-  color: #000;
-  padding-left: 1em;
-  display: table-cell;
-  vertical-align: middle;
+	color: #000;
+	padding-left: 1em;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .keywords {
-  display: none;
+	display: none;
 }
 
 @media screen and (max-width: 3.5in) {
-  .indicateExpand {
-    padding-left: 0.5em;
-  }
+	.indicateExpand {
+		padding-left: 0.5em;
+	}
 
-  h3 {
-    padding: 0.5em;
-  }
+	h3 {
+		padding: 0.5em;
+	}
 }

@@ -2,78 +2,78 @@
 /*CSS Document*/
 
 #headerContainer {
-  max-width: 12in;
-  margin: 0 auto 0 auto;
-  position: relative;
-  height: 70px;
+	max-width: 12in;
+	margin: 0 auto 0 auto;
+	position: relative;
+	height: 70px;
 }
 
 #header {
-  background-color: #C00;
+	background-color: #C00;
 
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D00), to(#800));
-  background: -webkit-linear-gradient(top, #D00, #800);
-  background: -moz-linear-gradient(top, #D00, #800);
-  background: -ms-linear-gradient(top, #D00, #800);
-  background: -o-linear-gradient(top, #D00, #800);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D00), to(#800));
+	background: -webkit-linear-gradient(top, #D00, #800);
+	background: -moz-linear-gradient(top, #D00, #800);
+	background: -ms-linear-gradient(top, #D00, #800);
+	background: -o-linear-gradient(top, #D00, #800);
 
-  min-width: 1.4in;
-  width: 100%;
-  text-align: right;
-  overflow-x: hidden;
+	min-width: 1.4in;
+	width: 100%;
+	text-align: right;
+	overflow-x: hidden;
 
-  box-shadow:
-    0 3pt 3pt #555;
-  -webkit-box-shadow:
-    0 3pt 3pt #555;
-  -moz-box-shadow:
-    0 3pt 3pt #555;
-  -ms-box-shadow:
-    0 3pt 3pt #555;
-  -o-box-shadow:
-    0 3pt 3pt #555;
+	box-shadow:
+		0 3pt 3pt #555;
+	-webkit-box-shadow:
+		0 3pt 3pt #555;
+	-moz-box-shadow:
+		0 3pt 3pt #555;
+	-ms-box-shadow:
+		0 3pt 3pt #555;
+	-o-box-shadow:
+		0 3pt 3pt #555;
 }
 
 #logo {
-  float: left;
-  padding-left: 10pt;
+	float: left;
+	padding-left: 10pt;
 }
 
 #logo > img {
-  border: none;
-  vertical-align: middle;
+	border: none;
+	vertical-align: middle;
 }
 
 #searchBarContainer {
-  top: 50%;
-  right: 10pt;
-  margin-top: -1em;
-  height: 2em;
-  position: absolute;
-  background-color: #EEE;
-  border: 2pt solid #000;
-  width: 50%;
-  max-width: 5in;
+	top: 50%;
+	right: 10pt;
+	margin-top: -1em;
+	height: 2em;
+	position: absolute;
+	background-color: #EEE;
+	border: 2pt solid #000;
+	width: 50%;
+	max-width: 5in;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 #searchBar {
-  background-color: rgba(238, 238, 238, 0);
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
-  width: 100%;
-  margin: 0;
-  font-size: 1.4em;
+	background-color: rgba(238, 238, 238, 0);
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	width: 100%;
+	margin: 0;
+	font-size: 1.4em;
 }
 
 #searchBarContainer, #SearchBar {
-  border-radius: 15pt;
-  -webkit-border-radius: 15pt;
-  -moz-border-radius: 15pt;
-  -ms-border-radius: 15pt;
-  -o-border-radius: 15pt;
+	border-radius: 15pt;
+	-webkit-border-radius: 15pt;
+	-moz-border-radius: 15pt;
+	-ms-border-radius: 15pt;
+	-o-border-radius: 15pt;
 }

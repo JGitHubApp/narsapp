@@ -2,21 +2,21 @@
 /*CSS Document*/
 
 #gallery {
- width: 99%;
- display: table;
- margin: 0 auto 0 auto;
+	width: 99%;
+	display: table;
+	margin: 0 auto 0 auto;
 }
 
 .imagelink {
- background-color: #DDD;
- cursor: pointer;
- border: 2pt solid #000;
- margin-bottom: 3px;
- height: 1.1in;
-    
- -moz-box-sizing: border-box;
- -webkit-box-sizing: border-box;
- box-sizing: border-box;
+	background-color: #DDD;
+	cursor: pointer;
+	border: 2pt solid #000;
+	margin-bottom: 3px;
+	height: 1.1in;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .imagelink:hover {
@@ -24,66 +24,66 @@
 }
 
 .image {
- text-align: center;
- height: 1.1in;
- display: table-cell;
- vertical-align: middle;
+	text-align: center;
+	height: 1.1in;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .thumbnail {
- max-width: 1in;
- max-height: 1in;
- margin-left: 1em;
+	max-width: 1in;
+	max-height: 1in;
+	margin-left: 1em;
 }
 
 .comment {
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: 1em;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 1em;
 }
 
 /* Deals with picture displaying */
 #picbg {
- z-index: 990;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- position: fixed;
- background-color: #000000;
- opacity: 0.50;
- /*Opacity fix for IE8*/
- filter: Alpha(Opacity=50);
- display: none;
+	z-index: 990;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #000000;
+	opacity: 0.50;
+	/*Opacity fix for IE8*/
+	filter: Alpha(Opacity=50);
+	display: none;
 }
 
 #pclose {
- z-index: 999;
- top: 0;
- right: 0;
- position: absolute;
- display: none;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	position: absolute;
+	display: none;
 }
 
 #pic {
- z-index: 995;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background-color: transparent;
- background-repeat: no-repeat;
- background-clip: content-box;
- background-position: center center;
- background-size: contain;
- position: absolute;
- display: none;
+	z-index: 995;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-position: center center;
+	background-size: contain;
+	position: absolute;
+	display: none;
 }
 
 @media screen and (min-width:10in) {
-  .imagelink {
-    margin-left: 0.33%;
-    float: left;
-    width: 49.5%;
-  }
+	.imagelink {
+		margin-left: 0.33%;
+		float: left;
+		width: 49.5%;
+	}
 }

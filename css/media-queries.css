@@ -2,102 +2,102 @@
 /*CSS Document*/
 
 @media screen and (min-width: 10in) {
-  .appLinkContainer {
-    width: 20%;
-  }
+	.appLinkContainer {
+		width: 20%;
+	}
 
-  .appLinkName {
-    font-size: 14pt;
-  }
+	.appLinkName {
+		font-size: 14pt;
+	}
 }
 
 @media screen and (max-width: 6in) {
-  .appLinkName {
-    letter-spacing: 0;
-    margin-top: 0;
-    font-size: 11pt;
-  }
+	.appLinkName {
+		letter-spacing: 0;
+		margin-top: 0;
+		font-size: 11pt;
+	}
 
-  .appLinkContainer {
-    height: 1.7in;
-  }
+	.appLinkContainer {
+		height: 1.7in;
+	}
 
-  #header {
-    height: auto;
-    padding-bottom: 1pt;
-    text-align: center;
+	#header {
+		height: auto;
+		padding-bottom: 1pt;
+		text-align: center;
 
-    border-radius: 0 0 15pt 15pt;
-    -webkit-border-radius: 0 0 15pt 15pt;
-    -moz-border-radius: 0 0 15pt 15pt;
-    -ms-border-radius: 0 0 15pt 15pt;
-    -o-border-radius: 0 0 15pt 15pt;
-  }
+		border-radius: 0 0 15pt 15pt;
+		-webkit-border-radius: 0 0 15pt 15pt;
+		-moz-border-radius: 0 0 15pt 15pt;
+		-ms-border-radius: 0 0 15pt 15pt;
+		-o-border-radius: 0 0 15pt 15pt;
+	}
 
-  #headerContainer {
-    position: static;
-    height: auto;
-  }
+	#headerContainer {
+		position: static;
+		height: auto;
+	}
 
-  #logo {
-    width: 100%;
-    padding: 0;
-    height: auto;
-    min-height: 1px;
-    float: none;
-  }
+	#logo {
+		width: 100%;
+		padding: 0;
+		height: auto;
+		min-height: 1px;
+		float: none;
+	}
 
-  #searchBarContainer {
-    width: 99%;
-    margin: 0 auto 0 auto;
-    position: static;
-  }
+	#searchBarContainer {
+		width: 99%;
+		margin: 0 auto 0 auto;
+		position: static;
+	}
 }
 
 @media screen and (max-width: 4in) {
-   .appLinkName {
-    font-size: 10pt;
-  }
-  
-  .appLinkContainer {
-    height: 1.4in;
-  }
+	 .appLinkName {
+		font-size: 10pt;
+	}
+	
+	.appLinkContainer {
+		height: 1.4in;
+	}
 }
 
 @media screen and (max-width: 3.5in) {
-  .appLinkContainer {
-    width: 33.3%;
-  }
+	.appLinkContainer {
+		width: 33.3%;
+	}
 
-  .appLinkPic {
-    border-radius: 10pt;
-    -webkit-border-radius: 10pt;
-    -moz-border-radius: 10pt;
-    -ms-border-radius: 10pt;
-    -o-border-radius: 10pt;
-  }
+	.appLinkPic {
+		border-radius: 10pt;
+		-webkit-border-radius: 10pt;
+		-moz-border-radius: 10pt;
+		-ms-border-radius: 10pt;
+		-o-border-radius: 10pt;
+	}
 }
 
 @media screen and (max-width: 2.5in) {
-   .appLinkName {
-    font-size: 8pt;
-  }
+	 .appLinkName {
+		font-size: 8pt;
+	}
 }
 
 @media screen and (max-width: 210px), (max-width: 2in) {
-   .appLinkName {
-    font-size: 7pt;
-  }
+	 .appLinkName {
+		font-size: 7pt;
+	}
 
-  .appLinkContainer {
-    height: 1.3in;
-  }
+	.appLinkContainer {
+		height: 1.3in;
+	}
 
-  #logo > img {
-    width: 100%;
-  }
+	#logo > img {
+		width: 100%;
+	}
 
-  .appLinkContainer {
-    width: 50%;
-  }
+	.appLinkContainer {
+		width: 50%;
+	}
 }

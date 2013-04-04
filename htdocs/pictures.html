@@ -1,68 +1,68 @@
 <!doctype html>
 <html lang='en'>
-  <head>
-    <script src='../js/fullscreen.js' type='text/javascript'></script>
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="../favicon.ico" type='image/x-icon' />
+	<head>
+		<script src='../js/fullscreen.js' type='text/javascript'></script>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<meta name='viewport' content='initial-scale=1.0, width=device-width' />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="../favicon.ico" type='image/x-icon' />
 
-    <title>NARS Resource Pictures</title>
+		<title>NARS Resource Pictures</title>
 
-    <link href='../css/styles.css' rel='stylesheet' type='text/css' />
-    <link href='../css/header.css' rel='stylesheet' type='text/css' />
-    <link href='../css/media-queries.css' rel='stylesheet' type='text/css' />
-    <link href='../css/pictures.css' rel='stylesheet' type='text/css' />
+		<link href='../css/styles.css' rel='stylesheet' type='text/css' />
+		<link href='../css/header.css' rel='stylesheet' type='text/css' />
+		<link href='../css/media-queries.css' rel='stylesheet' type='text/css' />
+		<link href='../css/pictures.css' rel='stylesheet' type='text/css' />
 
-    <script src='../js/pictures.js'></script>
-    <script src='../js/searchBar.js'></script>
+		<script src='../js/pictures.js'></script>
+		<script src='../js/searchBar.js'></script>
 
-  </head>
+	</head>
 
-  <body>
-    <div id='header'>
-      <div id='headerContainer'>
-        <a href='../index.html' id='logo' tabindex='-1'><img src='../images/logo.png' alt='National Academy of Railroad Science' /></a>
+	<body>
+		<div id='header'>
+			<div id='headerContainer'>
+				<a href='../index.html' id='logo' tabindex='-1'><img src='../images/logo.png' alt='National Academy of Railroad Science' /></a>
 
-        <div id='searchBarContainer'>
-          <input id='searchBar' type='search' results='0' placeholder='search' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' onblur='focusFirstOccurence()' tabindex='1' />
-        </div>
-      </div>
+				<div id='searchBarContainer'>
+					<input id='searchBar' type='search' results='0' placeholder='search' maxlength='40' onkeyup='search(this.value, event.which)' onchange='search(this.value, event.which)' onblur='focusFirstOccurence()' tabindex='1' />
+				</div>
+			</div>
 
-      <div class='clearfix'></div>
-    </div>
+			<div class='clearfix'></div>
+		</div>
 
-    <div id='container'>
-      <h1>Pictures</h1>
-      <hr id='titleLine' />
+		<div id='container'>
+			<h1>Pictures</h1>
+			<hr id='titleLine' />
 
-      <div id='picbg' onclick="hidePic();"></div>
-      <div id='pic' onclick="hidePic();"></div>
-      <img id='pclose' src='../images/close.png' alt='close' onclick="hidePic();" />
+			<div id='picbg' onclick="hidePic();"></div>
+			<div id='pic' onclick="hidePic();"></div>
+			<img id='pclose' src='../images/close.png' alt='close' onclick="hidePic();" />
 
-      <div id='gallery'>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/pictures/Myron and Son.jpg' /></div><div class='comment'>Myron and Son</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
-        <div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
-      </div>
-    </div>
-  </body>
+			<div id='gallery'>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/pictures/Myron and Son.jpg' /></div><div class='comment'>Myron and Son</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/filler.png' /></div><div class='comment'>A lamp.</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/f_logo.png' /></div><div class='comment'>Facebook</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/glossy-black-icon-business-space-satelite-sc43.png' /></div><div class='comment'>Satelite</div></div>
+				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/icons/manOnRailroadTracks.png' /></div><div class='comment'>Man on railroad tracks</div></div>
+			</div>
+		</div>
+	</body>
 </html>
