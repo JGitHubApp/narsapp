@@ -23,6 +23,7 @@ function SearchTree() {
 		}
 	}
 
+	// Convert SearchTree to a one dimensional array
 	this.flatten = flatten;
 	function flatten() {
 		var tmpArr = [];
@@ -38,31 +39,45 @@ SearchTree.prototype = new Array();
 
 // AppLinkLog object
 function AppLinkLog(info, aliases, subAppLinkLogs) {
+	// Create array of names
 	this.names = [];
 	for (var i = 0; i < info.length; i++)
 		this.names.push(info[i][0])
 
+	// Create array of image urls
 	this.imageurls = [];
 	for (var i = 0; i < info.length; i++)
 		this.imageurls.push(info[i][1])
 
+	// Create array of links
 	this.links = [];
 	for (var i = 0; i < info.length; i++)
 		this.links.push(info[i][2])
 
+	// Create array of background colors
 	this.backgroundColors = [];
 	for (var i = 0; i < info.length; i++)
 		this.backgroundColors.push(info[i][3])
 
+
+	// Create SearchTree for aliases
 	this.aliases = new SearchTree();
+
+	// Add names to SearchTree
 	for (var i = 0; i < this.names.length; i++)
 		this.aliases.push(this.names[i].toLowerCase().split(' '));
+
+	// Add aliases to SearchTree
 	for (var i = 0; i < aliases.length; i++)
 		if (aliases[i][0])
 			this.aliases[i] = this.aliases[i].concat(aliases[i]);
+
+	// Add subAppLinkLog aliases to SearchTree
 	for (var i = 0; i < subAppLinkLogs.length; i++)
 		if (subAppLinkLogs[i])
 			this.aliases[i] = this.aliases[i].concat(subAppLinkLogs[i].aliases.flatten());
+
+	// Sort the SearchTree aliases
 	for (var i = 0; i < this.aliases.length; i++)
 		this.aliases[i].sort();
 }

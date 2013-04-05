@@ -5,7 +5,7 @@ function search(pattern, keypress) {
 	if (keypress !== 32) { // not space key
 		// Remove special characters
 		pattern = pattern.toLowerCase().replace(/'[smd]|[^\w ]/g, '');
-		// Remove common/pointless words
+		// Remove common/unimportant words
 		pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|have|this|that|about|some|from|back|(look|find)(ing)?|info(rmation)?) )/g, ' ');
 
 		var appLinks = document.getElementsByClassName('appLinkHyperLink');
@@ -53,6 +53,8 @@ function highlightMatches(pattern, appLinks) {
 		resetTabIndex(appLinks);
 }
 
+// Puts focus on first appLink that matches the search pattern
+// Returns true if successful, false otherwise
 function focusFirstOccurence() {
 	if (firstMatch > -1) {
 		document.getElementsByClassName('appLinkHyperLink')[firstMatch].focus();
@@ -63,12 +65,13 @@ function focusFirstOccurence() {
 	}
 }
 
-// Sets the searchBar value equal to the string query.
+// Sets the searchBar value equal to the URL string query.
 function getSearchQuery() {
+	// Parse search pattern from URL
 	var query = location.search.substr(1).replace(/%20/g, ' ');
 
 	if (query) {
-		search(query);
+		search(query); // Check for matches
 
 		if (focusFirstOccurence())
 			document.getElementById('searchBar').value = query;
@@ -77,8 +80,12 @@ function getSearchQuery() {
 	}
 }
 
+// Updates an AppLink's hyperlink address
 function putSearchQuery(link) {
+	// Clear previous search pattern from link's address
 	var cleanLink = link.href.toString().replace(/\?.*/, '');
+
+	// Insert new string query link's address
 	link.href = cleanLink + "?" + document.getElementById("searchBar").value
 }
 

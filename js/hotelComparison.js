@@ -5,12 +5,7 @@ function updateColumn(obj, col) {
 		var cell = tbl.getElementsByTagName('tr')[i].getElementsByTagName('td')[col];
 
 		cell.innerHTML = hotelAmenities[obj.selectedIndex][i-1][0];
-
-		cell.classList.remove('true');
-		cell.classList.remove('false');
-
-		if (hotelAmenities[obj.selectedIndex][i-1][1])
-			cell.classList.add(hotelAmenities[obj.selectedIndex][i-1][1]);
+		cell.className = cell.className.split(/\b/)[0] + ' ' + hotelAmenities[obj.selectedIndex][i-1][1];
 	}
 }
 
