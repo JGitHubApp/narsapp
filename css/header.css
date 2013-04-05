@@ -54,10 +54,6 @@
 	max-width: 5in;
 	background-color: #EEE;
 	border: 2pt solid #000;
-
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .headerTool {
@@ -67,19 +63,19 @@
 	border: none;
 	width: 100%;
 	margin: 0;
+	padding: 0;
 	font-size: 1.4em;
-	line-height: 2em;
-}
-
-#searchBar {
 	-webkit-appearance: none;
-	line-height: 1.1em;
 }
 
-#headerToolContainer, #SearchBar {
+#headerToolContainer, .headerTool {
 	border-radius: 15pt;
 	-webkit-border-radius: 15pt;
 	-moz-border-radius: 15pt;
 	-ms-border-radius: 15pt;
 	-o-border-radius: 15pt;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }

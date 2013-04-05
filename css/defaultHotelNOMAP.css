@@ -42,6 +42,10 @@ li {
 	li {
 		width: 100%;
 	}
+
+	.appLinkContainer {
+		width: 50%;
+	}
 }
 
 	@media screen and (min-width: 10in) {

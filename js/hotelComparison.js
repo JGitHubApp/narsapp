@@ -5,7 +5,7 @@ function updateColumn(obj, col) {
 		var cell = tbl.getElementsByTagName('tr')[i].getElementsByTagName('td')[col];
 
 		cell.innerHTML = hotelAmenities[obj.selectedIndex][i-1][0];
-		cell.className = cell.className.split(/\b/)[0] + ' ' + hotelAmenities[obj.selectedIndex][i-1][1];
+		cell.className = cell.className.split(' ')[0] + ' ' + hotelAmenities[obj.selectedIndex][i-1][1];
 	}
 }
 
