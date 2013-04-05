@@ -15,8 +15,7 @@
 		<link href='../css/schedule.css' rel='stylesheet' type='text/css' />
 		<link href='../css/media-queries.css' rel='stylesheet' type='text/css' />
 
-
-		<script src='../js/searchBar.js'></script>
+		<script src='../js/schedule.js'></script>
 	</head>
 
 	<body>
@@ -24,26 +23,7 @@
 			<div id='headerContainer'>
 				<a href='../index.html' id='logo' tabindex='-1'><img src='../images/logo.png' alt='National Academy of Railroad Science' /></a>
 
-				<div class='headerTool'>
-					<script>
-						function goToWeek(selection) {
-							if (selection.value !== 'default') {
-								// set week to selected value
-								var week = document.getElementById(selection.value);
-
-								// Reset to default
-								selection.value='default';
-
-								// Scroll to week
-								scrollTo(0, week.offsetTop);
-
-								// Highlight the week temporarily
-								week.style.backgroundColor = '#00F'
-								setTimeout(function(){week.style.backgroundColor = ""}, 550);
-							}
-						}
-					</script>
-					<div id='headerToolContainer'>
+				<div id='headerToolContainer'>
 						<select class='headerTool' onchange='goToWeek(this)'>
 							<option value='default' selected>Go to Week...</option>
 							<option value='week1'>Week 1</option>
@@ -53,7 +33,6 @@
 							<option value='week5'>Week 5</option>
 							<option value='week6'>Week 6</option>
 						</select>
-					</div>
 				</div>
 			</div>
 

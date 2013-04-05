@@ -61,19 +61,19 @@
 }
 
 .headerTool {
+	background-color: #EEE;
 	background-color: rgba(238, 238, 238, 0);
 	outline: none;
 	border: none;
 	width: 100%;
 	margin: 0;
-	font-size: 1em;
-	line-height: 1.8em;
+	font-size: 1.4em;
+	line-height: 2em;
 }
 
 #searchBar {
 	-webkit-appearance: none;
-	font-size: 1.4em;
-	line-height: 1em;
+	line-height: 1.1em;
 }
 
 #headerToolContainer, #SearchBar {

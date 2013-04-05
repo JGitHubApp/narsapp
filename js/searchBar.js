@@ -6,7 +6,7 @@ function search(pattern, keypress) {
 		// Remove special characters
 		pattern = pattern.toLowerCase().replace(/'[smd]|[^\w ]/g, '');
 		// Remove common/pointless words
-		pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|have|this|that|about|some|from|(need|look|find)(ing)?|info(rmation)?) )/g, ' ');
+		pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|have|this|that|about|some|from|back|(look|find)(ing)?|info(rmation)?) )/g, ' ');
 
 		var appLinks = document.getElementsByClassName('appLinkHyperLink');
 

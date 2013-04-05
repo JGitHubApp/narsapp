@@ -47,14 +47,6 @@ table {
 font-size: 0.9em;
 }
 
-#goToWeek {
-	width: 100%;
-	height: 2em;
-	font-size: 1em;
-	margin-bottom: 10px;
-	text-align: center;
-}
-
 @media screen and (min-width: 8in) {
 	th span {
 		display: inline;
