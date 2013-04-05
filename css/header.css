@@ -54,32 +54,28 @@
 	max-width: 5in;
 	background-color: #EEE;
 	border: 2pt solid #000;
-
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .headerTool {
+	background-color: #EEE;
 	background-color: rgba(238, 238, 238, 0);
 	outline: none;
 	border: none;
 	width: 100%;
 	margin: 0;
-	font-size: 1em;
-	line-height: 1.8em;
-}
-
-#searchBar {
-	-webkit-appearance: none;
+	padding: 0;
 	font-size: 1.4em;
-	line-height: 1em;
+	-webkit-appearance: none;
 }
 
-#headerToolContainer, #SearchBar {
+#headerToolContainer, .headerTool {
 	border-radius: 15pt;
 	-webkit-border-radius: 15pt;
 	-moz-border-radius: 15pt;
 	-ms-border-radius: 15pt;
 	-o-border-radius: 15pt;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
