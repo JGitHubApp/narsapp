@@ -1,4 +1,4 @@
-var conductorAppLinkInfo = new AppLinkLog(
+conductorAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../htdocs/fastTrack.html', '#CCC'],
 		['Dates and Fees', '../images/icons/glossy-black-icon-business-currency-dollar-sc35.png', 'http://www.jccc.edu/railroad/conductor/training-dates-fees.html', '#0F0'],

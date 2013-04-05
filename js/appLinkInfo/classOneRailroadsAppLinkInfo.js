@@ -1,4 +1,4 @@
-var classOneRailroadsAppLinkInfo = new AppLinkLog(
+classOneRailroadsAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', 'railroadIndustry.html', '#CCC'],
 		['BNSF', '../images/icons/filler.png', 'http://www.bnsf.com', 'white'],
@@ -12,13 +12,13 @@ var classOneRailroadsAppLinkInfo = new AppLinkLog(
 
 	[
 		[],
-		['burlington', 'northern', 'santa fe', 'railroad', 'railway'],
-		['railroad'],
-		['railroad'],
-		['railroad'],
-		['railroad'],
-		['railroad'],
-		['railroad']
+		['burlington', 'northern', 'santa', 'fe', 'railroads', 'railway'],
+		['railroads'],
+		['railroads'],
+		['railroads'],
+		['railroads'],
+		['railroads'],
+		['railroads']
 	],
 
 	[

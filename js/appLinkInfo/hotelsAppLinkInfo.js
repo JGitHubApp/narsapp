@@ -1,4 +1,4 @@
-var hotelsAppLinkInfo = new AppLinkLog(
+hotelsAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
 		['CandleWood Suites', '../images/icons/filler.png', '../htdocs/CandlewoodSuites.html', 'white'],

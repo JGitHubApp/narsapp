@@ -1,4 +1,4 @@
-var signalSystemsAppLinkInfo = new AppLinkLog(
+signalSystemsAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../htdocs/fastTrack.html', '#CCC'],
 		['Dates and Fees', '../images/icons/glossy-black-icon-business-currency-dollar-sc35.png', 'http://www.jccc.edu/railroad/signal/training-dates-fees.html', '#0F0'],

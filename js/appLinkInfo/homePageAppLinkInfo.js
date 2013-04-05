@@ -1,4 +1,4 @@
-var homePageAppLinkInfo = new AppLinkLog(
+homePageAppLinkInfo = new AppLinkLog(
 	[
 		['Fast Track Certificates', 'images/icons/glossy-black-icon-people-things-diploma-sc2.png', 'htdocs/fastTrack.html', '#608'],
 		['Railroad Industry', 'images/icons/glossy-black-icon-signs-z-roadsign47.png', 'htdocs/railroadIndustry.html', '#EEE'],

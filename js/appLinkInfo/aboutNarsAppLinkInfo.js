@@ -1,4 +1,4 @@
-var aboutNarsAppLinkInfo = new AppLinkLog(
+aboutNarsAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
 		['Twitter', '../images/icons/twitter-bird-dark-bgs.png', 'https://twitter.com/NARS_RRTraining', '#00ACED'],

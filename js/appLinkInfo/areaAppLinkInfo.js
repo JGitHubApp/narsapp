@@ -1,4 +1,4 @@
-var areaAppLinkInfo = new AppLinkLog(
+areaAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
 		['Airport', '../images/icons/glossy-black-icon-transport-travel-transportation-airplane4.png', 'http://www.flykci.com', '#69E'],

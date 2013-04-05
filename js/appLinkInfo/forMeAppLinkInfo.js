@@ -1,4 +1,4 @@
-var forMeAppLinkInfo = new AppLinkLog(
+forMeAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
 		['Industry Requirements', '../images/icons/glossy-black-icon-business-clipboard2-sc1.png', 'http://www.jccc.edu/railroad/requirements.html', '#D63'],

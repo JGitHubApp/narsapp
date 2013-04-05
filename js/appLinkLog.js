@@ -80,4 +80,10 @@ function AppLinkLog(info, aliases, subAppLinkLogs) {
 	// Sort the SearchTree aliases
 	for (var i = 0; i < this.aliases.length; i++)
 		this.aliases[i].sort();
+
+	// Remove duplicate aliases from the SearchTree
+	for (var i = 0; i < this.aliases.length; i++)
+		for (var j = this.aliases[i].length - 1; j > 0; j--)
+			if (this.aliases[i][j].indexOf(this.aliases[i][j - 1]) === 0)
+				this.aliases[i].splice(j - 1, 1);
 }

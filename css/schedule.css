@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /*CSS Document*/
 
+.headerTool {
+	cursor: pointer;
+}
+
 #titleLine {
 	margin: 0;
 }

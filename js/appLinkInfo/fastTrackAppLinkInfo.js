@@ -1,4 +1,4 @@
-var fastTrackAppLinkInfo = new AppLinkLog(
+fastTrackAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
 		['Conductor', '../images/icons/glossy-black-icon-transport-travel-transportation-train4.png', '../htdocs/conductor.html', '#00E'],
