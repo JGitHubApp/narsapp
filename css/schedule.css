@@ -35,7 +35,6 @@ th, td {
 .divider {
 	background-color: #C00;
 	color: #FFF;
-	font-weight: bold;
 
 	transition: background-color 0.5s ease-in-out;
 	-webkit-transition: background-color 0.5s ease-in-out;
@@ -49,6 +48,14 @@ table {
  width:100%;
  margin: 0 auto 0 auto;
 font-size: 0.9em;
+}
+
+.divider span {
+	font-weight: bold;
+}
+
+.divider span:after {
+	content: ' - ';
 }
 
 @media screen and (min-width: 8in) {
@@ -100,6 +107,11 @@ font-size: 0.9em;
 		font-weight: bold;
 		font-size: 0.7em;
 		content: attr(data-title);
+	}
+
+	.divider span:after {
+		content: '\a';
+		white-space: pre;
 	}
 }
 
