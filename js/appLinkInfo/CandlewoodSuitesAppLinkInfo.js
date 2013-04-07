@@ -1,17 +1,20 @@
 CandlewoodSuitesAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../htdocs/hotels.html', '#CCC'],
-		['Candlewood Suites', '../images/icons/filler.png', 'http://www.ichotelsgroup.com/h/d/cw/1/en/hotel/mkcom?rpb=hotel&crUrl=/h/d/cw/1/en/hotelsearchresults', 'white'],
-		['Phone', '../images/icons/glossy-black-icon-business-phone2.png', 'tel:18009314667', '#A00']
+		['CandleWood Suites', '../images/icons/glossy-black-icon-business-home8.png', 'http://www.ichotelsgroup.com/h/d/cw/1/en/hotel/mkcom?rpb=hotel&crUrl=/h/d/cw/1/en/hotelsearchresults', '#005B9B'],
+		['1-800-931-4667', '../images/icons/glossy-black-icon-business-phone2.png', 'tel:18009314667', '#A00'],
+		['Directions', '../images/icons/glossy-black-icon-business-globe.png', 'http://goo.gl/maps/hZlTs', '#06F']
 	],
 
 	[
+		[],
 		[],
 		[],
 		[]
 	],
 
 	[
+		,
 		,
 		,
 		

@@ -12,7 +12,7 @@ freightCarAppLinkInfo = new AppLinkLog(
 		['fast', 'track', 'freightcars', 'money', 'tuition', 'times'],
 		['fast', 'track', 'freightcars'],
 		['fast', 'track', 'freightcars', 'preparations', 'ready'],
-		['fast', 'track', 'freightcars', 'time', 'when']
+		['fast', 'track', 'freightcars', 'times', 'when', 'calendars']
 	],
 
 	[

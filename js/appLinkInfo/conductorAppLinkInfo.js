@@ -12,7 +12,7 @@ conductorAppLinkInfo = new AppLinkLog(
 		['fast', 'track', 'conductors', 'money', 'tuition', 'times'],
 		['fast', 'track', 'conductors', ''],
 		['fast', 'track', 'conductors', 'preparations', 'ready'],
-		['fast', 'track', 'conductors', 'time', 'when']
+		['fast', 'track', 'conductors', 'times', 'when', 'calendars']
 	],
 
 	[

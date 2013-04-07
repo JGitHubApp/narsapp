@@ -6,7 +6,7 @@ function search(pattern, keypress) {
 		// Remove special characters
 		pattern = pattern.toLowerCase().replace(/'[smd]|[^\w ]/g, '');
 		// Remove common/unimportant words
-		pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|have|this|that|about|some|from|back|(look|find)(ing)?|info(rmation)?) )/g, ' ');
+		pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|th(ere|is|at)|have|some|from|back|(look|find)(ing)?|info(rmation)?) )/g, ' ');
 
 		var appLinks = document.getElementsByClassName('appLinkHyperLink');
 
@@ -29,9 +29,11 @@ function search(pattern, keypress) {
 function highlightMatches(pattern, appLinks) {
 	firstMatch = -1;
 	var matchCount = 0;
+
+	// Merge sections of whitespace
 	pattern = pattern.trim().replace(/ {2,}/g, ' ');
 
-	if (pattern === '') return;
+	if (pattern === ' ') return;
 
 	pattern = pattern.split(' ');
 

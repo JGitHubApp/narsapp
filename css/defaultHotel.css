@@ -9,9 +9,8 @@ body {
 	margin: 0;
 }
 
-
 #appLinkAnchor {
-	max-width: 8in;
+	max-width: 10in;
 	margin: 0 auto 0 auto;
 }
 
@@ -28,28 +27,9 @@ li {
 }
 
 #address {
-	margin-top: 2em;
+	margin-top: 1em;
 	font-weight: bold;
 	clear: both;
-}
-
-iframe {
-	width: 99%;
-	max-width: 7in;
-	min-width: 1.4in;
-	height: 3in;
-	border: 2pt solid #000;
-	draggable: false;
-
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
-
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 @media screen and (max-width: 6in) {
@@ -62,10 +42,15 @@ iframe {
 	li {
 		width: 100%;
 	}
+
+	.appLinkContainer {
+		width: 50%;
+	}
 }
 
-@media screen and (min-width: 3.5in) {
-	.appLinkContainer {
-		width: 33.3%;
+	@media screen and (min-width: 10in) {
+		.appLinkContainer {
+			width: 25%;
+		}
 	}
 }
