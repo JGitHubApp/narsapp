@@ -1,41 +1,33 @@
-var firstMatch = -1; // Contains the index of the first occurence of the matching appLink.
+var firstMatch = -1; // Contains the index of the first appLink that matches the search pattern.
 
-// Search through the appLinks.
+// Analyze keypress
 function search(pattern, keypress) {
-	if (keypress !== 32) { // not space key
-		// Remove special characters
-		pattern = pattern.toLowerCase().replace(/'[smd]|[^\w ]/g, '');
-		// Remove common/unimportant words
-		pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|th(ere|is|at)|have|some|from|back|(look|find)(ing)?|info(rmation)?) )/g, ' ');
+	if (keypress === 13)	// enter key
+		focusFirstOccurence();
+	else
+		findPattern(pattern);
+}
 
-		var appLinks = document.getElementsByClassName('appLinkHyperLink');
+// Analyze pattern
+function findPattern(pattern) {
+	// Remove special characters and repeating spaces
+	pattern = pattern.trim().toLowerCase().replace(/ {2,}/g, ' ').replace(/'[smd]|[^\w ]/g, '');
+	// Remove common/unimportant words
+	pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|th(ere|is|at)|have|some|from|back|(look|find)(ing)?|info(rmation)?) )/g, '');
 
-		if (pattern === '') {
-			for (var i = 0; i < appLinks.length; i++)
-				appLinks[i].className = 'appLinkHyperLink';
-
-			resetTabIndex(appLinks);
-		}
-		else if (keypress === 13) { // Enter key
-			focusFirstOccurence();
-		}
-		else {
-			highlightMatches(pattern, appLinks);
-		}
-	}
+	if (pattern === '' || pattern === ' ')
+		resetTabIndex();
+	else
+		highlightMatches(pattern);
 }
 
 // Highlight all the appLinks that match the pattern.
 function highlightMatches(pattern, appLinks) {
-	firstMatch = -1;
-	var matchCount = 0;
-
-	// Merge sections of whitespace
-	pattern = pattern.trim().replace(/ {2,}/g, ' ');
-
-	if (pattern === ' ') return;
-
+	var appLinks = document.getElementsByClassName('appLinkHyperLink');
 	pattern = pattern.split(' ');
+	
+	firstMatch = -1;
+	var index = 1;
 
 	// Iterate through all AppLink objects on current page
 	for (var i = 0; i < appLinks.length; i++) {
@@ -43,16 +35,13 @@ function highlightMatches(pattern, appLinks) {
 			if (firstMatch == -1) firstMatch = i;
 
 			appLinks[i].className = 'appLinkHyperLink searched';
-			appLinks[i].tabIndex = ++matchCount;
+			appLinks[i].tabIndex = index++;
 		}
 		else {
 			appLinks[i].className = 'appLinkHyperLink notSearched';
 			appLinks[i].tabIndex = -1;
 		}
 	}
-
-	if (firstMatch <= -1)
-		resetTabIndex(appLinks);
 }
 
 // Puts focus on first appLink that matches the search pattern
@@ -67,7 +56,28 @@ function focusFirstOccurence() {
 	}
 }
 
-// Sets the searchBar value equal to the URL string query.
+// Sets the tab index for all the appLinks to their default values.
+function resetTabIndex() {
+	var appLinks = document.getElementsByClassName('appLinkHyperLink');
+
+	for (var i = 0; i < appLinks.length; i++) {
+		appLinks[i].className = 'appLinkHyperLink';
+		appLinks[i].tabIndex = '';
+	}
+
+	firstMatch = -1;
+}
+
+// Updates an AppLink's hyperlink address
+function putSearchQuery(link) {
+	// Clear previous search pattern from link's address
+	var cleanLink = link.href.replace(/\?.*/, '');
+
+	// Insert new string query link's address
+	link.href = cleanLink + '?' + document.getElementById("searchBar").value
+}
+
+// Sets the searchBar value equal to the URL string query if there is a match.
 function getSearchQuery() {
 	// Parse search pattern from URL
 	var query = location.search.substr(1).replace(/%20/g, ' ');
@@ -78,23 +88,6 @@ function getSearchQuery() {
 		if (focusFirstOccurence())
 			document.getElementById('searchBar').value = query;
 		else
-			search(''); // Reset searchBar
+			resetTabIndex();
 	}
-}
-
-// Updates an AppLink's hyperlink address
-function putSearchQuery(link) {
-	// Clear previous search pattern from link's address
-	var cleanLink = link.href.toString().replace(/\?.*/, '');
-
-	// Insert new string query link's address
-	link.href = cleanLink + "?" + document.getElementById("searchBar").value
-}
-
-// Sets the tab index for all the appLinks to their default values.
-function resetTabIndex(appLinks) {
-	for (var i = 0; i < appLinks.length; i++)
-		appLinks[i].tabIndex = '';
-
-	firstMatch = -1;
 }
