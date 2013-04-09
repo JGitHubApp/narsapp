@@ -121,8 +121,8 @@ font-size: 0.9em;
 	}
 
 	.day {
-		width: 85%;
-		padding-left: 15%; 
+		width: 80%;
+		padding-left: 20%; 
 	}
 
 	.day:before { 
