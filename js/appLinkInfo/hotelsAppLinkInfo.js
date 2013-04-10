@@ -23,7 +23,7 @@ hotelsAppLinkInfo = new AppLinkLog(
 
 	[
 		,
-		CandlewoodSuitesAppLinkInfo,
+		,
 		,
 		,
 		,
@@ -32,8 +32,6 @@ hotelsAppLinkInfo = new AppLinkLog(
 		
 	]
 );
-
-delete CandlewoodSuitesAppLinkInfo;
 
 function loadHotelsAppLinks() {
 	loadAppLinks(hotelsAppLinkInfo, document.getElementById('container'));
