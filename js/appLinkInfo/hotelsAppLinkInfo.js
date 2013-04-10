@@ -1,11 +1,11 @@
 hotelsAppLinkInfo = new AppLinkLog(
 	[
 		['Back', '../images/icons/glossy-black-icon-arrows-arrow-styled-left.png', '../index.html', '#CCC'],
-		['CandleWood Suites', '../images/icons/glossy-black-icon-business-home8.png', '../htdocs/CandlewoodSuites.html', '#005B9B'],
-		['Chase Suites', '../images/icons/glossy-black-icon-business-home8.png', '#', '#77933C'],
-		['Crowne Plaza', '../images/icons/glossy-black-icon-business-home8.png', '#', '#971865'],
+		['Candlewood Suites', '../images/icons/glossy-black-icon-business-home8.png', 'CandlewoodSuites.html', '#005B9B'],
+		['Chase Suites', '../images/icons/glossy-black-icon-business-home8.png', 'ChaseSuites.html', '#77933C'],
+		['Crowne Plaza', '../images/icons/glossy-black-icon-business-home8.png', 'CrownePlaza.html', '#971865'],
 		['Drury Inn & Suites', '../images/icons/glossy-black-icon-business-home8.png', 'DruryInn.html', '#79C'],
-		['Hawthorne Suites', '../images/icons/glossy-black-icon-business-home8.png', 'HawthorneSuites.html', '#B32317'],
+		['Hawthorn Suites', '../images/icons/glossy-black-icon-business-home8.png', 'HawthornSuites.html', '#B32317'],
 		['Pear Tree Inn', '../images/icons/glossy-black-icon-business-home8.png', '#', '#79C'],
 		['Walnut Grove RV Park', '../images/icons/glossy-black-icon-business-home8.png', '#', '#800000']
 	],
