@@ -49,7 +49,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	background-color: #000000;
 	opacity: 0.50;
 	/*Opacity fix for IE8*/
