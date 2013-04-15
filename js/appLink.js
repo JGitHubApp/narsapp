@@ -26,6 +26,7 @@ Layout of the AppLink object:
 			</div>
 */
 
+// Create appLinks indicated in appLinkInfo and place them in container
 function loadAppLinks(appLinkInfo, container) {
 
 	// AppLink Object declaration
