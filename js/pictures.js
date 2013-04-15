@@ -1,28 +1,59 @@
 /* Pictures */
 
-function showPic(pic) {
-	/* Display Background Fill */
-	document.getElementById("picbg").style.display="block";
-	var h = document.body.offsetHeight || document.body.clientHeight || document.body.scrollHeight; /* Try 3 ways to get the height. */
+function displayPicture() {
+	var pic=document.getElementById("pic");
+	pic.style.display="block";
+	var picbg=document.getElementById("picbg");
+	// Display Image
 
-	/* If the page height is greater than window height make the background fill the entire page */
-	if( h > window.innerHeight)
-		document.getElementById("picbg").style.height=(h + "px");
+	// Get window height and width - Get body height - Pixels scrolled from top of browser
+	var winHeight=window.innerHeight || (document.documentElement.clientHeight + 15);
+	var winWidth=window.innerWidth || document.documentElement.clientWidth;
+	var bodyHeight=document.body.offsetHeight || document.body.scrollHeight || document.body.clientHeight;
+	var pixelsScrolled=window.pageYOffset || document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop;
+	
+	picbg.style.display="block";
+	// Covers page in background fill - phone fix
+	if(bodyHeight > winHeight)
+		picbg.style.height=(bodyHeight + "px");
 
-	/* Display Image */
-	document.getElementById("pic").style.display="block";
-	document.getElementById("pic").style.backgroundImage=("url(" + pic.src + ")");
-	var pixelsScrolled=window.pageYOffset || document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop; /* Get distance scrolled by user */
-	document.getElementById("pic").style.top=(pixelsScrolled + "px"); /* Set the top equal to distance scrolled by user */
-	document.getElementById("pclose").style.top=(pixelsScrolled + "px"); /* Set the top equal to distance scrolled by user */
+	// Contain the image within the window leaving a 15px offset
+	pic.style.maxHeight=(winHeight-30) + "px";
+	pic.style.maxWidth=(winWidth-30) + "px";
 
-	/* Display Close Icon */
+	// Center the image and offset it based on current viewing area
+	pic.style.top=((winHeight*0.5) + pixelsScrolled)+"px";
+	pic.style.marginTop="-" + ((pic.height / 2) + 5)+ "px";
+	pic.style.marginLeft="-" + ((pic.width / 2) + 5) + "px";
+
+	// Display Close Icon
+	document.getElementById("pclose").style.top=(pixelsScrolled + "px");
 	document.getElementById("pclose").style.display="block";
 }
 
+function showPic(aPic) {
+	var pic=document.getElementById("pic");
+	var i=new Image();
+	i.src=aPic.src; // <- Change this line to set up thumbnails
+	var failSafe=setTimeout("displayPicture();", 2000);
+	pic.onload=displayPicture;
+	pic.src=i.src;
+	clearTimeout(failSafe);
+	i=null;
+}
+
 function hidePic() {
-	/* Hide background and image */
+	// Hide background and image
 	document.getElementById("picbg").style.display="";
-	document.getElementById("pic").style.display="";
+	var pic = document.getElementById("pic");
+	pic.style.display="";
+	pic.src="";
 	document.getElementById("pclose").style.display="";
 }
+
+function update() {
+	if(document.getElementById("pic").style.display === "block") {
+		displayPicture();
+	}
+}
+window.onresize=update;
