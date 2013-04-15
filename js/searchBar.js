@@ -11,7 +11,7 @@ function search(pattern, keypress) {
 // Analyze pattern
 function findPattern(pattern) {
 	// Remove special characters and repeating spaces
-	pattern = pattern.trim().toLowerCase().replace(/ {2,}/g, ' ').replace(/'[smd]|[^\w ]/g, '');
+	pattern = pattern.replace(/^\s+|\s+$/g, '').toLowerCase().replace(/ {2,}/g, ' ').replace(/'[smd]|[^\w ]/g, '');
 	// Remove common/unimportant words
 	pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|th(ere|is|at)|have|some|from|back|(look|find)(ing)?|info(rmation)?) )/g, '');
 
@@ -90,4 +90,11 @@ function getSearchQuery() {
 		else
 			resetTabIndex();
 	}
+}
+
+// Define getElementsByClassName if undefined
+if(!document.getElementsByClassName) {
+	document.getElementsByClassName = function(value) {
+		return this.querySelectorAll('.' + value);
+	};
 }
