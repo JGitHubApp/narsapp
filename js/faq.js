@@ -45,3 +45,10 @@ function search(pattern) {
 				faqs[i].style.display = 'none';
 	}
 }
+
+// Define getElementsByClassName if undefined
+if(!document.getElementsByClassName) {
+	document.getElementsByClassName = function(value) {
+		return this.querySelectorAll('.' + value);
+	};
+}
