@@ -6,8 +6,8 @@ hotelsAppLinkInfo = new AppLinkLog(
 		['Crowne Plaza', '../images/icons/glossy-black-icon-business-home8.png', 'CrownePlaza.html', '#971865'],
 		['Drury Inn & Suites', '../images/icons/glossy-black-icon-business-home8.png', 'DruryInn.html', '#79C'],
 		['Hawthorn Suites', '../images/icons/glossy-black-icon-business-home8.png', 'HawthornSuites.html', '#B32317'],
-		['Pear Tree Inn', '../images/icons/glossy-black-icon-business-home8.png', '#', '#79C'],
-		['Walnut Grove RV Park', '../images/icons/glossy-black-icon-business-home8.png', '#', '#800000']
+		['Pear Tree Inn', '../images/icons/glossy-black-icon-business-home8.png', 'PearTreeInn.html', '#79C'],
+		['Walnut Grove RV Park', '../images/icons/glossy-black-icon-business-home8.png', 'WalnutGrove.html', '#800000']
 	],
 
 	[
