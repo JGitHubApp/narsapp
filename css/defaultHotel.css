@@ -5,10 +5,6 @@ body {
 	text-align: center;
 }
 
-#titleLine {
-	margin: 0;
-}
-
 #appLinkAnchor {
 	max-width: 10in;
 	margin: 0 auto 0 auto;
