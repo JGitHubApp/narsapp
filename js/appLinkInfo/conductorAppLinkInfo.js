@@ -4,7 +4,7 @@ conductorAppLinkInfo = new AppLinkLog(
 		['Dates and Fees', '../images/icons/glossy-black-icon-business-currency-dollar-sc35.png', 'http://www.jccc.edu/railroad/conductor/training-dates-fees.html', '#0F0'],
 		['How to Apply', '../images/icons/glossy-black-icon-business-document4.png', 'http://www.jccc.edu/railroad/conductor/admissions.html', '#FFF'],
 		['How to Prepare', '../images/icons/glossy-black-icon-business-notepad.png', 'http://www.jccc.edu/railroad/conductor/training-day.html', '#F50'],
-		['Class Schedule', '../images/icons/glossy-black-icon-business-calendar.png', '../htdocs/conductorSchedule.html', '#EEE']
+		['Class Schedule', '../images/icons/glossy-black-icon-business-calendar.png', 'conductorSchedule.html', '#EEE']
 	],
 
 	[
