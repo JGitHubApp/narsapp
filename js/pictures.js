@@ -34,7 +34,7 @@ function displayPicture() {
 function showPic(aPic) {
 	var pic=document.getElementById("pic");
 	var i=new Image();
-	i.src=aPic.src; // <- Change this line to set up thumbnails
+	i.src= aPic.src.replace(/\/thumbnail-/, '/'); // <- Change this line to set up thumbnails
 	var failSafe=setTimeout("displayPicture();", 2000);
 	pic.onload=displayPicture;
 	pic.src=i.src;
