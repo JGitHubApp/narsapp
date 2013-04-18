@@ -10,8 +10,7 @@ function search(pattern, keypress) {
 
 // Analyze pattern
 function findPattern(pattern) {
-	// Remove special characters and repeating spaces
-	pattern = pattern.replace(/^\s+|\s+$/g, '').toLowerCase().replace(/ {2,}/g, ' ').replace(/'[smd]|[^\w ]/g, '');
+	pattern = filterQuery(pattern.toLowerCase());
 	// Remove common/unimportant words
 	pattern = pattern.replace(/\b(\w{1,3} |(w(hat|hich|ill|ant|ith)|th(ere|is|at)|have|some|from|back|(look|find)(ing)?|info(rmation)?) )/g, '');
 
@@ -19,6 +18,11 @@ function findPattern(pattern) {
 		resetTabIndex();
 	else
 		highlightMatches(pattern);
+}
+
+// Remove special characters and repeating spaces
+function filterQuery(pattern) {
+	return pattern.replace(/^\s+|\s+$/g, '').replace(/ {2,}/g, ' ').replace(/'[smd]|[^\w ]/g, '');
 }
 
 // Highlight all the appLinks that match the pattern.
@@ -74,7 +78,7 @@ function putSearchQuery(link) {
 	var cleanLink = link.href.replace(/\?.*/, '');
 
 	// Insert new string query link's address
-	link.href = cleanLink + '?' + document.getElementById("searchBar").value
+	link.href = cleanLink + '?' + filterQuery(document.getElementById("searchBar").value);
 }
 
 // Sets the searchBar value equal to the URL string query if there is a match.
