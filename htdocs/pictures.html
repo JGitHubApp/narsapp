@@ -17,7 +17,6 @@
 
 		<script src='../js/pictures.js'></script>
 		<script src='../js/searchBar.js'></script>
-
 	</head>
 
 	<body>
@@ -37,9 +36,14 @@
 			<h1>Pictures</h1>
 			<hr id='titleLine' />
 
-			<div id='picbg' onclick="hidePic();"></div>
-			<img id='pic' alt='close' onclick="hidePic();" />
-			<img id='pclose' src='../images/close.png' alt='close' onclick="hidePic();" />
+			<table id='picbg' onclick="hidePic();">
+				<tr>
+					<td>
+						<img id='pclose' src='../images/close.png' alt='close' onclick="hidePic();" />
+						<img id='pic' alt='close' onclick="hidePic();" />
+					</td>
+				</tr>
+			</table>
 
 			<div id='gallery'>
 				<div class="imagelink" onclick="showPic(this.getElementsByTagName('img')[0])"><div class='image'><img class='thumbnail' src='../images/pictures/thumbnail-interviewDay.jpg' /></div><div class='comment'>Interview day March 8, 2013</div></div>

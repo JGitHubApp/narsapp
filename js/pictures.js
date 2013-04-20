@@ -1,59 +1,39 @@
 /* Pictures */
 
-function displayPicture() {
-	var pic=document.getElementById("pic");
-	pic.style.display="block";
-	var picbg=document.getElementById("picbg");
-	// Display Image
+function resizePicture() {
+	var pic = document.getElementById('pic');
 
-	// Get window height and width - Get body height - Pixels scrolled from top of browser
-	var winHeight=window.innerHeight || (document.documentElement.clientHeight + 15);
-	var winWidth=window.innerWidth || document.documentElement.clientWidth;
-	var bodyHeight=document.body.offsetHeight || document.body.scrollHeight || document.body.clientHeight;
-	var pixelsScrolled=window.pageYOffset || document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop;
+	// Get window height and width
+	var winHeight = window.innerHeight || (document.documentElement.clientHeight + 15);
+	var winWidth = window.innerWidth || document.documentElement.clientWidth;
 	
-	picbg.style.display="block";
-	// Covers page in background fill - phone fix
-	if(bodyHeight > winHeight)
-		picbg.style.height=(bodyHeight + "px");
-
 	// Contain the image within the window leaving a 15px offset
-	pic.style.maxHeight=(winHeight-30) + "px";
-	pic.style.maxWidth=(winWidth-30) + "px";
+	pic.style.maxHeight = (winHeight-30) + 'px';
+	pic.style.maxWidth = (winWidth-30) + 'px';
 
-	// Center the image and offset it based on current viewing area
-	pic.style.top=((winHeight*0.5) + pixelsScrolled)+"px";
-	pic.style.marginTop="-" + ((pic.height / 2) + 5)+ "px";
-	pic.style.marginLeft="-" + ((pic.width / 2) + 5) + "px";
-
-	// Display Close Icon
-	document.getElementById("pclose").style.top=(pixelsScrolled + "px");
-	document.getElementById("pclose").style.display="block";
+	// Get pixels scrolled from top of browser
+	var pixelsScrolled=window.pageYOffset || document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop;
+	document.getElementById('picbg').style.marginTop = pixelsScrolled + 'px';
 }
 
 function showPic(aPic) {
-	var pic=document.getElementById("pic");
-	var i=new Image();
-	i.src= aPic.src.replace(/\/thumbnail-/, '/'); // <- Change this line to set up thumbnails
-	var failSafe=setTimeout("displayPicture();", 2000);
-	pic.onload=displayPicture;
-	pic.src=i.src;
-	clearTimeout(failSafe);
-	i=null;
+	document.getElementById('picbg').style.display = 'table';
+	pic = document.getElementById('pic').src = aPic.src.replace(/\/thumbnail-/, '/');
+
+	resizePicture();
+	var update = function() {
+		resizePicture();
+	}
+
+	window.addEventListener('resize', update, false);
+	window.addEventListener('scroll', update, false);
 }
 
 function hidePic() {
-	// Hide background and image
-	document.getElementById("picbg").style.display="";
-	var pic = document.getElementById("pic");
-	pic.style.display="";
-	pic.src="";
-	document.getElementById("pclose").style.display="";
+	// Hide picbg
+	picbg = document.getElementById('picbg')
+	picbg.style.display = '';
+	picbg.style.marginTop = '';
+	window.removeEventListener('resize', update, false);
+	window.removeEventListener('scroll', update, false);
 }
-
-function update() {
-	if(document.getElementById("pic").style.display === "block") {
-		displayPicture();
-	}
-}
-window.onresize=update;

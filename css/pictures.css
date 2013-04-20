@@ -44,34 +44,27 @@
 
 /* Deals with picture displaying */
 #picbg {
-	z-index: 990;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	position: fixed;
+	position: absolute;
+	text-align: center;
 	background-color: #000000;
-	opacity: 0.50;
-	/*Opacity fix for IE8*/
-	filter: Alpha(Opacity=50);
+	background-color: rgba(0, 0, 0, 0.7);
 	display: none;
 }
 
 #pclose {
-	z-index: 999;
 	top: 0;
 	right: 0;
 	position: absolute;
-	display: none;
 }
 
 #pic {
-	z-index: 995;
-	left:50%;
-	position: absolute;
 	border:5px solid #000;
 	background:#FFF;
-	display:none;
+	vertical-align: middle;
 }
 
 @media screen and (min-width:10in) {
