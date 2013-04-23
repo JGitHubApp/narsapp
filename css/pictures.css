@@ -62,8 +62,9 @@
 }
 
 #pic {
-	border:5px solid #000;
+	border:5px solid #FFF;
 	background:#FFF;
+	max-width: 95%;
 	vertical-align: middle;
 }
 
