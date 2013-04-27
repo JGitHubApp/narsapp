@@ -16,14 +16,6 @@
 		<link href='../css/pictures.css' rel='stylesheet' type='text/css' />
 
 		<script src='../js/pictures.js'></script>
-
-		<!--[if lt IE 9]>
-			<style>
-				#container, #headerContainer {
-					width: 6in;
-				}
-			</style>
-		<![endif]-->
 	</head>
 
 	<body>
@@ -39,11 +31,12 @@
 			<h1>Pictures</h1>
 			<hr id='titleLine' />
 
-			<table id='picbg' onclick="hidePic();">
+			<div id='picbg' onclick="hidePic();"></div>
+			<table id='picContainer' onclick="hidePic();">
 				<tr>
 					<td>
-						<img id='pclose' src='../images/close.png' alt='close' onclick="hidePic();" />
-						<img id='pic' alt='close' onclick="hidePic();" />
+						<img id='pclose' src='../images/close.png' alt='Close' onclick="hidePic();" />
+						<img id='pic' alt='Loading' onclick="hidePic();" />
 					</td>
 				</tr>
 			</table>

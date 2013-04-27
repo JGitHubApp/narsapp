@@ -46,12 +46,23 @@
 #picbg {
 	top: 0;
 	left: 0;
+	width:100%;
+	height:100%;
+	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	display: none;
+	filter: Alpha(Opacity=70);
+}
+
+#picContainer {
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	text-align: center;
-	background-color: #000000;
-	background-color: rgba(0, 0, 0, 0.7);
+	table-layout: fixed;
 	display: none;
 }
 
