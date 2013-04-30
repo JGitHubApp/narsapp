@@ -4,7 +4,7 @@ function resizePicture() {
 	var pic = document.getElementById('pic');
 
 	// Get window height
-	var winHeight = window.innerHeight || (document.documentElement.clientHeight + 15);
+	var winHeight = window.innerHeight || document.documentElement.clientHeight;
 	var bodyHeight=document.body.offsetHeight || document.body.scrollHeight || document.body.clientHeight;
 
 	// Get pixels scrolled from top of browser
@@ -23,10 +23,8 @@ function resizePicture() {
 	// Fix iOs scrolling past bottom of page and browser maximization issues
 	if(((winHeight+pixelsScrolled) <= bodyHeight) || (pixelsScrolled==0))
 		picContainer.style.top = pixelsScrolled + 'px';
-	else {
+	else
 		picContainer.style.top = (bodyHeight - winHeight) + 'px';
-		pixelsScrolled=0;
-	}
 }
 
 function showPic(aPic) {
