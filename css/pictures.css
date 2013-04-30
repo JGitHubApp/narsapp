@@ -7,6 +7,10 @@
 	margin: 0 auto 0 auto;
 }
 
+h2 {
+	margin-bottom: 1em;
+}
+
 .imagelink {
 	background-color: #DDD;
 	cursor: pointer;
