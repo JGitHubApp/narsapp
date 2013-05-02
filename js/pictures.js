@@ -2,29 +2,35 @@
 
 function resizePicture() {
 	var pic = document.getElementById('pic');
+	var picContainer = document.getElementById('picContainer');
 
 	// Get window height
 	var winHeight = window.innerHeight || document.documentElement.clientHeight;
+	// Get body height
 	var bodyHeight=document.body.offsetHeight || document.body.scrollHeight || document.body.clientHeight;
-
 	// Get pixels scrolled from top of browser
 	var pixelsScrolled=window.pageYOffset || document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop;
 
 	// Covers page with background fill
 	if(bodyHeight > winHeight)
-		document.getElementById('picbg').style.height=(bodyHeight + 'px');
-	else
-		document.getElementById('picbg').style.height='100%';		//Fix for desktop browsers
-	
+		document.getElementById('picbg').style.height = bodyHeight + 'px';
+	else {
+		document.getElementById('picbg').style.height = winHeight + 'px';		//Fix for desktop browsers
+		pixelsScrolled = 0;		// Force pixelsScrolled to be zero if the window gets bigger than the body
+	}
+
 	// Contain the image within the window leaving a 15px offset
 	pic.style.maxHeight = (winHeight-30) + 'px';
 
-	var picContainer = document.getElementById('picContainer');
-	// Fix iOs scrolling past bottom of page and browser maximization issues
+	// Fix browser maximization issues and on phone orientation change
 	if(((winHeight+pixelsScrolled) <= bodyHeight) || (pixelsScrolled==0))
 		picContainer.style.top = pixelsScrolled + 'px';
 	else
 		picContainer.style.top = (bodyHeight - winHeight) + 'px';
+
+	// Fix iOs non-homescreen browsing not vertically center issue (noticed on iPhone 4 with iOs 6.1.3)
+	// Sets the picContainer height to be the window height.. CSS height: 100%; wasn't covering 100% of the screen
+	picContainer.style.height = winHeight + 'px';
 }
 
 function showPic(aPic) {
