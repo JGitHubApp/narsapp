@@ -1,5 +1,7 @@
-var signRadius = 28;
-var postGap = 28;
+var fc = document.getElementById('flashCard');
+
+var signRadius = 32;
+var postGap = 30;
 var signalMargin = 0;
 
 var blink = true;
@@ -12,35 +14,34 @@ var blinkEvent = setInterval (function() {
 
 function drawSign(x, y, color, small) {
 	small = small === true ? 5:0;
-	var fc = document.getElementById('flashCard').getContext('2d');
+	var context = fc.getContext('2d');
 
-	fc.beginPath();
-	fc.arc(x, y, signRadius - small, 0, 2 * Math.PI, false);
-	fc.fillStyle = color;
-	fc.fill();
-	fc.lineWidth = 22 - (small * 2);
-	fc.strokeStyle = '#000';
-	fc.stroke();
+	context.beginPath();
+	context.arc(x, y, signRadius - small, 0, 2 * Math.PI, false);
+	context.fillStyle = color;
+	context.fill();
+	context.lineWidth = 22 - (small * 2);
+	context.strokeStyle = '#000';
+	context.stroke();
 }
 
 function drawPost(x) {
-	var fc = document.getElementById('flashCard').getContext('2d');
-	fc.beginPath();
-	fc.moveTo(x - postGap, signRadius * 12);
-	fc.lineTo(x + postGap, signRadius * 12);
-	fc.moveTo(x, signRadius * 12);
-	fc.lineTo(x, signRadius);
-	fc.lineWidth = 5;
-	fc.strokeStyle = '#000';
-	fc.stroke();
+	var context = fc.getContext('2d');
+	context.beginPath();
+	context.moveTo(x - postGap, signRadius * 12);
+	context.lineTo(x + postGap, signRadius * 12);
+	context.moveTo(x, signRadius * 12);
+	context.lineTo(x, signRadius);
+	context.lineWidth = 5;
+	context.strokeStyle = '#000';
+	context.stroke();
 }
 
 function drawPosts(n) {
-	canvas = document.getElementById('flashCard');
-	canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+	fc.getContext('2d').clearRect(0, 0, fc.width, fc.height);
 
 	var signWidth = (signRadius * 2) + postGap;
-	signalMargin = ((canvas.width - (signWidth * n - postGap)) / 2) + signRadius;
+	signalMargin = ((fc.width - (signWidth * n - postGap)) / 2) + signRadius;
 
 	for (var i = 0; i < n; i++)
 		drawPost(signalMargin + (signWidth * i));
@@ -85,7 +86,7 @@ Signal.prototype = new Array();
 
 // Resize the canvas height
 function resizeFlashCard() {
-	document.getElementById('flashCard').style.maxHeight = (window.innerHeight || document.documentElement.clientHeight) + 'px';
+	fc.style.maxHeight = (window.innerHeight || document.documentElement.clientHeight) + 'px';
 }
 
 // Change to random signal
