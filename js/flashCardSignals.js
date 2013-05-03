@@ -1,26 +1,36 @@
-// Blank Sign
-	var noSign = new Sign('#222');
-
-// red Sign
-	var rSign = new Sign('#C00');
-	var rBSign = new Sign('#C00', true);
-
-// Green Sign
-	var gSign = new Sign('#0A0');
-	var gBSign = new Sign('#0A0', true);
-
-// Yellow Sign
-	var ySign = new Sign('#FF0');
-	var yBSign = new Sign('#FF0', true);
-
-// Lunar Sign
-	var lSign = new Sign('#BBF');
-	var lBSign = new Sign('#BBF', true);
-
-// Array of Signals
+var signArray = [];
 var signalArray = [];
 var ruleArray = [];
 var tmpSignal;
+
+// Blank Sign
+	var noSign = new Sign('#222');
+	signArray.push(noSign);
+
+// red Sign
+	var rSign = new Sign('#C00');
+	signArray.push(rSign);
+	var rBSign = new Sign('#C00', true);
+	signArray.push(rBSign);
+
+// Green Sign
+	var gSign = new Sign('#0A0');
+	signArray.push(gSign);
+	var gBSign = new Sign('#0A0', true);
+	signArray.push(gBSign);
+
+// Yellow Sign
+	var ySign = new Sign('#FF0');
+	signArray.push(ySign);
+	var yBSign = new Sign('#FF0', true);
+	signArray.push(yBSign);
+
+// Lunar Sign
+	var lSign = new Sign('#BBF');
+	signArray.push(lSign);
+	var lBSign = new Sign('#BBF', true);
+	signArray.push(lBSign);
+
 
 // Rule 9.1.3
 ruleArray.push(new Rule('9.1.3', 'Clear', 'Proceed'));
@@ -112,7 +122,7 @@ var r9x1x8 = [];
 signalArray.push(r9x1x8);
 
 // Rule 9.1.9
-ruleArray.push(new Rule('9.1.9', 'Diverging Clear', 'Proceed on divergin route not exceeding prescribed speed through turnout.'));
+ruleArray.push(new Rule('9.1.9', 'Diverging Clear', 'Proceed on diverging route not exceeding prescribed speed through turnout.'));
 var r9x1x9 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([rSign, rSign, rSign, rSign]);
@@ -122,7 +132,7 @@ var r9x1x9 = [];
 signalArray.push(r9x1x9);
 
 // Rule 9.1.10
-ruleArray.push(new Rule('9.1.10', 'Diverging Approach Diverging', 'Proceed on divergin route not exceeding prescribed speed through turnout prepared to advance on diverging route at the next signal not exceeding prescribed speed through turnout.'));
+ruleArray.push(new Rule('9.1.10', 'Diverging Approach Diverging', 'Proceed on diverging route not exceeding prescribed speed through turnout prepared to advance on diverging route at the next signal not exceeding prescribed speed through turnout.'));
 var r9x1x10 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([rSign]);
@@ -132,7 +142,7 @@ var r9x1x10 = [];
 signalArray.push(r9x1x10);
 
 // Rule 9.1.11
-ruleArray.push(new Rule('9.1.11', 'Diverging Approach Medium', 'Proceed on divergin route not exceeding prescribed speed through turnout prepared to pass next signal not exceeding 35 mph.'));
+ruleArray.push(new Rule('9.1.11', 'Diverging Approach Medium', 'Proceed on diverging route not exceeding prescribed speed through turnout prepared to pass next signal not exceeding 35 mph.'));
 var r9x1x11 = [];
 		tmpSignal = new Signal();
 		tmpSignal.addRow([rSign, rSign, rSign]);
@@ -204,3 +214,69 @@ var r9x1x15 = [];
 		tmpSignal.addRow([null, rSign, rSign, noSign]);
 	r9x1x15.push(tmpSignal);
 signalArray.push(r9x1x15);
+
+function generateSign() {
+	switch (Math.floor(Math.random() * (signArray.length))) {
+		case 0:
+			return null;
+		case 1:
+			return noSign;
+		default:
+			return new Sign(('#' + Math.floor(Math.random() * 3375).toString(16)), (Math.floor(Math.random() * 4) === 0));
+	}
+}
+
+function generateRow(len) {
+	var generatedRow = [];
+
+	for (var j = 0; j < len; j++)
+		generatedRow.push(generateSign());
+
+	return generatedRow;
+}
+
+function generateSignal() {
+	var w = Math.ceil(Math.random() * 6);
+	var h = Math.ceil(Math.random() * 4);
+
+	var generatedSignal = new Signal();
+
+	for (var i = 0; i < h; i++) {
+		generatedSignal.addRow(generateRow(w));
+	}
+
+	return generatedSignal;
+}
+
+function generateRule() {
+	// Generate number
+	var generatedRuleNumber = 'abcdefghijklmnopqrstuvwxyz'.charAt(Math.floor(Math.random() * 26)) + Math.ceil(Math.random() * 10) + '.' + Math.floor(Math.random() * 10) + '.' + Math.floor(Math.random() * 100);
+
+	// Generate name
+	var randNum = Math.floor(Math.random() * ruleArray.length);
+	var tmpArray = ruleArray[randNum].name.split(' ');
+	var generatedRuleName = tmpArray[Math.floor(Math.random() * tmpArray.length)] + ' ';
+
+	randNum = Math.floor(Math.random() * ruleArray.length);
+	tmpArray = ruleArray[randNum].name.split(' ');
+	generatedRuleName += tmpArray[Math.floor(Math.random() * tmpArray.length)];
+		
+	// Generate indication
+	randNum = Math.floor(Math.random() * ruleArray.length);
+	tmpArray = ruleArray[randNum].indication.split(' ');
+	randStartNum = Math.floor(Math.random() * (tmpArray.length));
+	var generatedRuleIndication = tmpArray.slice(randStartNum, Math.ceil(Math.random() * (tmpArray.length - randStartNum) + randStartNum));
+
+	randNum = Math.floor(Math.random() * ruleArray.length);
+	tmpArray = ruleArray[randNum].indication.split(' ');
+	randStartNum = Math.floor(Math.random() * (tmpArray.length));
+	generatedRuleIndication = generatedRuleIndication.concat(tmpArray.slice(randStartNum, Math.ceil(Math.random() * (tmpArray.length - randStartNum) + randStartNum)));
+	generatedRuleIndication = generatedRuleIndication.sort(function() { return 0.5 - Math.random();}).join(' ');
+	generatedRuleIndication = generatedRuleIndication[0].toUpperCase() + generatedRuleIndication.slice(1, generatedRuleIndication.length - 1) + (generatedRuleIndication[generatedRuleIndication.length - 1].match(/\w/) ? generatedRuleIndication[generatedRuleIndication.length - 1] + '.':'.');
+
+	return new Rule(generatedRuleNumber, generatedRuleName, generatedRuleIndication);
+}
+
+function drawGeneratedSignal() {
+	drawSignal(generateSignal(), generateRule());
+}
