@@ -68,21 +68,14 @@ function drawSignal(signal) {
 }
 
 function drawRule(rule) {
-	var message = 'Rule ' + rule.number + '\n' + rule.name + '\n' + rule.indication;
-	var context = bFc.getContext('2d');
-	context.textAlign = 'center';
+	// Print Rule
+	document.getElementById('signalRule').innerHTML = 'Rule ' + rule.number;
+	
+	// Print Rule
+	document.getElementById('signalName').innerHTML = rule.name;
 
 	// Print Rule
-	context.font='bold 48px Oxygen, "Open-Sans", sans-serif';
-	context.fillText('Rule ' + rule.number, bFc.width / 2, 60);
-
-	// Print Name
-	context.font='bold 38px Oxygen, "Open-Sans", sans-serif';
-	context.fillText(rule.name, bFc.width / 2, 120);
-
-	// Print Indication
-	context.font='bold 28px Oxygen, "Open-Sans", sans-serif';
-	context.fillText(rule.indication, bFc.width / 2, 200);
+	document.getElementById('signalIndication').innerHTML = rule.indication;
 }
 
 // Sign class
@@ -113,11 +106,12 @@ function Rule(number, name, indication) {
 
 function resizeFlashCard() {
 	h = (window.innerHeight || document.documentElement.clientHeight) + 'px';
+	w = (window.innerWidth || document.documentElement.clientWidth) + 'px';
+
 	fc.style.maxHeight = h;
 	fFc.style.maxHeight = h;
 	bFc.style.maxHeight = h;
 
-	w = (window.innerWidth || document.documentElement.clientWidth) + 'px';
 	fc.style.maxWidth = w;
 	fFc.style.maxWidth = w;
 	bFc.style.maxWidth = w;

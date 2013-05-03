@@ -23,7 +23,7 @@ var ruleArray = [];
 var tmpSignal;
 
 // Rule 9.1.3
-ruleArray.push(new Rule('9.1.3', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.3', 'Clear', 'Proceed'));
 var r9x1x3 = [];
 	var tmpSignal = new Signal();
 		tmpSignal.addRow([gSign, gSign, gSign, gSign]);
@@ -39,7 +39,7 @@ var r9x1x3 = [];
 signalArray.push(r9x1x3);
 
 // Rule 9.1.4
-ruleArray.push(new Rule('9.1.4', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.4', 'Approach Limited', 'Proceed to pass next signal not exceeding 60 mph and be prepared to enter diverging route at prescribed speed.'));
 var r9x1x4 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([ySign]);
@@ -48,7 +48,7 @@ var r9x1x4 = [];
 signalArray.push(r9x1x4);
 
 // Rule 9.1.5
-ruleArray.push(new Rule('9.1.5', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.5', 'Advance Approach', 'Proceed prepared to pass next signal not exceeding 50 mph and be prepared to enter diverging route at prescribed speed.'));
 var r9x1x5 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([ySign, ySign, ySign]);
@@ -58,7 +58,7 @@ var r9x1x5 = [];
 signalArray.push(r9x1x5);
 
 // Rule 9.1.6
-ruleArray.push(new Rule('9.1.6', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.6', 'Approach Medium', 'Proceed prepared to pass next signal not exceeding 40 mph and be prepared to enter diverging route at prescribed speed.'));
 var r9x1x6 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([yBSign, yBSign, yBSign, ySign]);
@@ -80,7 +80,7 @@ var r9x1x6 = [];
 signalArray.push(r9x1x6);
 
 // Rule 9.1.7
-ruleArray.push(new Rule('9.1.7', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.7', 'Approach Restricting', 'Proceed prepared to pass next signal at restricted speed.'));
 var r9x1x7 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([ySign, ySign, ySign]);
@@ -96,7 +96,7 @@ var r9x1x7 = [];
 signalArray.push(r9x1x7);
 
 // Rule 9.1.8
-ruleArray.push(new Rule('9.1.8', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.8', 'Approach', 'Proceed prepared to stop at next signal, trains exceeding 30mpg immediately reduce to that speed.'));
 var r9x1x8 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([ySign, ySign, ySign, ySign]);
@@ -112,7 +112,7 @@ var r9x1x8 = [];
 signalArray.push(r9x1x8);
 
 // Rule 9.1.9
-ruleArray.push(new Rule('9.1.9', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.9', 'Diverging Clear', 'Proceed on divergin route not exceeding prescribed speed through turnout.'));
 var r9x1x9 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([rSign, rSign, rSign, rSign]);
@@ -122,7 +122,7 @@ var r9x1x9 = [];
 signalArray.push(r9x1x9);
 
 // Rule 9.1.10
-ruleArray.push(new Rule('9.1.10', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.10', 'Diverging Approach Diverging', 'Proceed on divergin route not exceeding prescribed speed through turnout prepared to advance on diverging route at the next signal not exceeding prescribed speed through turnout.'));
 var r9x1x10 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([rSign]);
@@ -132,7 +132,7 @@ var r9x1x10 = [];
 signalArray.push(r9x1x10);
 
 // Rule 9.1.11
-ruleArray.push(new Rule('9.1.11', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.11', 'Diverging Approach Medium', 'Proceed on divergin route not exceeding prescribed speed through turnout prepared to pass next signal not exceeding 35 mph.'));
 var r9x1x11 = [];
 		tmpSignal = new Signal();
 		tmpSignal.addRow([rSign, rSign, rSign]);
@@ -142,7 +142,7 @@ var r9x1x11 = [];
 signalArray.push(r9x1x11);
 
 // Rule 9.1.12
-ruleArray.push(new Rule('9.1.12', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.12', 'Diverging Approach', 'Proceed on diverging route not exceeding prescribed speed through turnout; approach next signal preparing to stop, if exceeding 30mph, immediately reduce to that speed.'));
 var r9x1x12 =	[];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([rSign, rSign, rSign, rSign]);
@@ -152,7 +152,7 @@ var r9x1x12 =	[];
 signalArray.push(r9x1x12);
 
 // Rule 9.1.13
-ruleArray.push(new Rule('9.1.13', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.13', 'Restricting', 'Proceed at restricted speed.'));
 var r9x1x13 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([rBSign, rSign, rSign, rBSign]);
@@ -190,7 +190,7 @@ signalArray.push(r9x1x13);
 	// a9x1x14
 
 // Rule 9.1.15
-ruleArray.push(new Rule('9.1.15', 'NAME', 'Indication'));
+ruleArray.push(new Rule('9.1.15', 'Stop', 'Stop.'));
 var r9x1x15 = [];
 	tmpSignal = new Signal();
 		tmpSignal.addRow([rSign, rSign, rSign, rSign]);
