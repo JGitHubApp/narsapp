@@ -18,139 +18,189 @@
 	var lBSign = new Sign('#BBF', true);
 
 // Array of Signals
-signalArray = [];
+var signalArray = [];
+var ruleArray = [];
+var tmpSignal;
 
-var a9x1x3 = new Signal();
-	a9x1x3.addRow([gSign, gSign, gSign, gSign]);
-	a9x1x3.addRow([null, noSign, rSign, rSign]);
-	a9x1x3.addRow([null, null, null, rSign]);
-	signalArray.push(a9x1x3);
+// Rule 9.1.3
+ruleArray.push(new Rule('9.1.3', 'NAME', 'Indication'));
+var r9x1x3 = [];
+	var tmpSignal = new Signal();
+		tmpSignal.addRow([gSign, gSign, gSign, gSign]);
+		tmpSignal.addRow([null, noSign, rSign, rSign]);
+		tmpSignal.addRow([null, null, null, rSign]);
+	r9x1x3.push(tmpSignal);
 
-var b9x1x3 = new Signal();
-	b9x1x3.addRow([gSign, gSign, gSign]);
-	b9x1x3.addRow([noSign, noSign, rSign]);
-	b9x1x3.addRow([noSign, rSign, noSign]);
-	signalArray.push(b9x1x3);
+	var tmpSignal = new Signal();
+		tmpSignal.addRow([gSign, gSign, gSign]);
+		tmpSignal.addRow([noSign, noSign, rSign]);
+		tmpSignal.addRow([noSign, rSign, noSign]);
+	r9x1x3.push(tmpSignal);
+signalArray.push(r9x1x3);
 
-var a9x1x4 = new Signal();
-	a9x1x4.addRow([ySign]);
-	a9x1x4.addRow([gBSign]);
-	signalArray.push(a9x1x4);
+// Rule 9.1.4
+ruleArray.push(new Rule('9.1.4', 'NAME', 'Indication'));
+var r9x1x4 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([ySign]);
+		tmpSignal.addRow([gBSign]);
+	r9x1x4.push(tmpSignal);
+signalArray.push(r9x1x4);
 
-var a9x1x5 = new Signal();
-	a9x1x5.addRow([ySign, ySign, ySign]);
-	a9x1x5.addRow([gSign, gSign, gSign]);
-	a9x1x5.addRow([null, rSign, noSign]);
-	signalArray.push(a9x1x5);
+// Rule 9.1.5
+ruleArray.push(new Rule('9.1.5', 'NAME', 'Indication'));
+var r9x1x5 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([ySign, ySign, ySign]);
+		tmpSignal.addRow([gSign, gSign, gSign]);
+		tmpSignal.addRow([null, rSign, noSign]);
+	r9x1x5.push(tmpSignal);
+signalArray.push(r9x1x5);
 
-var a9x1x6 = new Signal();
-	a9x1x6.addRow([yBSign, yBSign, yBSign, ySign]);
-	a9x1x6.addRow([null, rSign, rSign, ySign]);
-	a9x1x6.addRow([null, null, rSign, null]);
-	signalArray.push(a9x1x6);
+// Rule 9.1.6
+ruleArray.push(new Rule('9.1.6', 'NAME', 'Indication'));
+var r9x1x6 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([yBSign, yBSign, yBSign, ySign]);
+		tmpSignal.addRow([null, rSign, rSign, ySign]);
+		tmpSignal.addRow([null, null, rSign, null]);
+	r9x1x6.push(tmpSignal);
 
-var b9x1x6 = new Signal();
-	b9x1x6.addRow([yBSign, yBSign, ySign, yBSign]);
-	b9x1x6.addRow([noSign, noSign, ySign, noSign]);
-	b9x1x6.addRow([null, noSign, rSign, rSign]);
-	signalArray.push(b9x1x6);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([yBSign, yBSign, ySign, yBSign]);
+		tmpSignal.addRow([noSign, noSign, ySign, noSign]);
+		tmpSignal.addRow([null, noSign, rSign, rSign]);
+	r9x1x6.push(tmpSignal);
 
-var c9x1x6 = new Signal();
-	c9x1x6.addRow([yBSign, ySign]);
-	c9x1x6.addRow([rSign, ySign]);
-	c9x1x6.addRow([noSign, noSign]);
-	signalArray.push(c9x1x6);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([yBSign, ySign]);
+		tmpSignal.addRow([rSign, ySign]);
+		tmpSignal.addRow([noSign, noSign]);
+	r9x1x6.push(tmpSignal);
+signalArray.push(r9x1x6);
 
-var a9x1x7 = new Signal();
-	a9x1x7.addRow([ySign, ySign, ySign]);
-	a9x1x7.addRow([lSign, lSign, rBSign]);
-	a9x1x7.addRow([null, rSign, null]);
-	signalArray.push(a9x1x7);
+// Rule 9.1.7
+ruleArray.push(new Rule('9.1.7', 'NAME', 'Indication'));
+var r9x1x7 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([ySign, ySign, ySign]);
+		tmpSignal.addRow([lSign, lSign, rBSign]);
+		tmpSignal.addRow([null, rSign, null]);
+	r9x1x7.push(tmpSignal);
 
-var b9x1x7 = new Signal();
-	b9x1x7.addRow([ySign, ySign]);
-	b9x1x7.addRow([rBSign, rBSign]);
-	b9x1x7.addRow([noSign, rSign]);
-	signalArray.push(b9x1x7);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([ySign, ySign]);
+		tmpSignal.addRow([rBSign, rBSign]);
+		tmpSignal.addRow([noSign, rSign]);
+	r9x1x7.push(tmpSignal);
+signalArray.push(r9x1x7);
 
-var a9x1x8 = new Signal();
-	a9x1x8.addRow([ySign, ySign, ySign, ySign]);
-	a9x1x8.addRow([null, rSign, rSign, noSign]);
-	a9x1x8.addRow([null, null, rSign, null]);
-	signalArray.push(a9x1x8);
+// Rule 9.1.8
+ruleArray.push(new Rule('9.1.8', 'NAME', 'Indication'));
+var r9x1x8 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([ySign, ySign, ySign, ySign]);
+		tmpSignal.addRow([null, rSign, rSign, noSign]);
+		tmpSignal.addRow([null, null, rSign, null]);
+	r9x1x8.push(tmpSignal);
 
-var b9x1x8 = new Signal();
-	b9x1x8.addRow([ySign, ySign, noSign, ySign]);
-	b9x1x8.addRow([noSign, noSign, ySign, rSign]);
-	b9x1x8.addRow([noSign,  rSign,  null, noSign]);
-	signalArray.push(b9x1x8);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([ySign, ySign, noSign, ySign]);
+		tmpSignal.addRow([noSign, noSign, ySign, rSign]);
+		tmpSignal.addRow([noSign,  rSign,  null, noSign]);
+	r9x1x8.push(tmpSignal);
+signalArray.push(r9x1x8);
 
-var a9x1x9 = new Signal();
-	a9x1x9.addRow([rSign, rSign, rSign, rSign]);
-	a9x1x9.addRow([gSign, gSign, rSign, gSign]);
-	a9x1x9.addRow([null,  rSign,  gSign, noSign]);
-	signalArray.push(a9x1x9);
+// Rule 9.1.9
+ruleArray.push(new Rule('9.1.9', 'NAME', 'Indication'));
+var r9x1x9 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([rSign, rSign, rSign, rSign]);
+		tmpSignal.addRow([gSign, gSign, rSign, gSign]);
+		tmpSignal.addRow([null,  rSign,  gSign, noSign]);
+	r9x1x9.push(tmpSignal);
+signalArray.push(r9x1x9);
 
-var a9x1x10 = new Signal();
-	a9x1x10.addRow([rSign]);
-	a9x1x10.addRow([ySign]);
-	a9x1x10.addRow([ySign]);
-	signalArray.push(a9x1x10);
+// Rule 9.1.10
+ruleArray.push(new Rule('9.1.10', 'NAME', 'Indication'));
+var r9x1x10 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([rSign]);
+		tmpSignal.addRow([ySign]);
+		tmpSignal.addRow([ySign]);
+	r9x1x10.push(tmpSignal);
+signalArray.push(r9x1x10);
 
-var a9x1x11 = new Signal();
-	a9x1x11.addRow([rSign, rSign, rSign]);
-	a9x1x11.addRow([yBSign, yBSign, yBSign]);
-	a9x1x11.addRow([null,  rSign,  noSign]);
-	signalArray.push(a9x1x11);
+// Rule 9.1.11
+ruleArray.push(new Rule('9.1.11', 'NAME', 'Indication'));
+var r9x1x11 = [];
+		tmpSignal = new Signal();
+		tmpSignal.addRow([rSign, rSign, rSign]);
+		tmpSignal.addRow([yBSign, yBSign, yBSign]);
+		tmpSignal.addRow([null,  rSign,  noSign]);
+	r9x1x11.push(tmpSignal);
+signalArray.push(r9x1x11);
 
-var a9x1x12 = new Signal();
-	a9x1x12.addRow([rSign, rSign, rSign, rSign]);
-	a9x1x12.addRow([ySign, ySign, rSign, ySign]);
-	a9x1x12.addRow([null,  rSign,  ySign, noSign]);
-	signalArray.push(a9x1x12);
+// Rule 9.1.12
+ruleArray.push(new Rule('9.1.12', 'NAME', 'Indication'));
+var r9x1x12 =	[];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([rSign, rSign, rSign, rSign]);
+		tmpSignal.addRow([ySign, ySign, rSign, ySign]);
+		tmpSignal.addRow([null,  rSign,  ySign, noSign]);
+	r9x1x12.push(tmpSignal);
+signalArray.push(r9x1x12);
 
-var a9x1x13 = new Signal();
-	a9x1x13.addRow([rBSign, rSign, rSign, rBSign]);
-	a9x1x13.addRow([null, rBSign, rBSign, rSign]);
-	a9x1x13.addRow([null, null, rSign, null]);
-	signalArray.push(a9x1x13);
+// Rule 9.1.13
+ruleArray.push(new Rule('9.1.13', 'NAME', 'Indication'));
+var r9x1x13 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([rBSign, rSign, rSign, rBSign]);
+		tmpSignal.addRow([null, rBSign, rBSign, rSign]);
+		tmpSignal.addRow([null, null, rSign, null]);
+	r9x1x13.push(tmpSignal);
 
-var b9x1x13 = new Signal();
-	b9x1x13.addRow([rBSign, rSign, rBSign, noSign]);
-	b9x1x13.addRow([rSign, rSign, noSign, rBSign]);
-	b9x1x13.addRow([rSign, rBSign]);
-	signalArray.push(b9x1x13);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([rBSign, rSign, rBSign, noSign]);
+		tmpSignal.addRow([rSign, rSign, noSign, rBSign]);
+		tmpSignal.addRow([rSign, rBSign]);
+	r9x1x13.push(tmpSignal);
 
-var c9x1x13 = new Signal();
-	c9x1x13.addRow([lSign, lSign, lSign]);
-	c9x1x13.addRow([null, rSign, rSign]);
-	c9x1x13.addRow([null, null, rSign]);
-	signalArray.push(c9x1x13);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([lSign, lSign, lSign]);
+		tmpSignal.addRow([null, rSign, rSign]);
+		tmpSignal.addRow([null, null, rSign]);
+	r9x1x13.push(tmpSignal);
 
-var d9x1x13 = new Signal();
-	d9x1x13.addRow([rSign, rSign, rSign, noSign]);
-	d9x1x13.addRow([lSign, rSign, lSign, lSign]);
-	d9x1x13.addRow([null, lSign, rSign]);
-	signalArray.push(d9x1x13);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([rSign, rSign, rSign, noSign]);
+		tmpSignal.addRow([lSign, rSign, lSign, lSign]);
+		tmpSignal.addRow([null, lSign, rSign]);
+	r9x1x13.push(tmpSignal);
 
-// e9x1x13
+	// e9x1x13
 
-var f9x1x13 = new Signal();
-	f9x1x13.addRow([noSign, rBSign, rBSign, rSign]);
-	f9x1x13.addRow([rBSign, noSign, rSign, rBSign]);
-	f9x1x13.addRow([rSign, rSign, noSign, noSign]);
-	signalArray.push(f9x1x13);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([noSign, rBSign, rBSign, rSign]);
+		tmpSignal.addRow([rBSign, noSign, rSign, rBSign]);
+		tmpSignal.addRow([rSign, rSign, noSign, noSign]);
+	r9x1x13.push(tmpSignal);
+signalArray.push(r9x1x13);
 
-// a9x1x14
+	// a9x1x14
 
-var a9x1x15 = new Signal();
-	a9x1x15.addRow([rSign, rSign, rSign, rSign]);
-	a9x1x15.addRow([null, noSign, rSign, rSign]);
-	a9x1x15.addRow([null, null, null, rSign]);
-	signalArray.push(a9x1x15);
+// Rule 9.1.15
+ruleArray.push(new Rule('9.1.15', 'NAME', 'Indication'));
+var r9x1x15 = [];
+	tmpSignal = new Signal();
+		tmpSignal.addRow([rSign, rSign, rSign, rSign]);
+		tmpSignal.addRow([null, noSign, rSign, rSign]);
+		tmpSignal.addRow([null, null, null, rSign]);
+	r9x1x15.push(tmpSignal);
 
-var b9x1x15 = new Signal();
-	b9x1x15.addRow([noSign, noSign, rSign, rSign]);
-	b9x1x15.addRow([rSign, rSign, noSign, rSign]);
-	b9x1x15.addRow([null, rSign, rSign, noSign]);
-	signalArray.push(b9x1x15);
+	tmpSignal = new Signal();
+		tmpSignal.addRow([noSign, noSign, rSign, rSign]);
+		tmpSignal.addRow([rSign, rSign, noSign, rSign]);
+		tmpSignal.addRow([null, rSign, rSign, noSign]);
+	r9x1x15.push(tmpSignal);
+signalArray.push(r9x1x15);

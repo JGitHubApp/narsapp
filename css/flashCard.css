@@ -20,18 +20,45 @@ body {
 }
 
 #flashCard {
-	max-width: 100%;
-	border: 2px solid #000;
+	display: inline-block;
+	width: 600px;
+	height: 400px;
 	background-color: #FFF;
 	cursor: pointer;
 
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
 
 	transition: transform 1s ease-in-out;
 	-webkit-transition: -webkit-transform 1s ease-in-out;
 	-moz-transition: -moz-transform 1s ease-in-out;
 	-ms-transition: -ms-transform 1s ease-in-out;
-	-o-transition: -o-transform 1s ease-in-out;
+}
+
+#flashCard.flipped {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+}
+
+.side {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+}
+
+#backFlashCard {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
 }

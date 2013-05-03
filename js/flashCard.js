@@ -1,4 +1,6 @@
 var fc = document.getElementById('flashCard');
+var fFc = document.getElementById('frontFlashCard');
+var bFc = document.getElementById('backFlashCard');
 
 var signRadius = 32;
 var postGap = 30;
@@ -14,7 +16,7 @@ var blinkEvent = setInterval (function() {
 
 function drawSign(x, y, color, small) {
 	small = small === true ? 5:0;
-	var context = fc.getContext('2d');
+	var context = fFc.getContext('2d');
 
 	context.beginPath();
 	context.arc(x, y, signRadius - small, 0, 2 * Math.PI, false);
@@ -26,7 +28,7 @@ function drawSign(x, y, color, small) {
 }
 
 function drawPost(x) {
-	var context = fc.getContext('2d');
+	var context = fFc.getContext('2d');
 	context.beginPath();
 	context.moveTo(x - postGap, signRadius * 12);
 	context.lineTo(x + postGap, signRadius * 12);
@@ -38,10 +40,10 @@ function drawPost(x) {
 }
 
 function drawPosts(n) {
-	fc.getContext('2d').clearRect(0, 0, fc.width, fc.height);
+	fFc.getContext('2d').clearRect(0, 0, fFc.width, fFc.height);
 
 	var signWidth = (signRadius * 2) + postGap;
-	signalMargin = ((fc.width - (signWidth * n - postGap)) / 2) + signRadius;
+	signalMargin = ((fFc.width - (signWidth * n - postGap)) / 2) + signRadius;
 
 	for (var i = 0; i < n; i++)
 		drawPost(signalMargin + (signWidth * i));
@@ -65,13 +67,31 @@ function drawSignal(signal) {
 		}
 }
 
-// Sign object
+function drawRule(rule) {
+	var message = 'Rule ' + rule.number + '\n' + rule.name + '\n' + rule.indication;
+	var context = bFc.getContext('2d');
+	context.textAlign = 'center';
+
+	// Print Rule
+	context.font='bold 48px Oxygen, "Open-Sans", sans-serif';
+	context.fillText('Rule ' + rule.number, bFc.width / 2, 60);
+
+	// Print Name
+	context.font='bold 38px Oxygen, "Open-Sans", sans-serif';
+	context.fillText(rule.name, bFc.width / 2, 120);
+
+	// Print Indication
+	context.font='bold 28px Oxygen, "Open-Sans", sans-serif';
+	context.fillText(rule.indication, bFc.width / 2, 200);
+}
+
+// Sign class
 function Sign(color, blink) {
 	this.color = color;
 	this.blink = (blink === true);
 }
 
-// Signal object
+// Signal class
 function Signal() {
 	this.width = 0;
 
@@ -84,13 +104,30 @@ function Signal() {
 }
 Signal.prototype = new Array();
 
-// Resize the canvas height
-function resizeFlashCard() {
-	fc.style.maxHeight = (window.innerHeight || document.documentElement.clientHeight) + 'px';
+// Rule class
+function Rule(number, name, indication) {
+	this.number = number;
+	this.name = name;
+	this.indication = indication;
 }
+
+function resizeFlashCard() {
+	h = (window.innerHeight || document.documentElement.clientHeight) + 'px';
+	fc.style.maxHeight = h;
+	fFc.style.maxHeight = h;
+	bFc.style.maxHeight = h;
+
+	w = (window.innerWidth || document.documentElement.clientWidth) + 'px';
+	fc.style.maxWidth = w;
+	fFc.style.maxWidth = w;
+	bFc.style.maxWidth = w;
+}
+window.addEventListener('resize', resizeFlashCard);
 
 // Change to random signal
 function drawRandomSignal() {
-	var randomSignal = Math.floor(Math.random() * signalArray.length);
-	drawSignal(signalArray[randomSignal]);
+	var randomSignalRule = Math.floor(Math.random() * signalArray.length);
+	var randomSignal = Math.floor(Math.random() * signalArray[randomSignalRule].length);
+	drawSignal(signalArray[randomSignalRule][randomSignal]);
+	drawRule(ruleArray[randomSignalRule]);
 }

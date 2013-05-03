@@ -18,11 +18,14 @@
 		<link href='../css/styles.css' rel='stylesheet' type='text/css' />
 		<link href='../css/flashCard.css' rel='stylesheet' type='text/css' />
   </head>
-  <body onload='drawRandomSignal(); resizeFlashCard()' onresize='resizeFlashCard()'>
+  <body onload='drawRandomSignal(); resizeFlashCard()'>
 		<table id='flashCardContainer'>
 			<tr>
 				<td>
-					<canvas id='flashCard' width='600' height='400'></canvas>
+					<div id='flashCard'>
+						<canvas id='frontFlashCard' class='side' width='600' height='400'></canvas>
+						<canvas id='backFlashCard' class='side' width='600' height='400'></canvas>
+					</div>
 				</td>
 			</tr>
 		</table>
