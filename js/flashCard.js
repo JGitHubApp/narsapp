@@ -115,8 +115,8 @@ function drawRandomSignal() {
 }
 
 function resizeFlashCard() {
-	fFc.style.maxHeight = (window.innerHeight || document.documentElement.clientHeight) + 'px';
-	fFc.style.maxWidth = (window.innerWidth || document.documentElement.clientWidth) + 'px';
+	fFc.style.maxHeight = ((window.innerHeight || document.documentElement.clientHeight)) + 'px';
+	fFc.style.maxWidth = ((window.innerWidth || document.documentElement.clientWidth)) + 'px';
 	var h = fFc.offsetHeight + 'px';
 	var w = fFc.offsetWidth + 'px';
 

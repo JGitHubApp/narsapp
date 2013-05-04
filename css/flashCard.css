@@ -1,12 +1,6 @@
 body {
 	height: 100%;
 	overflow: hidden;
-	/*
-	background-image: linear-gradient(top, #999 70%, #EEE 90%);
-	background-image: -moz-linear-gradient(top, #999 70%, #EEE 90%);
-	background-image: -webkit-linear-gradient(top, #999 70%, #EEE 90%);
-	background-image: -ms-linear-gradient(top, #999 70%, #EEE 90%);
-	*/
 }
 
 #flashCardContainer {
@@ -25,6 +19,8 @@ body {
 	user-select: none;
 }
 
+#flashCardContainer tr, #flashCardContainer td { padding: 0; }
+
 #flashCard {
 	position: relative;
 	display: inline-block;
@@ -32,8 +28,7 @@ body {
 	height: 400px;
 	background-color: #FFF;
 	cursor: pointer;
-
-	/*-webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent) , to(rgba(250, 250, 250, 0.2)));*/
+	-moz-transform: perspective(1000px);
 
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -52,32 +47,11 @@ body {
 	-ms-transition: -ms-transform 0.8s ease-in-out;
 }
 
-#flashCard.flippedRight {
-	transform: rotateY(180deg);
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-	-ms-transform: rotateY(180deg);
-}
-
-#flashCard.flippedLeft {
+#flashCard.flipped {
 	transform: rotateY(-180deg);
 	-webkit-transform: rotateY(-180deg);
 	-moz-transform: rotateY(-180deg);
 	-ms-transform: rotateY(-180deg);
-}
-
-#flashCard.flippedRightAround {
-	transform: rotateY(180deg) rotate(360deg);
-	-webkit-transform: rotateY(180deg) rotate(360deg);
-	-moz-transform: rotateY(180deg) rotate(360deg);
-	-ms-transform: rotateY(180deg) rotate(360deg);
-}
-
-#flashCard.flippedLeftAround {
-	transform: rotateY(-180deg) rotate(-360deg);
-	-webkit-transform: rotateY(-180deg) rotate(-360deg);
-	-moz-transform: rotateY(-180deg) rotate(-360deg);
-	-ms-transform: rotateY(-180deg) rotate(-360deg);
 }
 
 #flashCard, .side {
@@ -120,23 +94,6 @@ body {
 	text-align: left;
 }
 
-/*
-@media screen and (max-width: 500px), (max-height: 340px) {
-	#backFlashCard { font-size: 16px; }
-}
-
-@media screen and (max-width: 420px), (max-height: 280px) {
-	#backFlashCard { font-size: 14px; }
-}
-
-@media screen and (max-width: 400px), (max-height: 260px) {
-	#backFlashCard { font-size: 13px; }
-}
-
-@media screen and (max-width: 360px), (max-height: 240px) {
-	#backFlashCard { font-size: 12px; }
-}
-*/
 @media screen and (max-width: 510px), (max-height: 340px) {
 	#backFlashCard { font-size: 16px; }
 }

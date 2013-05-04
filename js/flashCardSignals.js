@@ -250,7 +250,7 @@ function generateSignal() {
 
 function generateRule() {
 	// Generate number
-	var generatedRuleNumber = 'abcdefghijklmnopqrstuvwxyz'.charAt(Math.floor(Math.random() * 26)) + Math.ceil(Math.random() * 10) + '.' + Math.floor(Math.random() * 10) + '.' + Math.floor(Math.random() * 100);
+	var generatedRuleNumber = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.charAt(Math.floor(Math.random() * 26)) + '.' + Math.floor(Math.random() * 10) + '.' + Math.floor(Math.random() * 100);
 
 	// Generate name
 	var randNum = Math.floor(Math.random() * ruleArray.length);

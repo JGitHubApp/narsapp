@@ -48,16 +48,11 @@
 .appLinkHyperLink:hover > .appLinkPic, .appLinkHyperLink:focus > .appLinkPic, .appLinkHyperLink:active > .appLinkPic {
 	border-color: #EEE;
 
-	box-shadow:
-		0 0 20pt #FFF;
-	-webkit-box-shadow:
-		0 0 20pt #FFF;
-	-moz-box-shadow:
-		0 0 20pt #FFF;
-	-ms-box-shadow:
-		0 0 20pt #FFF;
-	-o-box-shadow:
-		0 0 20pt #FFF;
+	box-shadow: 0 0 20pt #FFF;
+	-webkit-box-shadow: 0 0 20pt #FFF;
+	-moz-box-shadow: 0 0 20pt #FFF;
+	-ms-box-shadow: 0 0 20pt #FFF;
+	-o-box-shadow: 0 0 20pt #FFF;
 }
 
 .appLinkHyperLink.notSearched > .appLinkPic {
