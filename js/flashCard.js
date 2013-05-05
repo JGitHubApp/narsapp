@@ -19,7 +19,7 @@ function drawSign(x, y, color, small) {
 	var context = fFc.getContext('2d');
 
 	context.beginPath();
-	context.arc(x, y, signRadius - small, 0, 2 * Math.PI, false);
+	context.arc(x, y, signRadius - small, 0, 2 * Math.PI);
 	context.fillStyle = color;
 	context.fill();
 	context.lineWidth = 22 - (small * 2);
