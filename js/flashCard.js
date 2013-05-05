@@ -115,14 +115,15 @@ function drawRandomSignal() {
 }
 
 function resizeFlashCard() {
-	fFc.style.maxHeight = ((window.innerHeight || document.documentElement.clientHeight)) + 'px';
-	fFc.style.maxWidth = ((window.innerWidth || document.documentElement.clientWidth)) + 'px';
-	var h = fFc.offsetHeight + 'px';
-	var w = fFc.offsetWidth + 'px';
+	var h = (window.innerHeight || document.documentElement.clientHeight) - 1;
+	var w = (window.innerWidth || document.documentElement.clientWidth) - 1;
+	
+	if (h*1.5 > w)
+		h = w/1.5;
+	else
+		w = h*1.5;
 
-	fc.style.maxHeight = h;
-	bFc.style.maxHeight = h;
-	fc.style.maxWidth = w;
-	bFc.style.maxWidth = w;
+	fc.style.maxHeight = h + 'px';
+	fc.style.maxWidth = w + 'px';
 }
 window.addEventListener('resize', resizeFlashCard);
