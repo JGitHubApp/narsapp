@@ -11,6 +11,7 @@ p {
 
 th {
 	background-color: #EEE;
+	width: 20%;
 }
 
 th span {
@@ -19,11 +20,10 @@ th span {
 
 td {
 	background-color: #FFF;
-	width: 20%;
 }
 
 th, td {
- border:2px solid black;
+ border:solid 2px #000;
  vertical-align: top;
  max-width: 1in;
  text-align: center;
@@ -65,7 +65,6 @@ font-size: 0.9em;
 	}
 }
 
-
 @media screen and (max-width: 6in) {
 	table {
 		border-collapse: collapse;
@@ -76,11 +75,9 @@ font-size: 0.9em;
 	}
  
 	td { 
-		position: relative;
-		width: 100%;
 		max-width: 100%;
 		white-space: normal;
-		display: block; 
+		display: block;
 		border: none;
 	}
 
@@ -91,8 +88,7 @@ font-size: 0.9em;
 	}
 
 	.day {
-		width: 85%;
-		padding-left: 15%; 
+		padding-left: 15%;
 		text-align:left;
 		border-bottom: solid 1px #000;
 	}
@@ -119,7 +115,6 @@ font-size: 0.9em;
 	}
 
 	.day {
-		width: 80%;
 		padding-left: 20%; 
 	}
 
