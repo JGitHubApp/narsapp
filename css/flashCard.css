@@ -136,3 +136,17 @@ body {
 		padding: 0;
 	}
 }
+
+@media not all and (-webkit-transform-3d) {
+	#flashCard.flipped {
+		-webkit-transform: none;
+	}
+
+	#flashCard #backFlashCard, #flashCard.flipped #frontFlashCard {
+		visibility: hidden;
+	}
+
+	#flashCard.flipped #backFlashCard, #flashCard #frontFlashCard {
+		visibility: visible;
+	}
+}

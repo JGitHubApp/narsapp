@@ -2,7 +2,10 @@ var cardIsFlipped = false;
 var flipCard;
 
 // Check if flip effect is supported
-if ('backfaceVisibility' in document.body.style || 'webkitBackfaceVisibility' in document.body.style || 'mozBackfaceVisibility' in document.body.style || 'msBackfaceVisibility' in document.body.style) {
+if ('backfaceVisibility' in fc.style ||
+		'WebkitBackfaceVisibility' in fc.style ||
+		'MozBackfaceVisibility' in fc.style ||
+		'MsBackfaceVisibility' in fc.style) {
 	// Flip flash card over
 	flipCard = function() {
 		if (cardIsFlipped)
