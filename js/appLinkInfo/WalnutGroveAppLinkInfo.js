@@ -24,5 +24,4 @@ WalnutGroveAppLinkInfo = new AppLinkLog(
 function loadWalnutGroveAppLinks() {
 	loadAppLinks(WalnutGroveAppLinkInfo, document.getElementById('appLinkAnchor'));
 	delete WalnutGroveAppLinkInfo;
-	getSearchQuery();
 }

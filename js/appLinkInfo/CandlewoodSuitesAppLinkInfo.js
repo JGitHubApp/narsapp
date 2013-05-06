@@ -24,5 +24,4 @@ CandlewoodSuitesAppLinkInfo = new AppLinkLog(
 function loadCandlewoodSuitesAppLinks() {
 	loadAppLinks(CandlewoodSuitesAppLinkInfo, document.getElementById('appLinkAnchor'));
 	delete CandlewoodSuitesAppLinkInfo;
-	getSearchQuery();
 }
