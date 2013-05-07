@@ -24,5 +24,4 @@ DruryInnAppLinkInfo = new AppLinkLog(
 function loadDruryInnAppLinks() {
 	loadAppLinks(DruryInnAppLinkInfo, document.getElementById('appLinkAnchor'));
 	delete DruryInnAppLinkInfo;
-	getSearchQuery();
 }

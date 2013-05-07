@@ -24,5 +24,4 @@ CrownePlazaAppLinkInfo = new AppLinkLog(
 function loadCrownePlazaAppLinks() {
 	loadAppLinks(CrownePlazaAppLinkInfo, document.getElementById('appLinkAnchor'));
 	delete CrownePlazaAppLinkInfo;
-	getSearchQuery();
 }

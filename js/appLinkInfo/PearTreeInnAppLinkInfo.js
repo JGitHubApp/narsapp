@@ -24,5 +24,4 @@ PearTreeInnAppLinkInfo = new AppLinkLog(
 function loadPearTreeInnAppLinks() {
 	loadAppLinks(PearTreeInnAppLinkInfo, document.getElementById('appLinkAnchor'));
 	delete PearTreeInnAppLinkInfo;
-	getSearchQuery();
 }

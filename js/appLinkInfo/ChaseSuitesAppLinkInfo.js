@@ -24,5 +24,4 @@ ChaseSuitesAppLinkInfo = new AppLinkLog(
 function loadChaseSuitesAppLinks() {
 	loadAppLinks(ChaseSuitesAppLinkInfo, document.getElementById('appLinkAnchor'));
 	delete ChaseSuitesAppLinkInfo;
-	getSearchQuery();
 }

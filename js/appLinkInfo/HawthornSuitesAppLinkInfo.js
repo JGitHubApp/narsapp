@@ -24,5 +24,4 @@ HawthornSuitesAppLinkInfo = new AppLinkLog(
 function loadHawthornSuitesAppLinks() {
 	loadAppLinks(HawthornSuitesAppLinkInfo, document.getElementById('appLinkAnchor'));
 	delete HawthornSuitesAppLinkInfo;
-	getSearchQuery();
 }
