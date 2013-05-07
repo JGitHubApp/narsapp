@@ -2,6 +2,9 @@ var fc = document.getElementById('flashCard');
 var fFc = document.getElementById('frontFlashCard');
 var bFc = document.getElementById('backFlashCard');
 
+var currentRule = 0;
+var currentSignal = 0;
+
 var signRadius = 32;
 var postGap = 30;
 var signalMargin = 0;
@@ -19,7 +22,7 @@ function drawSign(x, y, color, small) {
 	var context = fFc.getContext('2d');
 
 	context.beginPath();
-	context.arc(x, y, signRadius - small, 0, 2 * Math.PI);
+	context.arc(x, y, signRadius - small, 0, 2 * Math.PI, false);
 	context.fillStyle = color;
 	context.fill();
 	context.lineWidth = 22 - (small * 2);
@@ -51,7 +54,6 @@ function drawPosts(n) {
 
 function drawSignal(signal, rule) {
 	blinkingSigns = [];
-	signIsBlinking = true;
 	drawPosts(signal.width);
 
 	for (var row = 0; row < signal.length; row++)
@@ -108,10 +110,10 @@ function Rule(number, name, indication) {
 
 // Change to random signal
 function drawRandomSignal() {
-	var randomSignalRule = Math.floor(Math.random() * signalArray.length);
-	var randomSignal = Math.floor(Math.random() * signalArray[randomSignalRule].length);
+	currentRule = Math.floor(Math.random() * signalArray.length);
+	currentSignal = Math.floor(Math.random() * signalArray[currentRule].length);
 
-	drawSignal(signalArray[randomSignalRule][randomSignal], ruleArray[randomSignalRule]);
+	drawSignal(signalArray[currentRule][currentSignal], ruleArray[currentRule]);
 }
 
 function resizeFlashCard() {
@@ -126,4 +128,4 @@ function resizeFlashCard() {
 	fc.style.maxHeight = h + 'px';
 	fc.style.maxWidth = w + 'px';
 }
-window.addEventListener('resize', resizeFlashCard);
+window.addEventListener('resize', resizeFlashCard, false);

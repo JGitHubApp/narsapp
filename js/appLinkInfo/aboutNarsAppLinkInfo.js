@@ -11,7 +11,7 @@ aboutNarsAppLinkInfo = new AppLinkLog(
 		[],
 		['social'],
 		['social'],
-		['photographs'],
+		['photographs', 'images', 'gallery'],
 		[]
 	],
 

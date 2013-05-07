@@ -18,23 +18,30 @@
 		<link href='../css/styles.css' rel='stylesheet' type='text/css' />
 		<link href='../css/flashCard.css' rel='stylesheet' type='text/css' />
   </head>
-  <body onload='drawRandomSignal(); resizeFlashCard()'>
-		<table id='flashCardContainer'>
-			<tr>
-				<td>
-					<div id='flashCard'>
-						<canvas id='frontFlashCard' class='side' width='600' height='400'></canvas>
-						<div id='backFlashCard' class='side'>
+  <body onload='drawSignal(signalArray[0][0], ruleArray[0]); resizeFlashCard()'>
+		<div id='container'>
+			<table id='flashCardContainer'>
+				<tr>
+					<td>
+						<div id='flashCard'>
+							<canvas id='frontFlashCard' class='side' width='600' height='400'></canvas>
+							<div id='backFlashCard' class='side'>
 								<h1 id='signalRule'></h1>
 								<h2>Name</h2>
 								<p id='signalName'></p>
 								<h2>Indication</h2>
 								<p id='signalIndication'></p>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
-		</table>
+					</td>
+				</tr>
+			</table>
+
+			<img id='gotoBackCard' class='button' src='../images/dartLeft.png' alt='Back' />
+			<img id='gotoNextCard' class='button' src='../images/dartLeft.png' alt='Next' />
+		</div>
+
+		<a href='learningTools.html'><img id='return' class='button' alt='Return to Learning Tools' src='../images/icons/glossy-black-icon-arrows-arrow-styled-left.png' alt='Back' /></a>
 
 		<script src='../js/flashCard.js' type='text/javascript' defer></script>
 		<script src='../js/flashCardSignals.js' type='text/javascript' defer></script>

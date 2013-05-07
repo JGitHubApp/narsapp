@@ -33,4 +33,26 @@ else {
 	}
 }
 
+function goBackCard() {
+	if (--currentSignal < 0) {
+		if (--currentRule < 0)
+			currentRule = signalArray.length - 1;
+		currentSignal = signalArray[currentRule].length - 1;
+	}
+
+	drawSignal(signalArray[currentRule][currentSignal], ruleArray[currentRule]);
+}
+
+function goNextCard() {
+	if (signalArray[currentRule].length <= ++currentSignal) {
+		if (++currentRule >= signalArray.length)
+			currentRule = 0;
+		currentSignal = 0;
+	}
+
+	drawSignal(signalArray[currentRule][currentSignal], ruleArray[currentRule]);
+}
+
 fc.addEventListener('click', flipCard, false);
+document.getElementById('gotoBackCard').addEventListener('click', goBackCard, false);
+document.getElementById('gotoNextCard').addEventListener('click', goNextCard, false);
