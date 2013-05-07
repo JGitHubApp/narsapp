@@ -1,13 +1,6 @@
 @charset "UTF-8";
 /*CSS Document*/
 
-#headerContainer {
-	max-width: 12in;
-	margin: 0 auto 0 auto;
-	position: relative;
-	height: 70px;
-}
-
 #header {
 	background-color: #C00;
 
@@ -19,19 +12,20 @@
 
 	min-width: 1.4in;
 	width: 100%;
-	text-align: right;
 	overflow-x: hidden;
 
-	box-shadow:
-		0 3pt 3pt #555;
-	-webkit-box-shadow:
-		0 3pt 3pt #555;
-	-moz-box-shadow:
-		0 3pt 3pt #555;
-	-ms-box-shadow:
-		0 3pt 3pt #555;
-	-o-box-shadow:
-		0 3pt 3pt #555;
+	box-shadow: 0 3px 8px #333;
+	-webkit-box-shadow: 0 3px 8px #333;
+	-moz-box-shadow: 0 3px 8px #333;
+	-ms-box-shadow: 0 3px 8px #333;
+	-o-box-shadow: 0 3px 8px #333;
+}
+
+#headerContainer {
+	max-width: 12in;
+	margin: 0 auto 0 auto;
+	position: relative;
+	height: 70px;
 }
 
 #logo {
@@ -58,7 +52,6 @@
 
 .headerTool {
 	background-color: #EEE;
-	background-color: rgba(238, 238, 238, 0);
 	outline: none;
 	border: none;
 	width: 100%;
