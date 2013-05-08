@@ -1,10 +1,7 @@
+
 body {
 	height: 100%;
 	overflow: hidden;
-}
-
-#container, #flashCardContainer {
-	max-height: 750px;
 }
 
 #container {
@@ -153,6 +150,55 @@ a { background-color: black; }
 	-o-transform: scaleX(-1);
 	transform: scaleX(-1);
 	filter: fliph; /*IE*/
+}
+
+.moveUp, .moveDown {
+	-webkit-animation-timing-function: ease-in-out;
+	-moz-animation-timing-function: ease-in-out;
+	-o-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+.moveUp {
+	-webkit-animation: gotoPrevCard 0.5s;
+	-moz-animation: gotoPrevCard 5s;
+	-o-animation: gotoPrevCard 5s;
+	animation: gotoPrevCard 0.5s;
+}
+.moveDown {
+	-webkit-animation: gotoNextCard 0.5s;
+	-moz-animation: gotoNextCard 5s;
+	-o-animation: gotoNextCard 5s;
+	animation: gotoNextCard 0.5s;
+}
+
+@-webkit-keyframes gotoPrevCard {
+	50% { -webkit-transform: translate(0, -1000px);}
+	50.01% { -webkit-transform: translate(0, 1000px);}
+}
+@-moz-keyframes gotoPrevCard {
+	50% { -moz-transform: translate(0, -1000px);}
+	50.01% { -moz-transform: translate(0, 1000px);}
+}
+@-o-keyframes gotoPrevCard {
+	50% { -o-transform: translate(0, -1000px);}
+	50.01% { -o-transform: translate(0, 1000px);}
+}
+
+@-webkit-keyframes gotoNextCard {
+	50% { -webkit-transform: translate(0, 1000px);}
+	50.01% { -webkit-transform: translate(0, -1000px);}
+}
+@-moz-keyframes gotoNextCard {
+	50% { -moz-transform: translate(0, 1000px);}
+	50.01% { -moz-transform: translate(0, -1000px);}
+}
+@-o-keyframes gotoNextCard {
+	50% { -o-transform: translate(0, 1000px);}
+	50.01% { -o-transform: translate(0, -1000px);}
+}
+@keyframes gotoNextCard {
+	50% { transform: translate(0, 1000px);}
+	50.01% { transform: translate(0, -1000px);}
 }
 
 @media screen and (max-width: 510px), (max-height: 340px) {

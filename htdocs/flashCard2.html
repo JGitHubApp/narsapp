@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<script src='../js/fullscreen.js' type='text/javascript'></script>
+		<meta name='viewport' content='initial-scale=1.0, width=device-width' />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!--<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>-->
+		<link rel='icon' href="http://nars.graphicselite.com/favicon/icon-256.png" sizes="256x256" type="image/png" />
+		<link rel='icon' href="http://nars.graphicselite.com/favicon/icon-128.png" sizes="128x128" type="image/png" />
+		<link rel='icon' href="http://nars.graphicselite.com/favicon/icon-64.png" sizes="64x64" type="image/png" />
+		<link rel='icon' href="http://nars.graphicselite.com/favicon/icon-48.png" sizes="48x48" type="image/png" />
+		<link rel='icon' href="http://nars.graphicselite.com/favicon/icon-32.png" sizes="32x32" type="image/png" />
+		<link rel="shortcut icon" href="/favicon.ico" type='image/x-icon' />
+
+		<title>NARS Flash Cards</title>
+
+		<link href='../css/styles.css' rel='stylesheet' type='text/css' />
+		<link href='../css/flashCard2.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body onload='drawSignal(signalArray[0][0], ruleArray[0]); resizeFlashCard()'>
+		<div id="container">
+			<table id='flashCardContainer'>
+				<tr>
+					<td>
+						<div id='flashCard'>
+							<canvas id='frontFlashCard' class='side' width='600' height='400'></canvas>
+							<div id='backFlashCard' class='side'>
+								<h1 id='signalRule'></h1>
+								<h2>Name</h2>
+								<p id='signalName'></p>
+								<h2>Indication</h2>
+								<p id='signalIndication'></p>
+							</div>
+						</div>
+					<td>
+				</tr>
+			</table>
+
+			<a href='learningTools.html'><img id='return' class='button' alt='Return to Learning Tools' src='../images/icons/glossy-black-icon-arrows-arrow-styled-left.png' alt='Back' /></a>
+		</div>
+
+		<script src='../js/flashCard.js' type='text/javascript' defer></script>
+		<script src='../js/flashCardSignals.js' type='text/javascript' defer></script>
+		<script src='../js/flashCardAnimations.js' type='text/javascript' defer></script>
+
+		<script>
+			window.addEventListener('keydown', function() {
+					switch (event.which) {
+						case 37: // LEFT
+						case 39: // RIGHT
+							animateCard('left');
+							break;
+						case 38: // UP
+							animateCard('up');
+							break;
+						case 40: // DOWN
+							animateCard('down');
+							break;
+					}
+				});
+
+			var touchX = 0;
+			var touchY = 0;
+			var saveEvent = null;
+
+			// If touch events are supported
+			if ('ontouchstart' in window) {
+				window.addEventListener('touchstart', function() {
+					event.preventDefault();
+
+					touchX = event.touches[0].pageX;
+					touchY = event.touches[0].pageY;
+				});
+
+				window.addEventListener('touchend', function() {
+					var endX = event.changedTouches[0].pageX;
+					var endY = event.changedTouches[0].pageY;
+
+					// If swipe length is long enough
+					if (Math.sqrt(Math.pow(touchX - endX, 2) + Math.pow(touchY - endY, 2)) > 50) {
+						animateCard(directionOfSwipe(endX, endY));
+						event.preventDefault();
+					}
+					else {
+						var rb = document.getElementById('return');
+						if (touchX < document.getElementById('container').style.marginLeft + rb.clientWidth &&
+								touchY < rb.clientHeight)
+							rb.click();
+					}
+				});
+
+				function directionOfSwipe(endX, endY) {
+					var strDirection = '';
+
+					if (Math.abs(touchX - endX) > Math.abs(touchY - endY))
+						strDirection = 'left';
+					else
+						if (touchY > endY)
+							strDirection = 'up';
+						else
+							strDirection = 'down';
+
+					return strDirection;
+				}
+			}
+
+			function animateCard(direction) {
+					switch (direction) {
+						case 'left':
+						case 'right':
+							flipCard();
+							break;
+						case 'up':
+							fc.className = 'moveUp';
+							var t1 = setTimeout(goNextCard, 250);
+							var t2 = setTimeout(function() {fc.className = '';}, 500);
+							break;
+						case 'down':
+							fc.className = 'moveDown';
+							var t1 = setTimeout(goBackCard, 250);
+							var t2 = setTimeout(function() {fc.className = '';}, 500);
+							break;
+					}
+			}
+		</script>
+  </body>
+</html>
