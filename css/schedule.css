@@ -81,6 +81,10 @@ font-size: 0.9em;
 		border: none;
 	}
 
+	tr {
+		display:block;
+	}
+
 	.divider {
 		padding: 0.5em;
 		margin-top: 5px;
