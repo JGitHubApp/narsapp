@@ -43,7 +43,8 @@ function drawPost(x) {
 }
 
 function drawPosts(n) {
-	fFc.getContext('2d').clearRect(0, 0, fFc.width, fFc.height);
+	//fFc.getContext('2d').clearRect(0, 0, fFc.width, fFc.height);
+	fFc.width = fFc.width;
 
 	var signWidth = (signRadius * 2) + postGap;
 	signalMargin = ((fFc.width - (signWidth * n - postGap)) / 2) + signRadius;

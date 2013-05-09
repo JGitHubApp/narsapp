@@ -1,17 +1,34 @@
 var cardIsFlipped = false;
 var flipCard;
 
+// layout engine (webkit, moz, etc...)
+var LE = '';
+
+if ('webkitTransform' in fc.style)
+	LE = 'webkit';
+else if ('mozTransform' in fc.style)
+	LE = 'moz';
+else if ('MsTransform' in fc.style)
+	LE = 'moz';
+
 // Check if flip effect is supported
-if ('backfaceVisibility' in fc.style ||
-		'WebkitBackfaceVisibility' in fc.style ||
-		'MozBackfaceVisibility' in fc.style ||
-		'MsBackfaceVisibility' in fc.style) {
+if (((LE === '' ? 'b':LE + 'B') + 'ackfaceVisibility') in fc.style) {
+
+	var degreesFlipped = 36000000;
+	fc.style[(LE === '' ? 't':LE + 'T') + 'ransition'] = 'none';
+	fc.style.webkitTransform = 'rotateY(' + degreesFlipped + 'deg)';
+
+	setTimeout( function () { fc.style[(LE === '' ? 't':LE + 'T') + 'ransition'] = ''; }, 10);
+
+	var transformType = ((LE === '' ? 't':LE + 'T') + 'ransform')
 	// Flip flash card over
-	flipCard = function() {
-		if (cardIsFlipped)
-			fc.className = ''; // Flip to front of flash card
-		else
-			fc.className = 'flipped';
+	flipCard = function(direction) {
+			if (direction === 'left')
+				degreesFlipped -= 180;
+			else
+				degreesFlipped += 180;
+		
+		fc.style[transformType]  = 'rotateY(' + degreesFlipped + 'deg)';
 
 		cardIsFlipped = !cardIsFlipped;
 	}

@@ -48,8 +48,10 @@
 			window.addEventListener('keydown', function() {
 					switch (event.which) {
 						case 37: // LEFT
-						case 39: // RIGHT
 							animateCard('left');
+							break;
+						case 39: // RIGHT
+							animateCard('right');
 							break;
 						case 38: // UP
 							animateCard('up');
@@ -60,41 +62,58 @@
 					}
 				});
 
-			var touchX = 0;
-			var touchY = 0;
-			var saveEvent = null;
+			var touchX = null;
+			var touchY = null;
 
 			// If touch events are supported
 			if ('ontouchstart' in window) {
 				window.addEventListener('touchstart', function() {
-					event.preventDefault();
-
 					touchX = event.touches[0].pageX;
 					touchY = event.touches[0].pageY;
-				});
 
-				window.addEventListener('touchend', function() {
-					var endX = event.changedTouches[0].pageX;
-					var endY = event.changedTouches[0].pageY;
+					var rb = document.getElementById('return');
 
-					// If swipe length is long enough
-					if (Math.sqrt(Math.pow(touchX - endX, 2) + Math.pow(touchY - endY, 2)) > 50) {
-						animateCard(directionOfSwipe(endX, endY));
+					if ( touchX >= fc.offsetLeft &&
+							touchX <= fc.offsetLeft + fc.offsetWidth &&
+							touchY >= fc.offsetTop &&
+							touchY <= fc.offsetTop + fc.offsetHeight) {
 						event.preventDefault();
 					}
 					else {
+						touchX = null;
+						touchY = null;
+					}
+				});
+
+				window.addEventListener('touchend', function() {
+					if (touchX != null && touchY != null) {
+						var endX = event.changedTouches[0].pageX;
+						var endY = event.changedTouches[0].pageY;
 						var rb = document.getElementById('return');
-						if (touchX < document.getElementById('container').style.marginLeft + rb.clientWidth &&
-								touchY < rb.clientHeight)
+
+						// If swipe length is long enough
+						//if (Math.sqrt(Math.pow(touchX - endX, 2) + Math.pow(touchY - endY, 2)) > 50) {
+						if (Math.abs(endX - touchX) > 50 || Math.abs(endY - touchY) > 50) {
+							event.preventDefault();
+							animateCard(swipeDirection(endX, endY));
+						}
+						else if ( // On return button
+								touchX >= rb.offsetLeft &&
+								touchX <= rb.offsetLeft + rb.offsetWidth &&
+								touchY >= rb.offsetTop &&
+								touchY <= rb.offsetTop + rb.offsetHeight)
 							rb.click();
 					}
 				});
 
-				function directionOfSwipe(endX, endY) {
+				function swipeDirection(endX, endY) {
 					var strDirection = '';
 
 					if (Math.abs(touchX - endX) > Math.abs(touchY - endY))
-						strDirection = 'left';
+						if (touchX > endX)
+							strDirection = 'left';
+						else
+							strDirection = 'right';
 					else
 						if (touchY > endY)
 							strDirection = 'up';
@@ -109,17 +128,17 @@
 					switch (direction) {
 						case 'left':
 						case 'right':
-							flipCard();
+							flipCard(direction);
 							break;
 						case 'up':
-							fc.className = 'moveUp';
+							fc.classList.add('moveUp');
 							var t1 = setTimeout(goNextCard, 250);
-							var t2 = setTimeout(function() {fc.className = '';}, 500);
+							var t2 = setTimeout(function() {fc.classList.remove('moveUp');}, 500);
 							break;
 						case 'down':
-							fc.className = 'moveDown';
+							fc.classList.add('moveDown');
 							var t1 = setTimeout(goBackCard, 250);
-							var t2 = setTimeout(function() {fc.className = '';}, 500);
+							var t2 = setTimeout(function() {fc.classList.remove('moveDown');}, 500);
 							break;
 					}
 			}
