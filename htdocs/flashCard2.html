@@ -37,7 +37,7 @@
 				</tr>
 			</table>
 
-			<a href='learningTools.html'><img id='return' class='button' alt='Return to Learning Tools' src='../images/icons/glossy-black-icon-arrows-arrow-styled-left.png' alt='Back' /></a>
+			<a id='backButton' href='learningTools.html'><img class='button' alt='Back' src='../images/icons/glossy-black-icon-arrows-arrow-styled-left.png' alt='Back' /></a>
 		</div>
 
 		<script src='../js/flashCard.js' type='text/javascript' defer></script>
@@ -71,8 +71,6 @@
 					touchX = event.touches[0].pageX;
 					touchY = event.touches[0].pageY;
 
-					var rb = document.getElementById('return');
-
 					if ( touchX >= fc.offsetLeft &&
 							touchX <= fc.offsetLeft + fc.offsetWidth &&
 							touchY >= fc.offsetTop &&
@@ -89,7 +87,7 @@
 					if (touchX != null && touchY != null) {
 						var endX = event.changedTouches[0].pageX;
 						var endY = event.changedTouches[0].pageY;
-						var rb = document.getElementById('return');
+						var bb = document.getElementById('backButton').getElementsByTagName('img')[0];
 
 						// If swipe length is long enough
 						//if (Math.sqrt(Math.pow(touchX - endX, 2) + Math.pow(touchY - endY, 2)) > 50) {
@@ -98,11 +96,12 @@
 							animateCard(swipeDirection(endX, endY));
 						}
 						else if ( // On return button
-								touchX >= rb.offsetLeft &&
-								touchX <= rb.offsetLeft + rb.offsetWidth &&
-								touchY >= rb.offsetTop &&
-								touchY <= rb.offsetTop + rb.offsetHeight)
-							rb.click();
+								touchX >= bb.offsetLeft &&
+								touchX <= bb.offsetLeft + bb.offsetWidth &&
+								touchY >= bb.offsetTop &&
+								touchY <= bb.offsetTop + bb.offsetHeight)
+
+							location.href = document.getElementById('backButton').href;
 					}
 				});
 
@@ -124,7 +123,9 @@
 				}
 			}
 
-			function animateCard(direction) {
+			var animateCard;
+			if ('classList' in document.body) {
+				animateCard = function(direction) {
 					switch (direction) {
 						case 'left':
 						case 'right':
@@ -141,6 +142,23 @@
 							var t2 = setTimeout(function() {fc.classList.remove('moveDown');}, 500);
 							break;
 					}
+				}
+			}
+			else {
+				animateCard = function(direction) {
+					switch (direction) {
+						case 'left':
+						case 'right':
+							flipCard(direction);
+							break;
+						case 'up':
+							goNextCard();
+							break;
+						case 'down':
+							goBackCard();
+							break;
+					}
+				}
 			}
 		</script>
   </body>

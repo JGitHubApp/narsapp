@@ -12,8 +12,7 @@ else if ('MsTransform' in fc.style)
 	LE = 'moz';
 
 // Check if flip effect is supported
-if (((LE === '' ? 'b':LE + 'B') + 'ackfaceVisibility') in fc.style) {
-
+if (((LE === '' ? 'b':LE + 'B') + 'ackfaceVisibility') in fc.style && 'classList' in fc) {
 	var degreesFlipped = 36000000;
 	fc.style[(LE === '' ? 't':LE + 'T') + 'ransition'] = 'none';
 	fc.style.webkitTransform = 'rotateY(' + degreesFlipped + 'deg)';
