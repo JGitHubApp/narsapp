@@ -45,7 +45,7 @@
 		<script src='../js/flashCardAnimations.js' type='text/javascript' defer></script>
 
 		<script>
-			window.addEventListener('keydown', function() {
+			window.addEventListener('keydown', function(event) {
 					switch (event.which) {
 						case 37: // LEFT
 							animateCard('left');
@@ -60,7 +60,7 @@
 							animateCard('down');
 							break;
 					}
-				});
+				}, false);
 
 			var touchX = null;
 			var touchY = null;
