@@ -6,20 +6,35 @@ var LE = '';
 
 if ('webkitTransform' in fc.style)
 	LE = 'webkit';
-else if ('mozTransform' in fc.style)
-	LE = 'moz';
-else if ('MsTransform' in fc.style)
-	LE = 'moz';
+else if ('MozTransform' in fc.style)
+	LE = 'Moz';
 
 // Check if flip effect is supported
-if (((LE === '' ? 'b':LE + 'B') + 'ackfaceVisibility') in fc.style && 'classList' in fc) {
-	var degreesFlipped = 36000000;
-	fc.style[(LE === '' ? 't':LE + 'T') + 'ransition'] = 'none';
-	fc.style.webkitTransform = 'rotateY(' + degreesFlipped + 'deg)';
+if (((LE === '' ? 'b':LE + 'B') + 'ackfaceVisibility') in fc.style && !!(window.SVGSVGElement)) {
+	// Use high degree for browsers that don't support negative rotation
+	var degreesFlipped = 3600000;
 
-	setTimeout( function () { fc.style[(LE === '' ? 't':LE + 'T') + 'ransition'] = ''; }, 10);
-
+	// Get transform type for layout engine
 	var transformType = ((LE === '' ? 't':LE + 'T') + 'ransform')
+
+	// Change Rotation
+	fc.style[transformType] = 'rotateY(' + degreesFlipped + 'deg)';
+
+	// Create transition property after change has taken effect
+	setTimeout( function () {
+		var transitionType = (LE === '' ? 't':LE + 'T') + 'ransition';
+		var transitionVal = 'transform 0.5s ease-out';
+
+		if (LE)
+			transitionVal = '-' + LE.toLowerCase() + '-' + transitionVal;
+
+			fc.style[transitionType] = transitionVal;
+	}, 100);
+
+	function updateRotation(degrees) {
+		fc.style[transformType] = fc.style[transformType].replace(/(?!rotateY\()\d+/, degrees);
+	}
+
 	// Flip flash card over
 	flipCard = function(direction) {
 			if (direction === 'left')
@@ -27,12 +42,11 @@ if (((LE === '' ? 'b':LE + 'B') + 'ackfaceVisibility') in fc.style && 'classList
 			else
 				degreesFlipped += 180;
 		
-		fc.style[transformType]  = 'rotateY(' + degreesFlipped + 'deg)';
-
+		updateRotation(degreesFlipped);
 		cardIsFlipped = !cardIsFlipped;
 	}
 }
-else {
+else { // If flip effect is not supported
 	bFc.style.visibility = 'hidden';
 	// Simulate card flip
 	flipCard = function() {

@@ -64,10 +64,6 @@ a { background-color: black; }
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
-
-	transition: transform 0.5s ease-out;
-	-webkit-transition: -webkit-transform 0.5s ease-out;
-	-moz-transition: -moz-transform 0.5s ease-out;
 }
 
 #flashCard, .side {
@@ -111,6 +107,7 @@ a { background-color: black; }
 	text-indent: 2em;
 	text-align: left;
 }
+
 .moveUp, .moveDown {
 	-webkit-animation-timing-function: ease-in-out;
 	animation-timing-function: ease-in-out;
@@ -123,6 +120,7 @@ a { background-color: black; }
 	-webkit-animation: gotoNextCard 0.5s;
 	animation: gotoNextCard 0.5s;
 }
+
 @-webkit-keyframes gotoPrevCard {
 	50% { -webkit-transform: translate(0, -1000px);}
 	50.01% { -webkit-transform: translate(0, 1000px);}
