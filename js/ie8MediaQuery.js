@@ -1,3 +1,4 @@
+var winWidthOld;
 var appLinkNames;
 var appLinkContainers;
 var pHeader;
@@ -13,6 +14,7 @@ var hotelTd;
 var hotelInfo;
 var hotelTableContainer;
 var singleHotelAmenities;
+var scheduleTh;
 
 function pageLoad() {
 	appLinkNames = document.querySelectorAll('.appLinkName');
@@ -20,7 +22,9 @@ function pageLoad() {
 	pHeader = document.getElementById('header');
 	hLogo = document.getElementById('logo');
 	headContainer = document.getElementById('headerContainer');
-	headToolContainer = document.getElementById('headerToolContainer');
+	if(document.getElementById('headerToolContainer')) {
+		headToolContainer = document.getElementById('headerToolContainer');
+	}
 
 	// Hotel Comparison Page
 	if(document.getElementById('hotelTable')) {
@@ -37,7 +41,12 @@ function pageLoad() {
 	if(document.getElementById('address')) {
 		singleHotelAmenities = document.getElementsByTagName('li');
 	}
-	
+
+	// Schedule
+	if(document.getElementById('week1')) {
+		scheduleTh = document.getElementsByTagName('th');
+	}
+
 	pageSizing();
 
 	window.attachEvent('onresize', pageSizing);
@@ -179,88 +188,117 @@ function styleIndividualHotelAmenties(aWidth) {
 	}
 }
 
+// Style schedule th span
+function scheduleThSpan(aDisplay) {
+	if(document.getElementById('week1')) {
+		for(var i=0; i < scheduleTh.length; i++) {
+			scheduleTh[i].getElementsByTagName('span')[0].style.display=aDisplay;
+		}
+	}
+}
+
 function pageSizing() {
 	var winWidth = document.documentElement.clientWidth;
 
-	switch(true) {
-	case ((winWidth <= 260)):
-		updateAppLinkContainers('50%', '1.4in');
-		updateAppLinkNames('7pt', '0pt');
+	if(winWidth != winWidthOld) {
+		winWidthOld = winWidth;
+		switch(true) {
+		case ((winWidth <= 260)):
+			updateAppLinkContainers('50%', '1.4in');
+			updateAppLinkNames('7pt', '0pt');
 
-		sizeHeaderLessThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
+			sizeHeaderLessThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
 
-		styleHotelTable('none', 'none', 'none', '100%', '0.85in', 'none', '1.4in', '50%');
+			styleHotelTable('none', 'none', 'none', '100%', '0.85in', 'none', '1.4in', '50%');
 
-		styleIndividualHotelAmenties('100%');
+			styleIndividualHotelAmenties('100%');
 
-		break;
-	case ((winWidth <= 332) && (winWidth > 260)): // Media Query max-Width: 3.5 in
-		updateAppLinkContainers('33.3%', '1.4in');
-		updateAppLinkNames('10pt', '0pt');
+			scheduleThSpan('none');
 
-		sizeHeaderLessThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
+			break;
+		case ((winWidth <= 332) && (winWidth > 260)): // Media Query max-Width: 3.5 in
+			updateAppLinkContainers('33.3%', '1.4in');
+			updateAppLinkNames('10pt', '0pt');
 
-		styleHotelTable('none', 'none', 'none', '100%', '0.95in', 'none', '1.4in', '66.6%');
+			sizeHeaderLessThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
 
-		// Used to handle defaultHotel.css difference
-		if(document.getElementById('address')) {
-			updateAppLinkContainers('50%', '1.7in');
-		}
-		styleIndividualHotelAmenties('100%');
+			styleHotelTable('none', 'none', 'none', '100%', '0.95in', 'none', '1.4in', '66.6%');
 
-		break;
-	case ((winWidth <= 360) && (winWidth > 332)): // Media Query max-Width: 4 in
-		updateAppLinkContainers('33.3%', '1.5in');
-		updateAppLinkNames('10pt', '0pt');
+			// Used to handle defaultHotel.css difference
+			if(document.getElementById('address')) {
+				updateAppLinkContainers('50%', '1.7in');
+			}
+			styleIndividualHotelAmenties('100%');
 
-		sizeHeaderLessThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
+			scheduleThSpan('none');
 
-		styleHotelTable('none', 'none', 'table-cell', '50%', '0.95in', 'none', '1.5in', '66.6%');
+			break;
+		case ((winWidth <= 360) && (winWidth > 332)): // Media Query max-Width: 4 in
+			updateAppLinkContainers('33.3%', '1.5in');
+			updateAppLinkNames('10pt', '0pt');
 
-		// Used to handle defaultHotel.css difference
-		if(document.getElementById('address')) {
-			updateAppLinkContainers('50%', '1.7in');
-		}
-		styleIndividualHotelAmenties('100%');
+			sizeHeaderLessThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
 
-		break;
-	case ((winWidth <= 556) && (winWidth > 360)): // Media Query max-Width: 6 in
-		updateAppLinkContainers('25%', '1.7in');
-		updateAppLinkNames('10pt', '4pt');
+			styleHotelTable('none', 'none', 'table-cell', '50%', '0.95in', 'none', '1.5in', '66.6%');
 
-		sizeHeaderLessThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
+			// Used to handle defaultHotel.css difference
+			if(document.getElementById('address')) {
+				updateAppLinkContainers('50%', '1.7in');
+			}
+			styleIndividualHotelAmenties('100%');
 
-		styleHotelTable('none', 'none', 'table-cell', '50%', '1.25in', 'none', '1.7in', '75%');
+			scheduleThSpan('none');
 
-		styleIndividualHotelAmenties('50%');
+			break;
+		case ((winWidth <= 556) && (winWidth > 360)): // Media Query max-Width: 6 in
+			updateAppLinkContainers('25%', '1.7in');
+			updateAppLinkNames('10pt', '4pt');
 
-		break;
-	case ((winWidth <= 954) && (winWidth > 556)):
-		updateAppLinkContainers('25%', '1.9in');
-		updateAppLinkNames('12pt', '4pt');
+			sizeHeaderLessThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
 
-		sizeHeaderGreaterThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
+			styleHotelTable('none', 'none', 'table-cell', '50%', '1.25in', 'none', '1.7in', '75%');
 
-		styleHotelTable('none', 'table-cell', 'table-cell', '33.3%', '1.45in', 'block', '1.9in', '75%');
+			styleIndividualHotelAmenties('50%');
 
-		styleIndividualHotelAmenties('33%');
+			scheduleThSpan('none');
 
-		break;
-	case ((winWidth > 954)): // Media Query min-Width: 10 in
-		updateAppLinkContainers('20%', '1.9in');
-		updateAppLinkNames('14pt', '4pt');
-
-		sizeHeaderGreaterThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
-
-		styleHotelTable('table-cell', 'table-cell', 'table-cell', '25%', '1.45in', 'block', '1.9in', '75%');
-
-		// Used to handle defaultHotel.css difference
-		if(document.getElementById('address')) {
+			break;
+		case ((winWidth <= 954) && (winWidth > 556)):
 			updateAppLinkContainers('25%', '1.9in');
-		}
-		styleIndividualHotelAmenties('33%');
+			updateAppLinkNames('12pt', '4pt');
 
-		break;
+			sizeHeaderGreaterThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
+
+			styleHotelTable('none', 'table-cell', 'table-cell', '33.3%', '1.45in', 'block', '1.9in', '75%');
+
+			styleIndividualHotelAmenties('33%');
+
+			if(winWidth > 762) {
+				scheduleThSpan('inline');
+			}
+			else {
+				scheduleThSpan('none');
+			}
+
+			break;
+		case ((winWidth > 954)): // Media Query min-Width: 10 in
+			updateAppLinkContainers('20%', '1.9in');
+			updateAppLinkNames('14pt', '4pt');
+
+			sizeHeaderGreaterThanSix(pHeader, headContainer, hLogo, headToolContainer, headTool);
+
+			styleHotelTable('table-cell', 'table-cell', 'table-cell', '25%', '1.45in', 'block', '1.9in', '75%');
+
+			// Used to handle defaultHotel.css difference
+			if(document.getElementById('address')) {
+				updateAppLinkContainers('25%', '1.9in');
+			}
+			styleIndividualHotelAmenties('33%');
+
+			scheduleThSpan('inline');
+
+			break;
+		}
 	}
 }
 
