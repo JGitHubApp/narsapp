@@ -1,30 +1,25 @@
+
 body {
 	height: 100%;
 	overflow: hidden;
 }
 
-#container, #flashCardContainer {
-	max-height: 750px;
-}
-
-#container {
-	position: relative;
-	max-width: 850px;
-	min-height: 1in;
-	height: 100%;
-	padding: 0;
-}
-
-#return {
+#backButton > img {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 25%;
+	max-width: 100px;
+	min-width: 30px;
+	height: auto;
 	cursor: pointer;
 	opacity: 0.5;
 }
-
-#return:hover {
+#backButton:hover {
 	opacity: 0.9;
+}
+#backButton:active {
+	opacity: 0.8;
 }
 
 #flashCardContainer {
@@ -53,7 +48,6 @@ a { background-color: black; }
 	height: 400px;
 	background-color: #FFF;
 	cursor: pointer;
-	-moz-transform: perspective(1000px);
 
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -61,14 +55,7 @@ a { background-color: black; }
 
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
-	-moz-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
-}
-
-#flashCard.flipped {
-	transform: rotateY(-180deg);
-	-webkit-transform: rotateY(-180deg);
-	-moz-transform: rotateY(-180deg);
 }
 
 #flashCard, .side {
@@ -113,31 +100,35 @@ a { background-color: black; }
 	text-align: left;
 }
 
-.button {
-	width: 25%;
-	max-width: 100px;
-	min-width: 30px;
-	height: auto;
-	position: absolute;
-	bottom: 0;
-	cursor: pointer;
-	opacity: 0.85;
+.moveUp, .moveDown {
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+.moveUp {
+	-webkit-animation: gotoPrevCard 0.5s;
+	animation: gotoPrevCard 0.5s;
+}
+.moveDown {
+	-webkit-animation: gotoNextCard 0.5s;
+	animation: gotoNextCard 0.5s;
 }
 
-.button:hover {
-	opacity: 1;
+@-webkit-keyframes gotoPrevCard {
+	50% { -webkit-transform: translate(0, -1000px);}
+	50.01% { -webkit-transform: translate(0, 1000px);}
+}
+@keyframes gotoPrevCard {
+	50% { transform: translate(0, -1000px);}
+	50.01% { transform: translate(0, 1000px);}
 }
 
-.button:active {
-	opacity: 0.9;
+@-webkit-keyframes gotoNextCard {
+	50% { -webkit-transform: translate(0, 1000px);}
+	50.01% { -webkit-transform: translate(0, -1000px);}
 }
-
-#gotoBackCard {
-	left: 0;
-}
-
-#gotoNextCard  {
-	right: 0;
+@keyframes gotoNextCard {
+	50% { transform: translate(0, 1000px);}
+	50.01% { transform: translate(0, -1000px);}
 }
 
 @media screen and (max-width: 510px), (max-height: 340px) {
@@ -170,19 +161,5 @@ a { background-color: black; }
 	#backFlashCard { font-size: 5px;
 		width: 100%;
 		padding: 0;
-	}
-}
-
-@media not all and (-webkit-transform-3d) {
-	#flashCard.flipped {
-		-webkit-transform: none;
-	}
-
-	#flashCard #backFlashCard, #flashCard.flipped #frontFlashCard {
-		visibility: hidden;
-	}
-
-	#flashCard.flipped #backFlashCard, #flashCard #frontFlashCard {
-		visibility: visible;
 	}
 }
