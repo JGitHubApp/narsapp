@@ -17,8 +17,8 @@
 
 		<link href='../css/styles.css' rel='stylesheet' type='text/css' />
 		<link href='../css/flashCard2.css' rel='stylesheet' type='text/css' />
-  </head>
-  <body onload='drawSignal(signalArray[0][0], ruleArray[0]); resizeFlashCard()'>
+	</head>
+	<body onload='drawSignal(signalArray[0][0], ruleArray[0]); resizeFlashCard()'>
 		<div id="container">
 			<table id='flashCardContainer'>
 				<tr>
@@ -65,7 +65,7 @@
 			var touchX = null;
 			var touchY = null;
 			var tiltDirection = null;
-			var previousTilt = null;
+			var prevTransform = null;
 
 			// If touch events are supported
 			if ('ontouchstart' in window) {
@@ -78,7 +78,7 @@
 							touchY >= fc.offsetTop &&
 							touchY <= fc.offsetTop + fc.offsetHeight) {
 						event.preventDefault();
-						previousTilt = fc.style[transformType];
+						prevTransform = fc.style[transformType];
 					}
 					else {
 						touchX = null;
@@ -88,7 +88,7 @@
 
 				window.addEventListener('touchend', function() {
 					if (touchX != null && touchY != null) {
-						fc.style[transformType]  = previousTilt;
+						fc.style[transformType] = prevTransform;
 
 						var endX = event.changedTouches[0].pageX;
 						var endY = event.changedTouches[0].pageY;
@@ -110,7 +110,7 @@
 						}
 
 						tiltDirection = null;
-						previousTilt = null;
+						prevTransform = null;
 					}
 				});
 
@@ -163,22 +163,22 @@
 						// If tilt direction has changed
 						if (tiltDirection != swipeDirection(curX, curY)) {
 							// Reset Tilt
-							fc.style[transformType]  = previousTilt;
+							fc.style[transformType] = prevTransform;
 							distX = Math.abs(curX - touchX);
 
 							// If length of swipe is long enough
 							if (distX > 50) {
 								tiltDirection = swipeDirection(curX, curY);
-								var tiltAmount = 20;
+								var tiltAmount = 15;
 
 								switch (tiltDirection) {
 									case 'left':
 										tiltAmount = degreesFlipped - tiltAmount;
-										fc.style[transformType]  = 'rotateY(' + tiltAmount + 'deg)';
+										updateRotation(tiltAmount);
 										break;
 									case 'right':
 										tiltAmount = degreesFlipped + tiltAmount;
-										fc.style[transformType]  = 'rotateY(' + tiltAmount + 'deg)';
+										updateRotation(tiltAmount);
 										break;
 								}
 							}
@@ -203,5 +203,5 @@
 				}
 			}
 		</script>
-  </body>
+	</body>
 </html>

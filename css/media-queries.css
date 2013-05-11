@@ -30,8 +30,6 @@
 		border-radius: 0 0 15pt 15pt;
 		-webkit-border-radius: 0 0 15pt 15pt;
 		-moz-border-radius: 0 0 15pt 15pt;
-		-ms-border-radius: 0 0 15pt 15pt;
-		-o-border-radius: 0 0 15pt 15pt;
 	}
 
 	#headerContainer {
@@ -73,8 +71,6 @@
 		border-radius: 10pt;
 		-webkit-border-radius: 10pt;
 		-moz-border-radius: 10pt;
-		-ms-border-radius: 10pt;
-		-o-border-radius: 10pt;
 	}
 }
 

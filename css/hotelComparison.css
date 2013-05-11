@@ -84,8 +84,6 @@ th, th > select {
 	border-radius: 5pt 5pt 0 0;
 	-webkit-border-radius: 5pt 5pt 0 0;
 	-moz-border-radius: 5pt 5pt 0 0;
-	-ms-border-radius: 5pt 5pt 0 0;
-	-o-border-radius: 5pt 5pt 0 0;
 }
 
 @media screen and (min-width: 10in) {

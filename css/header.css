@@ -17,8 +17,6 @@
 	box-shadow: 0 3px 8px #333;
 	-webkit-box-shadow: 0 3px 8px #333;
 	-moz-box-shadow: 0 3px 8px #333;
-	-ms-box-shadow: 0 3px 8px #333;
-	-o-box-shadow: 0 3px 8px #333;
 }
 
 #headerContainer {
@@ -65,8 +63,6 @@
 	border-radius: 15pt;
 	-webkit-border-radius: 15pt;
 	-moz-border-radius: 15pt;
-	-ms-border-radius: 15pt;
-	-o-border-radius: 15pt;
 
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
