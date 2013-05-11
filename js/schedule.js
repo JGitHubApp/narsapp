@@ -1,7 +1,7 @@
-function goToWeek(menu) {
-	if (menu.value !== 'default') {
+function goToWeek(weekName) {
+	if (weekName !== 'default') {
 		// set week to selected value
-		var week = document.getElementById(menu.value);
+		var week = document.getElementById(weekName);
 
 		// Scroll to week
 		scrollTo(0, week.offsetTop);
