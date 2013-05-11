@@ -82,7 +82,6 @@ function goNextCard() {
 
 	drawSignal(signalArray[currentRule][currentSignal], ruleArray[currentRule]);
 }
-
 window.addEventListener('keydown', function(event) {
 		switch (event.which) {
 			case 37: // LEFT
@@ -100,13 +99,13 @@ window.addEventListener('keydown', function(event) {
 		}
 	}, false);
 
+var touchX = null;
+var touchY = null;
+var tiltDirection = null;
+var prevTransform = null;
+
 // If touch events are supported
 if ('ontouchstart' in window) {
-	var touchX = null;
-	var touchY = null;
-	var tiltDirection = null;
-	var prevTransform = null;
-
 	window.addEventListener('touchstart', function() {
 		touchX = event.touches[0].pageX;
 		touchY = event.touches[0].pageY;
@@ -126,61 +125,25 @@ if ('ontouchstart' in window) {
 
 	window.addEventListener('touchend', function() {
 		if (touchX != null && touchY != null) {
+			fc.style[transformType] = prevTransform;
+
+			var endX = event.changedTouches[0].pageX;
+			var endY = event.changedTouches[0].pageY;
 			var bb = document.getElementById('backButton').getElementsByTagName('img')[0];
 
-			if ( // On return button
+			// If swipe length is long enough
+			//if (Math.sqrt(Math.pow(touchX - endX, 2) + Math.pow(touchY - endY, 2)) > 50) {
+			if (Math.abs(endX - touchX) > 50 || Math.abs(endY - touchY) > 50) {
+				event.preventDefault();
+				animateCard(swipeDirection(endX, endY));
+			}
+			else if ( // On return button
 					touchX >= bb.offsetLeft &&
 					touchX <= bb.offsetLeft + bb.offsetWidth &&
 					touchY >= bb.offsetTop &&
 					touchY <= bb.offsetTop + bb.offsetHeight) {
 
 				location.href = document.getElementById('backButton').href;
-			}
-			else {
-				event.preventDefault();
-				var deg = fc.style[transformType].match(/(?!rotateY\()\d+/) % 360;
-
-				var endX = event.changedTouches[0].pageX;
-				var endY = event.changedTouches[0].pageY;
-
-				// Left-Right
-				if (Math.abs(touchX - endX) > Math.abs(touchY - endY)) {
-					if (cardIsFlipped) {
-						if (deg > 270 || deg < 90) {
-							if (deg < 90)
-								flipCard('left');
-							else
-								flipCard('right');
-						}
-						else {
-							fc.style[transformType]  = prevTransform;
-						}
-					}
-					else {
-						if (deg > 90 && deg < 270) {
-							if (deg > 180)
-								flipCard('left');
-							else
-								flipCard('right');
-						}
-						else {
-							fc.style[transformType]  = prevTransform;
-						}
-					}
-				}
-				else { // up-down
-					var swipeDistance = touchY - endY;
-
-					// If swipe distance is long enough
-					if (Math.abs(swipeDistance) > 50) {
-						fc.style[transformType] = prevTransform;
-
-						if (swipeDistance > 0)
-							animateCard('up')
-						else
-							animateCard('down')
-					}
-				}
 			}
 
 			tiltDirection = null;
@@ -229,27 +192,39 @@ if ('classList' in document.body) {
 
 	window.addEventListener('touchmove', function() {
 		if (touchX != null && touchY != null) {
-			event.preventDefault();
+			if (event.changedTouches.length === 1) { // 1 finger
+				event.preventDefault();
 
-			var curX = event.touches[0].pageX;
-			var curY = event.touches[0].pageY;
-			tiltDirection = swipeDirection(curX, curY);
+				var curX = event.touches[0].pageX;
+				var curY = event.touches[0].pageY;
 
-			var distX = Math.abs(curX - touchX);
-			var tiltAmount = distX / 2 > 180 ? 180:(distX / 2);
-
-			switch (tiltDirection) {
-				case 'left':
-					tiltAmount = degreesFlipped - tiltAmount;
-					updateRotation(tiltAmount);
-					break;
-				case 'right':
-					tiltAmount = degreesFlipped + tiltAmount;
-					updateRotation(tiltAmount);
-					break;
-				default:
+				// If tilt direction has changed
+				if (tiltDirection != swipeDirection(curX, curY)) {
+					// Reset Tilt
 					fc.style[transformType] = prevTransform;
-					break;
+					distX = Math.abs(curX - touchX);
+
+					// If length of swipe is long enough
+					if (distX > 50) {
+						tiltDirection = swipeDirection(curX, curY);
+						var tiltAmount = 15;
+
+						switch (tiltDirection) {
+							case 'left':
+								tiltAmount = degreesFlipped - tiltAmount;
+								updateRotation(tiltAmount);
+								break;
+							case 'right':
+								tiltAmount = degreesFlipped + tiltAmount;
+								updateRotation(tiltAmount);
+								break;
+						}
+					}
+				}
+			}
+			else { // More than 1 finger
+				touchX = null;
+				touchY = null;
 			}
 		}
 	});
