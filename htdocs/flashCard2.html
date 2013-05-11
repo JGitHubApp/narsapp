@@ -20,26 +20,24 @@
 		<link href='../css/flashCard2.css' rel='stylesheet' type='text/css' />
 	</head>
 	<body onload='drawSignal(signalArray[0][0], ruleArray[0]); resizeFlashCard()'>
-		<div id="container">
-			<table id='flashCardContainer'>
-				<tr>
-					<td>
-						<div id='flashCard'>
-							<canvas id='frontFlashCard' class='side' width='600' height='400'></canvas>
-							<div id='backFlashCard' class='side'>
-								<h1 id='signalRule'></h1>
-								<h2>Name</h2>
-								<p id='signalName'></p>
-								<h2>Indication</h2>
-								<p id='signalIndication'></p>
-							</div>
+		<table id='flashCardContainer'>
+			<tr>
+				<td>
+					<div id='flashCard'>
+						<canvas id='frontFlashCard' class='side' width='600' height='400'></canvas>
+						<div id='backFlashCard' class='side'>
+							<h1 id='signalRule'></h1>
+							<h2>Name</h2>
+							<p id='signalName'></p>
+							<h2>Indication</h2>
+							<p id='signalIndication'></p>
 						</div>
-					<td>
-				</tr>
-			</table>
+					</div>
+				<td>
+			</tr>
+		</table>
 
-			<a id='backButton' href='learningTools.html'><img class='button' alt='Back' src='../images/icons/glossy-black-icon-arrows-arrow-styled-left.png' alt='Back' /></a>
-		</div>
+		<a id='backButton' href='learningTools.html'><img class='button' alt='Back' src='../images/icons/glossy-black-icon-arrows-arrow-styled-left.png' alt='Back' /></a>
 
 		<script src='../js/flashCard.js' type='text/javascript' defer></script>
 		<script src='../js/flashCardSignals.js' type='text/javascript' defer></script>
