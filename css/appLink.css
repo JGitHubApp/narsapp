@@ -15,6 +15,7 @@
 	width: 95%;
 	height: 100%;
 	text-decoration: none;
+	outline: 0;
 
 	border: 2pt solid #AAA;
 	border-color: rgba(136, 136, 136, 0);
@@ -39,7 +40,23 @@
 }
 
 .appLinkHyperLink:focus {
-	border-color: #FFF;
+	-webkit-animation: glow 4s;
+	animation: glow 4s;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes glow {
+	from { border-color: #C00;}
+	to { border-color: #AAA;}
+}
+@keyframes glow {
+	from { border-color: #C00;}
+	to { border-color: #AAA;}
+}
+
+.appLinkHyperLink:focus:hover {
+	border-color: #FFF !important;
 }
 
 .appLinkHyperLink:hover > .appLinkPic, .appLinkHyperLink:focus > .appLinkPic, .appLinkHyperLink:active > .appLinkPic {
