@@ -12,13 +12,13 @@ hotelsAppLinkInfo = new AppLinkLog(
 
 	[
 		[],
-		['hotels','apartments', 'suites', 'kitchens', 'fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'breakfast', 'dinner', 'washers', 'washing', 'machines', 'dryers'],
-		['hotels','apartments', 'suites', 'kitchens', 'fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'breakfast', 'dinner', 'shuttle', 'transportation', 'washers', 'washing', 'machines', 'dryers'],
-		['hotels','fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'shuttle', 'transportation', 'washers', 'washing', 'machines', 'dryers', 'swimming', 'pools'],
-		['hotels','fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'breakfast', 'dinner', 'washers', 'washing', 'machines', 'dryers', 'swimming', 'pools'],
-		['hotels','apartments', 'suites', 'kitchens', 'fitness', 'centers', 'free', 'wifi', 'wireless', 'internet', 'access', 'breakfast', 'dinner', 'shuttle', 'transportation', 'washers', 'washing', 'machines', 'dryers'],
-		['hotels','fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'breakfast', 'washers', 'washing', 'machines', 'dryers'],
-		['free', 'wifi', 'wireless', 'internet', 'access', 'washers', 'washing', 'machines', 'dryers']
+		['provides', 'hotels','apartments', 'suites', 'kitchens', 'fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'serves', 'breakfast', 'dinner', 'washers', 'washing', 'machines', 'dryers'],
+		['provides', 'hotels','apartments', 'suites', 'kitchens', 'fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'serves', 'breakfast', 'dinner', 'shuttle', 'transportation', 'washers', 'washing', 'machines', 'dryers'],
+		['provides', 'hotels','fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'shuttle', 'transportation', 'washers', 'washing', 'machines', 'dryers', 'swimming', 'pools'],
+		['provides', 'hotels','fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'serves', 'breakfast', 'dinner', 'washers', 'washing', 'machines', 'dryers', 'swimming', 'pools'],
+		['provides', 'hotels','apartments', 'suites', 'kitchens', 'fitness', 'centers', 'free', 'wifi', 'wireless', 'internet', 'access', 'serves', 'breakfast', 'dinner', 'shuttle', 'transportation', 'washers', 'washing', 'machines', 'dryers'],
+		['provides', 'hotels','fitness', 'centers', 'athletics', 'clubs', 'passes', 'free', 'wifi', 'wireless', 'internet', 'access', 'serves', 'breakfast', 'washers', 'washing', 'machines', 'dryers'],
+		['provides', 'free', 'wifi', 'wireless', 'internet', 'access', 'washers', 'washing', 'machines', 'dryers']
 	],
 
 	[
