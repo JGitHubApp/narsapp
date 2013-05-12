@@ -1,10 +1,10 @@
 function goToWeek(weekName) {
 	if (weekName !== 'default') {
+		// Scroll to week
+		location.href = '#' + weekName;
+
 		// set week to selected value
 		var week = document.getElementById(weekName);
-
-		// Scroll to week
-		scrollTo(0, week.offsetTop);
 
 		// Highlight the week temporarily
 		week.style.backgroundColor = '#00D'
