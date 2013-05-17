@@ -116,22 +116,6 @@ function goNextCard() {
 
 	drawSignal(signalArray[currentRule][currentSignal], ruleArray[currentRule]);
 }
-window.addEventListener('keydown', function(event) {
-		switch (event.which) {
-			case 37: // LEFT
-				animateCard('left');
-				break;
-			case 39: // RIGHT
-				animateCard('right');
-				break;
-			case 38: // UP
-				animateCard('up');
-				break;
-			case 40: // DOWN
-				animateCard('down');
-				break;
-		}
-	}, false);
 
 // If touch events are supported
 if ('ontouchstart' in window) {
@@ -236,5 +220,23 @@ if ('ontouchstart' in window) {
 	}
 }
 else {
+
+	window.addEventListener('keydown', function(event) {
+		switch (event.which) {
+			case 37: // LEFT
+				animateCard('left');
+				break;
+			case 39: // RIGHT
+				animateCard('right');
+				break;
+			case 38: // UP
+				animateCard('up');
+				break;
+			case 40: // DOWN
+				animateCard('down');
+				break;
+		}
+	}, false);
+
 	fc.addEventListener('click', flipCard, false);
 }
